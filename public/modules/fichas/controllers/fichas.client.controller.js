@@ -206,7 +206,7 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 				// }
 
 				$scope.cliente = {codigo: ficha.codcli, nombre: ficha.nomcli};
-				$scope.titular = {codigo: ficha.codcli, nombre: ficha.nomcli};
+				$scope.titular = {codigo: ficha.codtit, nombre: ficha.nomtit};
 				// console.log('editficha:', ficha);
 				// console.log('scope.clase:', $scope.clase);
 				// console.log('scope.clases:', $scope.clases);

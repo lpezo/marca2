@@ -31,7 +31,7 @@ var parametros = require('./parametros.server.controller');
 		function(done) {
 
 			//Comprobar si el codigo del cliente existe
-
+			//console.log('ficha:', ficha);
 			if (ficha.codcli === '')
 				return res.status(400).send({
 						message: 'Cliente no debe estar vacío'});
