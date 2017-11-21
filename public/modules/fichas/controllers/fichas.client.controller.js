@@ -18,7 +18,7 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 			$scope.formFields = FichasForm.getFormFields(disabled);
 		};
 
-	    $scope.uploadPic = function(file, cliente, tramite) {
+	    $scope.uploadPic = function(file, cliente, titular) {
 
 
 			if (cliente)
@@ -27,10 +27,10 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 				$scope.ficha.nomcli = cliente.nombre;
 			}
 
-			if (tramite)
+			if (titular)
 			{
-				$scope.ficha.codtit = tramite.codigo;
-				$scope.ficha.nomtit = tramite.nombre;
+				$scope.ficha.codtit = titular.codigo;
+				$scope.ficha.nomtit = titular.nombre;
 			}
 
 
