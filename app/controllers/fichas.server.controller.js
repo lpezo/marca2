@@ -202,7 +202,7 @@ var parametros = require('./parametros.server.controller');
 			{
 				//console.log('saveFicha: es edit');
 
-				var upd = {codcli: ficha.codcli, nomcli: ficha.nomcli, derecho: ficha.derecho, tramite: ficha.tramite,
+				var upd = {codcli: ficha.codcli, nomcli: ficha.nomcli, codtit: ficha.codtit, nomtit: ficha.nomtit, derecho: ficha.derecho, tramite: ficha.tramite,
 					nomsigno: ficha.nomsigno, numexpediente: ficha.numexpediente, numcertificado: ficha.numcertificado,
 					clases: ficha.clases, subclases: ficha.subclases, prinumero: ficha.prinumero || '', 
 					prifecha: ficha.prifecha || null, pripais: ficha.pripais || '', 
