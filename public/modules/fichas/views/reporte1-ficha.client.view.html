@@ -1,0 +1,166 @@
+<section data-ng-controller="FichasController" ng-init="iniReporte()">
+	<div class="page-header">
+		<h1 ng-hide="modoReporte">Reporte de Marcas Registradas</h1>
+		<h3 ng-show="modoReporte">Reporte de Marcas Registradas
+		<button class="btn btn-default btn-sm" ng-show="modoReporte" ng-click="modoReporte = false" >
+				{{modoReporte ? "Consulta" : "Modo Reporte"}}
+		</button></h3>
+	</div>
+
+	<div class="col-md-16" ng-hide="modoReporte">
+
+		<form novalidate>
+			<div class="form-group">
+			    <label class="control-label" for="codcli">Cliente</label>
+			    <div class="controls container-fluid">
+			        <label class="control-label">CLIENTE</label>
+			        <input type="text" size="50" ng-model="cliente" ng-model-options="modelOptions" 
+			        name="codcli" placeholder="Ubicar Cliente" autocomplete="off" 
+			        typeahead="cliente as cliente.nombre for cliente in getCliente($viewValue)">
+				</div>
+			</div>
+        	<div class="row">
+
+				<div class="col-md-2">
+				    <label class="control-label" for="codder">Tipo de Fecha</label>
+				    <div class="controls">
+				        <select name="fechaSelect" ng-options="tip.campo as tip.descripcion for tip in tiposDeFecha" ng-model="tipoFecha">
+				        </select>
+				    </div>
+				</div>        		
+
+                <div class="col-md-3">
+                    <label class="control-label" for="desde">Desde</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-desde" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text"
+                                    data-ng-model="desde | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true }" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            	</span>
+
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="desde=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="desde"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-desde' }"
+                                                ng-change="changeDesde()">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <label class="control-label" for="hasta">Hasta</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-hasta" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text"
+                                    data-ng-model="hasta | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true }" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            	</span>
+
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="hasta=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="hasta"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-hasta' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+		</form>
+
+		<div>
+			<a class="btn btn-primary" title="Reportar" ng-click="reporte1()" item="ficha">
+				<i class="glyphicon glyphicon-report"></i> Reporte
+			</a>
+			<button class="btn btn-default" ng-click="modoReporte = true" >
+				{{modoReporte ? "Modo Consulta" : "Modo Reporte"}}
+			</button>
+		</div>
+
+		<hr/>
+	</div>
+
+		<h1 ng-hide="modoReporte">
+			{{tituloReporte}}
+		<hr/>
+		</h1>
+		<h3 ng-show="modoReporte">
+			{{tituloReporte}}
+		</h3>
+
+		<div class="CSSReport">
+			<table >
+				<tr>
+					<td style="align-text=center">
+						#
+					</td>
+					<td>
+						Código
+					</td>
+					<td>
+						Marca
+					</td>
+					<td>
+						Logo
+					</td>
+					<td >
+						Clase
+					</td>
+					<td>
+						Certificado
+					</td>
+					<td>
+						Fecha
+					</td>
+				</tr>
+				<tr ng-repeat="item in result">
+					<td style="align-text=center">
+						{{item.num}}
+					</td>
+					<td>
+                        {{item.codigo}}
+					</td>
+					<td >
+						{{item.nomsigno}}
+					</td>
+					<td>
+                        <img ng-hide="!item.archivo" ng-src="/img/{{item.archivo}}" id="img-id" width="50" onerror='this.style.display = "none"'/>						
+					</td>
+					<td>
+						<ul class="list-inline">
+							<li ng-repeat="clas in item.clases">
+								{{clas}}
+							</li>
+						</ul>
+					</td>
+					<td>
+						{{item.numcertificado}}
+					</td>
+					<td ng-switch on="tipoFecha">
+						{{item.fecha | date: 'dd-MM-yyyy'}}
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div data-ng-show="error" class="text-danger">
+	      <strong data-ng-bind="error"></strong>
+	    </div>          
+
+
+</section>

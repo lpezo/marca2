@@ -1,0 +1,27 @@
+<section data-ng-controller="ClientesController" data-ng-init="toViewCliente()">
+	<div class="page-header">
+		<h1 data-ng-bind="cliente.nombre"></h1>
+	</div>
+
+	<div class="col-md-12">
+
+		<form novalidate>
+			<formly-form model="cliente" fields="formFields">
+			</formly-form>
+		</form>
+
+		<div data-ng-show="((authentication.user))">
+			<a class="btn btn-success" href="/#!/clientes/{{cliente._id}}/edit">
+				<i class="glyphicon glyphicon-edit"></i> Edit
+			</a>
+			<a class="btn btn-danger" title="Remove" ng-really-message="Are you sure ?" ng-really-click="remove()" item="cliente">
+				<i class="glyphicon glyphicon-remove-circle"></i> Delete
+			</a>
+			<a class="btn btn-primary" href="/#!/clientes">
+				<i class="glyphicon glyphicon-list"></i> Lista Clientes
+			</a>
+		</div>
+
+	</div>
+
+</section>

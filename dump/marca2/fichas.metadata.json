@@ -1,0 +1,1 @@
+{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "marca2.fichas" }, { "v" : 1, "unique" : true, "key" : { "codigo" : 1 }, "name" : "codigo_1", "ns" : "marca2.fichas", "background" : true, "safe" : null }, { "v" : 1, "key" : { "clases" : 1 }, "name" : "clases_1", "ns" : "marca2.fichas", "background" : true, "safe" : null } ] }

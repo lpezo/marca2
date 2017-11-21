@@ -1,0 +1,34 @@
+<section data-ng-controller="SubclasesController">
+    <div class="page-header">
+        <h1>Sub Clases</h1>
+    </div>
+
+    <div class="pull-right">
+      <a type="button" class="btn btn-success" href="/#!/subclases/create">
+        <i class="glyphicon glyphicon-open"></i> Nuevo Subclase
+      </a>
+    </div>
+
+    <div>
+        <table ng-table="tableParams" show-filter="true">
+            <tr ng-repeat="subclase in $data">
+                <td data-title="'Clase'" sortable="'clase'" filter="{ 'clase': 'text' }">{{subclase.clase}}</td>
+                <td data-title="'SubClase'" sortable="'codigo'" filter="{ 'codigo': 'text' }">{{subclase.codigo}}</td>
+                <td data-title="'Name'" sortable="'name'" filter="{ 'name': 'text' }">{{subclase.name}}</td>
+                <td>
+                   <div class="table-actions">
+                        <a class="btn btn-default" title="View" href="/#!/subclases/{{subclase._id}}">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        <a class="btn btn-default" title="Edit" href="/#!/subclases/{{subclase._id}}/edit">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                        <a class="btn btn-danger" title="Remove" ng-really-message="Are you sure ?" ng-really-click="remove(subclase)" item="subclase">
+                  				<span class="glyphicon glyphicon-remove-circle"></span>
+                  			</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

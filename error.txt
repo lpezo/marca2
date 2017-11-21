@@ -1,0 +1,2448 @@
+[4mRunning "jshint:all" (jshint) task[24m
+
+[1m   public/modules/clases/clases.client.module.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mApplicationConfiguration.registerModule('clases', ['core']);[39m
+         ^ 'ApplicationConfiguration' is not defined.
+[1m   public/modules/clases/config/clases.client.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('clases').config(['$stateProvider',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/clases/controllers/clases.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('clases').controller('ClasesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Clases', 'TableSettings', 'ClasesForm',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/clases/services/clases.client.service.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('clases').factory('Clases', ['$resource',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/clases/tests/clases.client.controller.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      5 |[90m    describe('Clases Controller Tests', function() {[39m
+             ^ 'describe' is not defined.
+     18 |[90m        beforeEach(function() {[39m
+                 ^ 'beforeEach' is not defined.
+     19 |[90m            jasmine.addMatchers({[39m
+                     ^ 'jasmine' is not defined.
+     24 |[90m                                pass: angular.equals(actual, expected)[39m
+                                               ^ 'angular' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                 ^ 'beforeEach' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                            ^ 'module' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                                   ^ 'ApplicationConfiguration' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                 ^ 'beforeEach' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                            ^ 'inject' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Clase object fetched from XHR', inject(function(Clases) {[39m
+                 ^ 'it' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Clase object fetched from XHR', inject(function(Clases) {[39m
+                                                                                                            ^ 'inject' is not defined.
+     70 |[90m            expect(scope.clases).toEqualData(sampleClases);[39m
+                     ^ 'expect' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Clase object fetched from XHR using a claseId URL parameter', inject(function(Clases) {[39m
+                 ^ 'it' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Clase object fetched from XHR using a claseId URL parameter', inject(function(Clases) {[39m
+                                                                                                                                    ^ 'inject' is not defined.
+     90 |[90m            expect(scope.clase).toEqualData(sampleClase);[39m
+                     ^ 'expect' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Clases) {[39m
+                 ^ 'it' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Clases) {[39m
+                                                                                                                                                    ^ 'inject' is not defined.
+    116 |[90m            expect(scope.name).toEqual('');[39m
+                     ^ 'expect' is not defined.
+    119 |[90m            expect($location.path()).toBe('/clases/' + sampleClaseResponse._id);[39m
+                     ^ 'expect' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Clase', inject(function(Clases) {[39m
+                 ^ 'it' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Clase', inject(function(Clases) {[39m
+                                                                   ^ 'inject' is not defined.
+    140 |[90m            expect($location.path()).toBe('/clases/' + sampleClasePutData._id);[39m
+                     ^ 'expect' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid claseId and remove the Clase from the scope', inject(function(Clases) {[39m
+                 ^ 'it' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid claseId and remove the Clase from the scope', inject(function(Clases) {[39m
+                                                                                                                             ^ 'inject' is not defined.
+    160 |[90m            expect(scope.clases.length).toBe(0);[39m
+                     ^ 'expect' is not defined.
+[1m   public/modules/clientes/clientes.client.module.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mApplicationConfiguration.registerModule('clientes', ['core']);[39m
+         ^ 'ApplicationConfiguration' is not defined.
+[1m   public/modules/clientes/config/clientes.client.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('clientes').config(['$stateProvider',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/clientes/controllers/clientes.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('clientes').controller('ClientesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Clientes', 'TableSettings', 'ClientesForm',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/clientes/services/clientes.client.service.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('clientes').factory('Clientes', ['$resource',[39m
+         ^ 'angular' is not defined.
+     27 |[90m           return angular.toJson(modelValue,true)[39m
+                           ^ 'angular' is not defined.
+     28 |[90m          .substring(1,angular.toJson(modelValue).length-1);[39m
+                                ^ 'angular' is not defined.
+     35 |[90mangular.module('clientes').factory('ClientesCod', ['$resource',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/clientes/tests/clientes.client.controller.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      5 |[90m    describe('Clientes Controller Tests', function() {[39m
+             ^ 'describe' is not defined.
+     18 |[90m        beforeEach(function() {[39m
+                 ^ 'beforeEach' is not defined.
+     19 |[90m            jasmine.addMatchers({[39m
+                     ^ 'jasmine' is not defined.
+     24 |[90m                                pass: angular.equals(actual, expected)[39m
+                                               ^ 'angular' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                 ^ 'beforeEach' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                            ^ 'module' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                                   ^ 'ApplicationConfiguration' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                 ^ 'beforeEach' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                            ^ 'inject' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Cliente object fetched from XHR', inject(function(Clientes) {[39m
+                 ^ 'it' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Cliente object fetched from XHR', inject(function(Clientes) {[39m
+                                                                                                              ^ 'inject' is not defined.
+     70 |[90m            expect(scope.clientes).toEqualData(sampleClientes);[39m
+                     ^ 'expect' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Cliente object fetched from XHR using a clienteId URL parameter', inject(function(Clientes) {[39m
+                 ^ 'it' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Cliente object fetched from XHR using a clienteId URL parameter', inject(function(Clientes) {[39m
+                                                                                                                                        ^ 'inject' is not defined.
+     90 |[90m            expect(scope.cliente).toEqualData(sampleCliente);[39m
+                     ^ 'expect' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Clientes) {[39m
+                 ^ 'it' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Clientes) {[39m
+                                                                                                                                                    ^ 'inject' is not defined.
+    116 |[90m            expect(scope.name).toEqual('');[39m
+                     ^ 'expect' is not defined.
+    119 |[90m            expect($location.path()).toBe('/clientes/' + sampleClienteResponse._id);[39m
+                     ^ 'expect' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Cliente', inject(function(Clientes) {[39m
+                 ^ 'it' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Cliente', inject(function(Clientes) {[39m
+                                                                     ^ 'inject' is not defined.
+    140 |[90m            expect($location.path()).toBe('/clientes/' + sampleClientePutData._id);[39m
+                     ^ 'expect' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid clienteId and remove the Cliente from the scope', inject(function(Clientes) {[39m
+                 ^ 'it' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid clienteId and remove the Cliente from the scope', inject(function(Clientes) {[39m
+                                                                                                                                 ^ 'inject' is not defined.
+    160 |[90m            expect(scope.clientes.length).toBe(0);[39m
+                     ^ 'expect' is not defined.
+[1m   public/modules/core/config/core.client.config.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('core').run(['Menus',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/core/config/core.client.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('core').config(['$stateProvider', '$urlRouterProvider',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/core/controllers/header.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mangular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/core/controllers/home.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('core').controller('HomeController', ['$scope', '$location', 'Authentication',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/core/core.client.module.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mApplicationConfiguration.registerModule('core');[39m
+         ^ 'ApplicationConfiguration' is not defined.
+[1m   public/modules/core/directives/ng-really-click.client.directive.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mangular.module('core')[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/core/services/menus.client.service.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('core').service('Menus', [[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/core/services/table-settings.client.service.js[22m
+     27 |[90m      var tableParams = new ngTableParams(params, settings);[39m
+                                     ^ A constructor name should start with an uppercase letter.
+[1m   public/modules/core/tests/header.client.controller.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90m    describe('HeaderController', function() {[39m
+             ^ 'describe' is not defined.
+     10 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                 ^ 'beforeEach' is not defined.
+     10 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                            ^ 'module' is not defined.
+     10 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                                   ^ 'ApplicationConfiguration' is not defined.
+     12 |[90m        beforeEach(inject(function($controller, $rootScope) {[39m
+                 ^ 'beforeEach' is not defined.
+     12 |[90m        beforeEach(inject(function($controller, $rootScope) {[39m
+                            ^ 'inject' is not defined.
+     20 |[90m        it('should expose the authentication service', function() {[39m
+                 ^ 'it' is not defined.
+     21 |[90m            expect(scope.authentication).toBeTruthy();[39m
+                     ^ 'expect' is not defined.
+[1m   public/modules/core/tests/home.client.controller.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90m    describe('HomeController', function() {[39m
+             ^ 'describe' is not defined.
+     10 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                 ^ 'beforeEach' is not defined.
+     10 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                            ^ 'module' is not defined.
+     10 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                                   ^ 'ApplicationConfiguration' is not defined.
+     12 |[90m        beforeEach(inject(function($controller, $rootScope) {[39m
+                 ^ 'beforeEach' is not defined.
+     12 |[90m        beforeEach(inject(function($controller, $rootScope) {[39m
+                            ^ 'inject' is not defined.
+     20 |[90m        it('should expose the authentication service', function() {[39m
+                 ^ 'it' is not defined.
+     21 |[90m            expect(scope.authentication).toBeTruthy();[39m
+                     ^ 'expect' is not defined.
+[1m   public/modules/derechos/config/derechos.client.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('derechos').config(['$stateProvider',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/derechos/controllers/derechos.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('derechos').controller('DerechosController', ['$scope', '$stateParams', '$location', 'Authentication', 'Derechos', 'TableSettings', 'DerechosForm',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/derechos/derechos.client.module.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mApplicationConfiguration.registerModule('derechos', ['core']);[39m
+         ^ 'ApplicationConfiguration' is not defined.
+[1m   public/modules/derechos/services/derechos.client.service.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('derechos').factory('Derechos', ['$resource',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/derechos/tests/derechos.client.controller.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      5 |[90m    describe('Derechos Controller Tests', function() {[39m
+             ^ 'describe' is not defined.
+     18 |[90m        beforeEach(function() {[39m
+                 ^ 'beforeEach' is not defined.
+     19 |[90m            jasmine.addMatchers({[39m
+                     ^ 'jasmine' is not defined.
+     24 |[90m                                pass: angular.equals(actual, expected)[39m
+                                               ^ 'angular' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                 ^ 'beforeEach' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                            ^ 'module' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                                   ^ 'ApplicationConfiguration' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                 ^ 'beforeEach' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                            ^ 'inject' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Derecho object fetched from XHR', inject(function(Derechos) {[39m
+                 ^ 'it' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Derecho object fetched from XHR', inject(function(Derechos) {[39m
+                                                                                                              ^ 'inject' is not defined.
+     70 |[90m            expect(scope.derechos).toEqualData(sampleDerechos);[39m
+                     ^ 'expect' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Derecho object fetched from XHR using a derechoId URL parameter', inject(function(Derechos) {[39m
+                 ^ 'it' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Derecho object fetched from XHR using a derechoId URL parameter', inject(function(Derechos) {[39m
+                                                                                                                                        ^ 'inject' is not defined.
+     90 |[90m            expect(scope.derecho).toEqualData(sampleDerecho);[39m
+                     ^ 'expect' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Derechos) {[39m
+                 ^ 'it' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Derechos) {[39m
+                                                                                                                                                    ^ 'inject' is not defined.
+    116 |[90m            expect(scope.name).toEqual('');[39m
+                     ^ 'expect' is not defined.
+    119 |[90m            expect($location.path()).toBe('/derechos/' + sampleDerechoResponse._id);[39m
+                     ^ 'expect' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Derecho', inject(function(Derechos) {[39m
+                 ^ 'it' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Derecho', inject(function(Derechos) {[39m
+                                                                     ^ 'inject' is not defined.
+    140 |[90m            expect($location.path()).toBe('/derechos/' + sampleDerechoPutData._id);[39m
+                     ^ 'expect' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid derechoId and remove the Derecho from the scope', inject(function(Derechos) {[39m
+                 ^ 'it' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid derechoId and remove the Derecho from the scope', inject(function(Derechos) {[39m
+                                                                                                                                 ^ 'inject' is not defined.
+    160 |[90m            expect(scope.derechos.length).toBe(0);[39m
+                     ^ 'expect' is not defined.
+[1m   public/modules/fecvens/config/fecvens.client.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('fecvens').config(['$stateProvider',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/fecvens/controllers/fecvens.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('fecvens').controller('FecvensController', ['$scope', '$stateParams', '$location', 'Authentication', 'Fecvens', 'TableSettings', 'FecvensForm',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/fecvens/fecvens.client.module.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mApplicationConfiguration.registerModule('fecvens', ['core']);[39m
+         ^ 'ApplicationConfiguration' is not defined.
+[1m   public/modules/fecvens/services/fecvens.client.service.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('fecvens').factory('Fecvens', ['$resource',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/fecvens/tests/fecvens.client.controller.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      5 |[90m    describe('Fecvens Controller Tests', function() {[39m
+             ^ 'describe' is not defined.
+     18 |[90m        beforeEach(function() {[39m
+                 ^ 'beforeEach' is not defined.
+     19 |[90m            jasmine.addMatchers({[39m
+                     ^ 'jasmine' is not defined.
+     24 |[90m                                pass: angular.equals(actual, expected)[39m
+                                               ^ 'angular' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                 ^ 'beforeEach' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                            ^ 'module' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                                   ^ 'ApplicationConfiguration' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                 ^ 'beforeEach' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                            ^ 'inject' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Fecven object fetched from XHR', inject(function(Fecvens) {[39m
+                 ^ 'it' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Fecven object fetched from XHR', inject(function(Fecvens) {[39m
+                                                                                                             ^ 'inject' is not defined.
+     70 |[90m            expect(scope.fecvens).toEqualData(sampleFecvens);[39m
+                     ^ 'expect' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Fecven object fetched from XHR using a fecvenId URL parameter', inject(function(Fecvens) {[39m
+                 ^ 'it' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Fecven object fetched from XHR using a fecvenId URL parameter', inject(function(Fecvens) {[39m
+                                                                                                                                      ^ 'inject' is not defined.
+     90 |[90m            expect(scope.fecven).toEqualData(sampleFecven);[39m
+                     ^ 'expect' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Fecvens) {[39m
+                 ^ 'it' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Fecvens) {[39m
+                                                                                                                                                    ^ 'inject' is not defined.
+    116 |[90m            expect(scope.name).toEqual('');[39m
+                     ^ 'expect' is not defined.
+    119 |[90m            expect($location.path()).toBe('/fecvens/' + sampleFecvenResponse._id);[39m
+                     ^ 'expect' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Fecven', inject(function(Fecvens) {[39m
+                 ^ 'it' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Fecven', inject(function(Fecvens) {[39m
+                                                                    ^ 'inject' is not defined.
+    140 |[90m            expect($location.path()).toBe('/fecvens/' + sampleFecvenPutData._id);[39m
+                     ^ 'expect' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid fecvenId and remove the Fecven from the scope', inject(function(Fecvens) {[39m
+                 ^ 'it' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid fecvenId and remove the Fecven from the scope', inject(function(Fecvens) {[39m
+                                                                                                                               ^ 'inject' is not defined.
+    160 |[90m            expect(scope.fecvens.length).toBe(0);[39m
+                     ^ 'expect' is not defined.
+[1m   public/modules/feriados/config/feriados.client.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('feriados').config(['$stateProvider',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/feriados/controllers/feriados.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('feriados').controller('FeriadosController', ['$scope', '$stateParams', '$location', 'Authentication', 'Feriados', 'TableSettings', 'FeriadosForm',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/feriados/feriados.client.module.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mApplicationConfiguration.registerModule('feriados', ['core']);[39m
+         ^ 'ApplicationConfiguration' is not defined.
+[1m   public/modules/feriados/services/feriados.client.service.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('feriados').factory('Feriados', ['$resource',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/feriados/tests/feriados.client.controller.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      5 |[90m    describe('Feriados Controller Tests', function() {[39m
+             ^ 'describe' is not defined.
+     18 |[90m        beforeEach(function() {[39m
+                 ^ 'beforeEach' is not defined.
+     19 |[90m            jasmine.addMatchers({[39m
+                     ^ 'jasmine' is not defined.
+     24 |[90m                                pass: angular.equals(actual, expected)[39m
+                                               ^ 'angular' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                 ^ 'beforeEach' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                            ^ 'module' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                                   ^ 'ApplicationConfiguration' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                 ^ 'beforeEach' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                            ^ 'inject' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Feriado object fetched from XHR', inject(function(Feriados) {[39m
+                 ^ 'it' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Feriado object fetched from XHR', inject(function(Feriados) {[39m
+                                                                                                              ^ 'inject' is not defined.
+     70 |[90m            expect(scope.feriados).toEqualData(sampleFeriados);[39m
+                     ^ 'expect' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Feriado object fetched from XHR using a feriadoId URL parameter', inject(function(Feriados) {[39m
+                 ^ 'it' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Feriado object fetched from XHR using a feriadoId URL parameter', inject(function(Feriados) {[39m
+                                                                                                                                        ^ 'inject' is not defined.
+     90 |[90m            expect(scope.feriado).toEqualData(sampleFeriado);[39m
+                     ^ 'expect' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Feriados) {[39m
+                 ^ 'it' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Feriados) {[39m
+                                                                                                                                                    ^ 'inject' is not defined.
+    116 |[90m            expect(scope.name).toEqual('');[39m
+                     ^ 'expect' is not defined.
+    119 |[90m            expect($location.path()).toBe('/feriados/' + sampleFeriadoResponse._id);[39m
+                     ^ 'expect' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Feriado', inject(function(Feriados) {[39m
+                 ^ 'it' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Feriado', inject(function(Feriados) {[39m
+                                                                     ^ 'inject' is not defined.
+    140 |[90m            expect($location.path()).toBe('/feriados/' + sampleFeriadoPutData._id);[39m
+                     ^ 'expect' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid feriadoId and remove the Feriado from the scope', inject(function(Feriados) {[39m
+                 ^ 'it' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid feriadoId and remove the Feriado from the scope', inject(function(Feriados) {[39m
+                                                                                                                                 ^ 'inject' is not defined.
+    160 |[90m            expect(scope.feriados.length).toBe(0);[39m
+                     ^ 'expect' is not defined.
+[1m   public/modules/fichas/config/fichas.client.config.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('fichas').run(['Menus',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/fichas/config/fichas.client.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('fichas').config(['$stateProvider',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/fichas/controllers/fichas.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('fichas').controller('FichasController', ['$scope', '$stateParams', '$location', '$resource', [39m
+         ^ 'angular' is not defined.
+     36 |[90m                console.log('uploadPic:ficha', ficha);[39m
+                         ^ 'console' is not defined.
+     37 |[90m                console.log('uploadPic:file.name', file.name);[39m
+                         ^ 'console' is not defined.
+[1m   public/modules/fichas/fichas.client.module.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mApplicationConfiguration.registerModule('fichas', ['core']);[39m
+         ^ 'ApplicationConfiguration' is not defined.
+[1m   public/modules/fichas/services/fichas.client.service.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('fichas').factory('Fichas', ['$resource',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/fichas/tests/fichas.client.controller.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      5 |[90m    describe('Fichas Controller Tests', function() {[39m
+             ^ 'describe' is not defined.
+     18 |[90m        beforeEach(function() {[39m
+                 ^ 'beforeEach' is not defined.
+     19 |[90m            jasmine.addMatchers({[39m
+                     ^ 'jasmine' is not defined.
+     24 |[90m                                pass: angular.equals(actual, expected)[39m
+                                               ^ 'angular' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                 ^ 'beforeEach' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                            ^ 'module' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                                   ^ 'ApplicationConfiguration' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                 ^ 'beforeEach' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                            ^ 'inject' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Ficha object fetched from XHR', inject(function(Fichas) {[39m
+                 ^ 'it' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Ficha object fetched from XHR', inject(function(Fichas) {[39m
+                                                                                                            ^ 'inject' is not defined.
+     70 |[90m            expect(scope.fichas).toEqualData(sampleFichas);[39m
+                     ^ 'expect' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Ficha object fetched from XHR using a fichaId URL parameter', inject(function(Fichas) {[39m
+                 ^ 'it' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Ficha object fetched from XHR using a fichaId URL parameter', inject(function(Fichas) {[39m
+                                                                                                                                    ^ 'inject' is not defined.
+     90 |[90m            expect(scope.ficha).toEqualData(sampleFicha);[39m
+                     ^ 'expect' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Fichas) {[39m
+                 ^ 'it' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Fichas) {[39m
+                                                                                                                                                    ^ 'inject' is not defined.
+    116 |[90m            expect(scope.name).toEqual('');[39m
+                     ^ 'expect' is not defined.
+    119 |[90m            expect($location.path()).toBe('/fichas/' + sampleFichaResponse._id);[39m
+                     ^ 'expect' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Ficha', inject(function(Fichas) {[39m
+                 ^ 'it' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Ficha', inject(function(Fichas) {[39m
+                                                                   ^ 'inject' is not defined.
+    140 |[90m            expect($location.path()).toBe('/fichas/' + sampleFichaPutData._id);[39m
+                     ^ 'expect' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid fichaId and remove the Ficha from the scope', inject(function(Fichas) {[39m
+                 ^ 'it' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid fichaId and remove the Ficha from the scope', inject(function(Fichas) {[39m
+                                                                                                                             ^ 'inject' is not defined.
+    160 |[90m            expect(scope.fichas.length).toBe(0);[39m
+                     ^ 'expect' is not defined.
+[1m   public/modules/parametros/config/parametros.client.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('parametros').config(['$stateProvider',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/parametros/controllers/parametros.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('parametros').controller('ParametrosController', ['$scope', '$q', '$stateParams', '$location', 'Authentication', 'Parametros', 'TableSettings', 'ParametrosForm',[39m
+         ^ 'angular' is not defined.
+     78 |[90m            angular.forEach(parametros, function(param) {[39m
+                     ^ 'angular' is not defined.
+     91 |[90m                    console.log(data);[39m
+                             ^ 'console' is not defined.
+[1m   public/modules/parametros/parametros.client.module.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mApplicationConfiguration.registerModule('parametros', ['core']);[39m
+         ^ 'ApplicationConfiguration' is not defined.
+[1m   public/modules/parametros/services/parametros.client.service.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('parametros').factory('Parametros', ['$resource',[39m
+         ^ 'angular' is not defined.
+     16 |[90mangular.module('parametros').factory('ParametrosCod', ['$resource',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/parametros/tests/parametros.client.controller.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      5 |[90m    describe('Parametros Controller Tests', function() {[39m
+             ^ 'describe' is not defined.
+     18 |[90m        beforeEach(function() {[39m
+                 ^ 'beforeEach' is not defined.
+     19 |[90m            jasmine.addMatchers({[39m
+                     ^ 'jasmine' is not defined.
+     24 |[90m                                pass: angular.equals(actual, expected)[39m
+                                               ^ 'angular' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                 ^ 'beforeEach' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                            ^ 'module' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                                   ^ 'ApplicationConfiguration' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                 ^ 'beforeEach' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                            ^ 'inject' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Parametro object fetched from XHR', inject(function(Parametros) {[39m
+                 ^ 'it' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Parametro object fetched from XHR', inject(function(Parametros) {[39m
+                                                                                                                ^ 'inject' is not defined.
+     70 |[90m            expect(scope.parametros).toEqualData(sampleParametros);[39m
+                     ^ 'expect' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Parametro object fetched from XHR using a parametroId URL parameter', inject(function(Parametros) {[39m
+                 ^ 'it' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Parametro object fetched from XHR using a parametroId URL parameter', inject(function(Parametros) {[39m
+                                                                                                                                            ^ 'inject' is not defined.
+     90 |[90m            expect(scope.parametro).toEqualData(sampleParametro);[39m
+                     ^ 'expect' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Parametros) {[39m
+                 ^ 'it' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Parametros) {[39m
+                                                                                                                                                    ^ 'inject' is not defined.
+    116 |[90m            expect(scope.name).toEqual('');[39m
+                     ^ 'expect' is not defined.
+    119 |[90m            expect($location.path()).toBe('/parametros/' + sampleParametroResponse._id);[39m
+                     ^ 'expect' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Parametro', inject(function(Parametros) {[39m
+                 ^ 'it' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Parametro', inject(function(Parametros) {[39m
+                                                                       ^ 'inject' is not defined.
+    140 |[90m            expect($location.path()).toBe('/parametros/' + sampleParametroPutData._id);[39m
+                     ^ 'expect' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid parametroId and remove the Parametro from the scope', inject(function(Parametros) {[39m
+                 ^ 'it' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid parametroId and remove the Parametro from the scope', inject(function(Parametros) {[39m
+                                                                                                                                     ^ 'inject' is not defined.
+    160 |[90m            expect(scope.parametros.length).toBe(0);[39m
+                     ^ 'expect' is not defined.
+[1m   public/modules/subclases/config/subclases.client.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('subclases').config(['$stateProvider',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/subclases/controllers/subclases.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('subclases').controller('SubclasesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Subclases', 'TableSettings', 'SubclasesForm',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/subclases/services/subclases.client.service.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('subclases').factory('Subclases', ['$resource',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/subclases/subclases.client.module.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mApplicationConfiguration.registerModule('subclases', ['core']);[39m
+         ^ 'ApplicationConfiguration' is not defined.
+[1m   public/modules/subclases/tests/subclases.client.controller.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      5 |[90m    describe('Subclases Controller Tests', function() {[39m
+             ^ 'describe' is not defined.
+     18 |[90m        beforeEach(function() {[39m
+                 ^ 'beforeEach' is not defined.
+     19 |[90m            jasmine.addMatchers({[39m
+                     ^ 'jasmine' is not defined.
+     24 |[90m                                pass: angular.equals(actual, expected)[39m
+                                               ^ 'angular' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                 ^ 'beforeEach' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                            ^ 'module' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                                   ^ 'ApplicationConfiguration' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                 ^ 'beforeEach' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                            ^ 'inject' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Subclase object fetched from XHR', inject(function(Subclases) {[39m
+                 ^ 'it' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Subclase object fetched from XHR', inject(function(Subclases) {[39m
+                                                                                                               ^ 'inject' is not defined.
+     70 |[90m            expect(scope.subclases).toEqualData(sampleSubclases);[39m
+                     ^ 'expect' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Subclase object fetched from XHR using a subclaseId URL parameter', inject(function(Subclases) {[39m
+                 ^ 'it' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Subclase object fetched from XHR using a subclaseId URL parameter', inject(function(Subclases) {[39m
+                                                                                                                                          ^ 'inject' is not defined.
+     90 |[90m            expect(scope.subclase).toEqualData(sampleSubclase);[39m
+                     ^ 'expect' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Subclases) {[39m
+                 ^ 'it' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Subclases) {[39m
+                                                                                                                                                    ^ 'inject' is not defined.
+    116 |[90m            expect(scope.name).toEqual('');[39m
+                     ^ 'expect' is not defined.
+    119 |[90m            expect($location.path()).toBe('/subclases/' + sampleSubclaseResponse._id);[39m
+                     ^ 'expect' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Subclase', inject(function(Subclases) {[39m
+                 ^ 'it' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Subclase', inject(function(Subclases) {[39m
+                                                                      ^ 'inject' is not defined.
+    140 |[90m            expect($location.path()).toBe('/subclases/' + sampleSubclasePutData._id);[39m
+                     ^ 'expect' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid subclaseId and remove the Subclase from the scope', inject(function(Subclases) {[39m
+                 ^ 'it' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid subclaseId and remove the Subclase from the scope', inject(function(Subclases) {[39m
+                                                                                                                                   ^ 'inject' is not defined.
+    160 |[90m            expect(scope.subclases.length).toBe(0);[39m
+                     ^ 'expect' is not defined.
+[1m   public/modules/tramites/config/tramites.client.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('tramites').config(['$stateProvider',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/tramites/controllers/tramites.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('tramites').controller('TramitesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Tramites', 'TableSettings', 'TramitesForm',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/tramites/services/tramites.client.service.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('tramites').factory('Tramites', ['$resource',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/tramites/tests/tramites.client.controller.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      5 |[90m    describe('Tramites Controller Tests', function() {[39m
+             ^ 'describe' is not defined.
+     18 |[90m        beforeEach(function() {[39m
+                 ^ 'beforeEach' is not defined.
+     19 |[90m            jasmine.addMatchers({[39m
+                     ^ 'jasmine' is not defined.
+     24 |[90m                                pass: angular.equals(actual, expected)[39m
+                                               ^ 'angular' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                 ^ 'beforeEach' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                            ^ 'module' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                                   ^ 'ApplicationConfiguration' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                 ^ 'beforeEach' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                            ^ 'inject' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Tramite object fetched from XHR', inject(function(Tramites) {[39m
+                 ^ 'it' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Tramite object fetched from XHR', inject(function(Tramites) {[39m
+                                                                                                              ^ 'inject' is not defined.
+     70 |[90m            expect(scope.tramites).toEqualData(sampleTramites);[39m
+                     ^ 'expect' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Tramite object fetched from XHR using a tramiteId URL parameter', inject(function(Tramites) {[39m
+                 ^ 'it' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Tramite object fetched from XHR using a tramiteId URL parameter', inject(function(Tramites) {[39m
+                                                                                                                                        ^ 'inject' is not defined.
+     90 |[90m            expect(scope.tramite).toEqualData(sampleTramite);[39m
+                     ^ 'expect' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Tramites) {[39m
+                 ^ 'it' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Tramites) {[39m
+                                                                                                                                                    ^ 'inject' is not defined.
+    116 |[90m            expect(scope.name).toEqual('');[39m
+                     ^ 'expect' is not defined.
+    119 |[90m            expect($location.path()).toBe('/tramites/' + sampleTramiteResponse._id);[39m
+                     ^ 'expect' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Tramite', inject(function(Tramites) {[39m
+                 ^ 'it' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Tramite', inject(function(Tramites) {[39m
+                                                                     ^ 'inject' is not defined.
+    140 |[90m            expect($location.path()).toBe('/tramites/' + sampleTramitePutData._id);[39m
+                     ^ 'expect' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid tramiteId and remove the Tramite from the scope', inject(function(Tramites) {[39m
+                 ^ 'it' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid tramiteId and remove the Tramite from the scope', inject(function(Tramites) {[39m
+                                                                                                                                 ^ 'inject' is not defined.
+    160 |[90m            expect(scope.tramites.length).toBe(0);[39m
+                     ^ 'expect' is not defined.
+[1m   public/modules/tramites/tramites.client.module.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mApplicationConfiguration.registerModule('tramites', ['core']);[39m
+         ^ 'ApplicationConfiguration' is not defined.
+[1m   public/modules/ubis/config/ubis.client.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('ubis').config(['$stateProvider',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/ubis/controllers/ubis.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('ubis').controller('UbisController', ['$scope', '$stateParams', '$location', 'Authentication',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/ubis/services/ubis.client.service.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('ubis').factory('Ubis', ['$resource',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/ubis/tests/ubis.client.controller.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      5 |[90m    describe('Ubis Controller Tests', function() {[39m
+             ^ 'describe' is not defined.
+     18 |[90m        beforeEach(function() {[39m
+                 ^ 'beforeEach' is not defined.
+     19 |[90m            jasmine.addMatchers({[39m
+                     ^ 'jasmine' is not defined.
+     24 |[90m                                pass: angular.equals(actual, expected)[39m
+                                               ^ 'angular' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                 ^ 'beforeEach' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                            ^ 'module' is not defined.
+     33 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                                   ^ 'ApplicationConfiguration' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                 ^ 'beforeEach' is not defined.
+     38 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                            ^ 'inject' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Ubi object fetched from XHR', inject(function(Ubis) {[39m
+                 ^ 'it' is not defined.
+     53 |[90m        it('$scope.find() should create an array with at least one Ubi object fetched from XHR', inject(function(Ubis) {[39m
+                                                                                                          ^ 'inject' is not defined.
+     70 |[90m            expect(scope.ubis).toEqualData(sampleUbis);[39m
+                     ^ 'expect' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Ubi object fetched from XHR using a ubiId URL parameter', inject(function(Ubis) {[39m
+                 ^ 'it' is not defined.
+     73 |[90m        it('$scope.findOne() should create an array with one Ubi object fetched from XHR using a ubiId URL parameter', inject(function(Ubis) {[39m
+                                                                                                                                ^ 'inject' is not defined.
+     90 |[90m            expect(scope.ubi).toEqualData(sampleUbi);[39m
+                     ^ 'expect' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Ubis) {[39m
+                 ^ 'it' is not defined.
+     93 |[90m        it('$scope.create() with valid form data should send a POST request with the form input values and then locate to new object URL', inject(function(Ubis) {[39m
+                                                                                                                                                    ^ 'inject' is not defined.
+    116 |[90m            expect(scope.name).toEqual('');[39m
+                     ^ 'expect' is not defined.
+    119 |[90m            expect($location.path()).toBe('/ubis/' + sampleUbiResponse._id);[39m
+                     ^ 'expect' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Ubi', inject(function(Ubis) {[39m
+                 ^ 'it' is not defined.
+    122 |[90m        it('$scope.update() should update a valid Ubi', inject(function(Ubis) {[39m
+                                                                 ^ 'inject' is not defined.
+    140 |[90m            expect($location.path()).toBe('/ubis/' + sampleUbiPutData._id);[39m
+                     ^ 'expect' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid ubiId and remove the Ubi from the scope', inject(function(Ubis) {[39m
+                 ^ 'it' is not defined.
+    143 |[90m        it('$scope.remove() should send a DELETE request with a valid ubiId and remove the Ubi from the scope', inject(function(Ubis) {[39m
+                                                                                                                         ^ 'inject' is not defined.
+    160 |[90m            expect(scope.ubis.length).toBe(0);[39m
+                     ^ 'expect' is not defined.
+[1m   public/modules/ubis/ubis.client.module.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mApplicationConfiguration.registerModule('ubis', ['core']);[39m
+         ^ 'ApplicationConfiguration' is not defined.
+[1m   public/modules/users/config/users.client.config.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('users').config(['$httpProvider',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/users/config/users.client.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('users').config(['$stateProvider',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/users/controllers/authentication.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mangular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/users/controllers/password.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mangular.module('users').controller('PasswordController', ['$scope', '$stateParams', '$http', '$location', 'Authentication',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/users/controllers/settings.client.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mangular.module('users').controller('SettingsController', ['$scope', '$http', '$location', 'Users', 'Authentication',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/users/services/authentication.client.service.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('users').factory('Authentication', [[39m
+         ^ 'angular' is not defined.
+      9 |[90m            user: window.user,[39m
+                           ^ 'window' is not defined.
+[1m   public/modules/users/services/users.client.service.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mangular.module('users').factory('Users', ['$resource',[39m
+         ^ 'angular' is not defined.
+[1m   public/modules/users/tests/authentication.client.controller.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      5 |[90m    describe('AuthenticationController', function() {[39m
+             ^ 'describe' is not defined.
+     13 |[90m        beforeEach(function() {[39m
+                 ^ 'beforeEach' is not defined.
+     14 |[90m            jasmine.addMatchers({[39m
+                     ^ 'jasmine' is not defined.
+     19 |[90m                                pass: angular.equals(actual, expected)[39m
+                                               ^ 'angular' is not defined.
+     28 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                 ^ 'beforeEach' is not defined.
+     28 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                            ^ 'module' is not defined.
+     28 |[90m        beforeEach(module(ApplicationConfiguration.applicationModuleName));[39m
+                                   ^ 'ApplicationConfiguration' is not defined.
+     33 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                 ^ 'beforeEach' is not defined.
+     33 |[90m        beforeEach(inject(function($controller, $rootScope, [4m$location[24m, [4m$stateParams[24m, _$httpBackend_) {[39m
+                            ^ 'inject' is not defined.
+     49 |[90m        it('$scope.signin() should login with a correct user and password', function() {[39m
+                 ^ 'it' is not defined.
+     57 |[90m            expect(scope.authentication.user).toEqual('Fred');[39m
+                     ^ 'expect' is not defined.
+     58 |[90m            expect($location.url()).toEqual('/');[39m
+                     ^ 'expect' is not defined.
+     61 |[90m        it('$scope.signin() should fail to log in with nothing', function() {[39m
+                 ^ 'it' is not defined.
+     71 |[90m            expect(scope.error).toEqual('Missing credentials');[39m
+                     ^ 'expect' is not defined.
+     74 |[90m        it('$scope.signin() should fail to log in with wrong credentials', function() {[39m
+                 ^ 'it' is not defined.
+     88 |[90m            expect(scope.error).toEqual('Unknown user');[39m
+                     ^ 'expect' is not defined.
+     91 |[90m        it('$scope.signup() should register with correct data', function() {[39m
+                 ^ 'it' is not defined.
+    100 |[90m            expect(scope.authentication.user).toBe('Fred');[39m
+                     ^ 'expect' is not defined.
+    101 |[90m            expect(scope.error).toEqual(undefined);[39m
+                     ^ 'expect' is not defined.
+    102 |[90m            expect($location.url()).toBe('/');[39m
+                     ^ 'expect' is not defined.
+    105 |[90m        it('$scope.signup() should fail to register with duplicate Username', function() {[39m
+                 ^ 'it' is not defined.
+    115 |[90m            expect(scope.error).toBe('Username already exists');[39m
+                     ^ 'expect' is not defined.
+[1m   public/modules/users/users.client.module.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      4 |[90mApplicationConfiguration.registerModule('users');[39m
+         ^ 'ApplicationConfiguration' is not defined.
+[1m   gruntfile.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = function(grunt) {[39m
+         ^ 'module' is not defined.
+    146 |[90m    require('load-grunt-tasks')(grunt);[39m
+             ^ 'require' is not defined.
+    153 |[90m        var init = require('./config/init')();[39m
+                            ^ 'require' is not defined.
+    154 |[90m        var config = require('./config/config');[39m
+                              ^ 'require' is not defined.
+[1m   server.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      5 |[90mvar init = require('./config/init')(),[39m
+                    ^ 'require' is not defined.
+      6 |[90m    config = require('./config/config'),[39m
+                      ^ 'require' is not defined.
+      7 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      8 |[90m    chalk = require('chalk');[39m
+                     ^ 'require' is not defined.
+     15 |[90mrequire('mongoose-middleware').initialize(mongoose);[39m
+         ^ 'require' is not defined.
+     20 |[90m        console.error(chalk.red('Could not connect to MongoDB!'));[39m
+                 ^ 'console' is not defined.
+     21 |[90m        console.log(chalk.red(err));[39m
+                 ^ 'console' is not defined.
+     26 |[90mvar app = require('./config/express')(db);[39m
+                   ^ 'require' is not defined.
+     29 |[90mrequire('./config/passport')();[39m
+         ^ 'require' is not defined.
+     35 |[90mexports = module.exports = app;[39m
+         ^ 'exports' is not defined.
+     35 |[90mexports = module.exports = app;[39m
+                   ^ 'module' is not defined.
+     38 |[90mconsole.log('MEAN.JS application started on port ' + config.port);[39m
+         ^ 'console' is not defined.
+[1m   config/config.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar _ = require('lodash'),[39m
+                 ^ 'require' is not defined.
+      7 |[90m    glob = require('glob');[39m
+                    ^ 'require' is not defined.
+     12 |[90mmodule.exports = _.extend([39m
+         ^ 'module' is not defined.
+     13 |[90m    require('./env/all'),[39m
+             ^ 'require' is not defined.
+     14 |[90m    require('./env/' + process.env.NODE_ENV) || {}[39m
+             ^ 'require' is not defined.
+     14 |[90m    require('./env/' + process.env.NODE_ENV) || {}[39m
+                                ^ 'process' is not defined.
+     20 |[90mmodule.exports.getGlobbedFiles = function(globPatterns, removeRoot) {[39m
+         ^ 'module' is not defined.
+     59 |[90mmodule.exports.getJavaScriptAssets = function(includeTests) {[39m
+         ^ 'module' is not defined.
+     73 |[90mmodule.exports.getCSSAssets = function() {[39m
+         ^ 'module' is not defined.
+[1m   config/env/all.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = {[39m
+         ^ 'module' is not defined.
+      9 |[90m    port: process.env.PORT || 3000,[39m
+                   ^ 'process' is not defined.
+[1m   config/env/development.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = {[39m
+         ^ 'module' is not defined.
+      9 |[90m        clientID: process.env.FACEBOOK_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     10 |[90m        clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     14 |[90m        clientID: process.env.TWITTER_KEY || 'CONSUMER_KEY',[39m
+                           ^ 'process' is not defined.
+     15 |[90m        clientSecret: process.env.TWITTER_SECRET || 'CONSUMER_SECRET',[39m
+                               ^ 'process' is not defined.
+     19 |[90m        clientID: process.env.GOOGLE_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     20 |[90m        clientSecret: process.env.GOOGLE_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     24 |[90m        clientID: process.env.LINKEDIN_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     25 |[90m        clientSecret: process.env.LINKEDIN_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     29 |[90m        clientID: process.env.GITHUB_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     30 |[90m        clientSecret: process.env.GITHUB_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     34 |[90m        from: process.env.MAILER_FROM || 'MAILER_FROM',[39m
+                       ^ 'process' is not defined.
+     36 |[90m            service: process.env.MAILER_SERVICE_PROVIDER || 'MAILER_SERVICE_PROVIDER',[39m
+                              ^ 'process' is not defined.
+     38 |[90m                user: process.env.MAILER_EMAIL_ID || 'MAILER_EMAIL_ID',[39m
+                               ^ 'process' is not defined.
+     39 |[90m                pass: process.env.MAILER_PASSWORD || 'MAILER_PASSWORD'[39m
+                               ^ 'process' is not defined.
+[1m   config/env/production.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = {[39m
+         ^ 'module' is not defined.
+      4 |[90m    db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/marca',[39m
+                 ^ 'process' is not defined.
+      4 |[90m    db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/marca',[39m
+                                            ^ 'process' is not defined.
+      4 |[90m    db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/marca',[39m
+                                                                                        ^ 'process' is not defined.
+     40 |[90m        clientID: process.env.FACEBOOK_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     41 |[90m        clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     45 |[90m        clientID: process.env.TWITTER_KEY || 'CONSUMER_KEY',[39m
+                           ^ 'process' is not defined.
+     46 |[90m        clientSecret: process.env.TWITTER_SECRET || 'CONSUMER_SECRET',[39m
+                               ^ 'process' is not defined.
+     50 |[90m        clientID: process.env.GOOGLE_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     51 |[90m        clientSecret: process.env.GOOGLE_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     55 |[90m        clientID: process.env.LINKEDIN_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     56 |[90m        clientSecret: process.env.LINKEDIN_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     60 |[90m        clientID: process.env.GITHUB_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     61 |[90m        clientSecret: process.env.GITHUB_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     65 |[90m        from: process.env.MAILER_FROM || 'MAILER_FROM',[39m
+                       ^ 'process' is not defined.
+     67 |[90m            service: process.env.MAILER_SERVICE_PROVIDER || 'MAILER_SERVICE_PROVIDER',[39m
+                              ^ 'process' is not defined.
+     69 |[90m                user: process.env.MAILER_EMAIL_ID || 'MAILER_EMAIL_ID',[39m
+                               ^ 'process' is not defined.
+     70 |[90m                pass: process.env.MAILER_PASSWORD || 'MAILER_PASSWORD'[39m
+                               ^ 'process' is not defined.
+[1m   config/env/secure.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = {[39m
+         ^ 'module' is not defined.
+      5 |[90m    db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://localhost/marca',[39m
+                 ^ 'process' is not defined.
+      5 |[90m    db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://localhost/marca',[39m
+                                            ^ 'process' is not defined.
+     25 |[90m        clientID: process.env.FACEBOOK_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     26 |[90m        clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     30 |[90m        clientID: process.env.TWITTER_KEY || 'CONSUMER_KEY',[39m
+                           ^ 'process' is not defined.
+     31 |[90m        clientSecret: process.env.TWITTER_SECRET || 'CONSUMER_SECRET',[39m
+                               ^ 'process' is not defined.
+     35 |[90m        clientID: process.env.GOOGLE_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     36 |[90m        clientSecret: process.env.GOOGLE_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     40 |[90m        clientID: process.env.LINKEDIN_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     41 |[90m        clientSecret: process.env.LINKEDIN_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     45 |[90m        clientID: process.env.GITHUB_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     46 |[90m        clientSecret: process.env.GITHUB_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     50 |[90m        from: process.env.MAILER_FROM || 'MAILER_FROM',[39m
+                       ^ 'process' is not defined.
+     52 |[90m            service: process.env.MAILER_SERVICE_PROVIDER || 'MAILER_SERVICE_PROVIDER',[39m
+                              ^ 'process' is not defined.
+     54 |[90m                user: process.env.MAILER_EMAIL_ID || 'MAILER_EMAIL_ID',[39m
+                               ^ 'process' is not defined.
+     55 |[90m                pass: process.env.MAILER_PASSWORD || 'MAILER_PASSWORD'[39m
+                               ^ 'process' is not defined.
+[1m   config/env/test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = {[39m
+         ^ 'module' is not defined.
+     10 |[90m        clientID: process.env.FACEBOOK_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     11 |[90m        clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     15 |[90m        clientID: process.env.TWITTER_KEY || 'CONSUMER_KEY',[39m
+                           ^ 'process' is not defined.
+     16 |[90m        clientSecret: process.env.TWITTER_SECRET || 'CONSUMER_SECRET',[39m
+                               ^ 'process' is not defined.
+     20 |[90m        clientID: process.env.GOOGLE_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     21 |[90m        clientSecret: process.env.GOOGLE_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     25 |[90m        clientID: process.env.LINKEDIN_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     26 |[90m        clientSecret: process.env.LINKEDIN_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     30 |[90m        clientID: process.env.GITHUB_ID || 'APP_ID',[39m
+                           ^ 'process' is not defined.
+     31 |[90m        clientSecret: process.env.GITHUB_SECRET || 'APP_SECRET',[39m
+                               ^ 'process' is not defined.
+     35 |[90m        from: process.env.MAILER_FROM || 'MAILER_FROM',[39m
+                       ^ 'process' is not defined.
+     37 |[90m            service: process.env.MAILER_SERVICE_PROVIDER || 'MAILER_SERVICE_PROVIDER',[39m
+                              ^ 'process' is not defined.
+     39 |[90m                user: process.env.MAILER_EMAIL_ID || 'MAILER_EMAIL_ID',[39m
+                               ^ 'process' is not defined.
+     40 |[90m                pass: process.env.MAILER_PASSWORD || 'MAILER_PASSWORD'[39m
+                               ^ 'process' is not defined.
+[1m   config/express.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar fs = require('fs'),[39m
+                  ^ 'require' is not defined.
+      7 |[90m    http = require('http'),[39m
+                    ^ 'require' is not defined.
+      8 |[90m    https = require('https'),[39m
+                     ^ 'require' is not defined.
+      9 |[90m    express = require('express'),[39m
+                       ^ 'require' is not defined.
+     10 |[90m    morgan = require('morgan'),[39m
+                      ^ 'require' is not defined.
+     11 |[90m    bodyParser = require('body-parser'),[39m
+                          ^ 'require' is not defined.
+     12 |[90m    session = require('express-session'),[39m
+                       ^ 'require' is not defined.
+     13 |[90m    compress = require('compression'),[39m
+                        ^ 'require' is not defined.
+     14 |[90m    methodOverride = require('method-override'),[39m
+                              ^ 'require' is not defined.
+     15 |[90m    cookieParser = require('cookie-parser'),[39m
+                            ^ 'require' is not defined.
+     16 |[90m    helmet = require('helmet'),[39m
+                      ^ 'require' is not defined.
+     17 |[90m    passport = require('passport'),[39m
+                        ^ 'require' is not defined.
+     18 |[90m    mongoStore = require('connect-mongo')({[39m
+                          ^ 'require' is not defined.
+     21 |[90m    flash = require('connect-flash'),[39m
+                     ^ 'require' is not defined.
+     22 |[90m    config = require('./config'),[39m
+                      ^ 'require' is not defined.
+     23 |[90m    consolidate = require('consolidate'),[39m
+                           ^ 'require' is not defined.
+     24 |[90m    path = require('path');[39m
+                    ^ 'require' is not defined.
+     26 |[90mmodule.exports = function(db) {[39m
+         ^ 'module' is not defined.
+     32 |[90m        require(path.resolve(modelPath));[39m
+                 ^ 'require' is not defined.
+     68 |[90m    if (process.env.NODE_ENV === 'development') {[39m
+                 ^ 'process' is not defined.
+     74 |[90m    } else if (process.env.NODE_ENV === 'production') {[39m
+                        ^ 'process' is not defined.
+    118 |[90m        require(path.resolve(routePath))(app);[39m
+                 ^ 'require' is not defined.
+    127 |[90m        console.error(err.stack);[39m
+                 ^ 'console' is not defined.
+    143 |[90m    if (process.env.NODE_ENV === 'secure') {[39m
+                 ^ 'process' is not defined.
+    145 |[90m        console.log('Securely using https protocol');[39m
+                 ^ 'console' is not defined.
+[1m   config/init.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar glob = require('glob'),[39m
+                    ^ 'require' is not defined.
+      7 |[90m    chalk = require('chalk');[39m
+                     ^ 'require' is not defined.
+     12 |[90mmodule.exports = function() {[39m
+         ^ 'module' is not defined.
+     17 |[90m    glob('./config/env/' + process.env.NODE_ENV + '.js', {[39m
+                                    ^ 'process' is not defined.
+     21 |[90m            if (process.env.NODE_ENV) {[39m
+                         ^ 'process' is not defined.
+     22 |[90m                console.error(chalk.red('No configuration file found for "' + process.env.NODE_ENV + '" environment using development instead'));[39m
+                         ^ 'console' is not defined.
+     22 |[90m                console.error(chalk.red('No configuration file found for "' + process.env.NODE_ENV + '" environment using development instead'));[39m
+                                                                                       ^ 'process' is not defined.
+     24 |[90m                console.error(chalk.red('NODE_ENV is not defined! Using default development environment'));[39m
+                         ^ 'console' is not defined.
+     27 |[90m            process.env.NODE_ENV = 'development';[39m
+                     ^ 'process' is not defined.
+     29 |[90m            console.log(chalk.black.bgWhite('Application loaded using the "' + process.env.NODE_ENV + '" environment configuration'));[39m
+                     ^ 'console' is not defined.
+     29 |[90m            console.log(chalk.black.bgWhite('Application loaded using the "' + process.env.NODE_ENV + '" environment configuration'));[39m
+                                                                                        ^ 'process' is not defined.
+[1m   config/passport.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar passport = require('passport'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    User = require('mongoose').model('User'),[39m
+                    ^ 'require' is not defined.
+      8 |[90m    path = require('path'),[39m
+                    ^ 'require' is not defined.
+      9 |[90m    config = require('./config');[39m
+                      ^ 'require' is not defined.
+     14 |[90mmodule.exports = function() {[39m
+         ^ 'module' is not defined.
+     31 |[90m        require(path.resolve(strategy))();[39m
+                 ^ 'require' is not defined.
+[1m   config/strategies/facebook.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar passport = require('passport'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    url = require('url'),[39m
+                   ^ 'require' is not defined.
+      8 |[90m    FacebookStrategy = require('passport-facebook').Strategy,[39m
+                                ^ 'require' is not defined.
+      9 |[90m    config = require('../config'),[39m
+                      ^ 'require' is not defined.
+     10 |[90m    users = require('../../app/controllers/users.server.controller');[39m
+                     ^ 'require' is not defined.
+     12 |[90mmodule.exports = function() {[39m
+         ^ 'module' is not defined.
+[1m   config/strategies/github.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar passport = require('passport'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    url = require('url'),[39m
+                   ^ 'require' is not defined.
+      8 |[90m    GithubStrategy = require('passport-github').Strategy,[39m
+                              ^ 'require' is not defined.
+      9 |[90m    config = require('../config'),[39m
+                      ^ 'require' is not defined.
+     10 |[90m    users = require('../../app/controllers/users.server.controller');[39m
+                     ^ 'require' is not defined.
+     12 |[90mmodule.exports = function() {[39m
+         ^ 'module' is not defined.
+[1m   config/strategies/google.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar passport = require('passport'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    url = require('url'),[39m
+                   ^ 'require' is not defined.
+      8 |[90m    GoogleStrategy = require('passport-google-oauth').OAuth2Strategy,[39m
+                              ^ 'require' is not defined.
+      9 |[90m    config = require('../config'),[39m
+                      ^ 'require' is not defined.
+     10 |[90m    users = require('../../app/controllers/users.server.controller');[39m
+                     ^ 'require' is not defined.
+     12 |[90mmodule.exports = function() {[39m
+         ^ 'module' is not defined.
+[1m   config/strategies/linkedin.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar passport = require('passport'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    url = require('url'),[39m
+                   ^ 'require' is not defined.
+      8 |[90m    LinkedInStrategy = require('passport-linkedin').Strategy,[39m
+                                ^ 'require' is not defined.
+      9 |[90m    config = require('../config'),[39m
+                      ^ 'require' is not defined.
+     10 |[90m    users = require('../../app/controllers/users.server.controller');[39m
+                     ^ 'require' is not defined.
+     12 |[90mmodule.exports = function() {[39m
+         ^ 'module' is not defined.
+[1m   config/strategies/local.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar passport = require('passport'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    LocalStrategy = require('passport-local').Strategy,[39m
+                             ^ 'require' is not defined.
+      8 |[90m    User = require('mongoose').model('User');[39m
+                    ^ 'require' is not defined.
+     10 |[90mmodule.exports = function() {[39m
+         ^ 'module' is not defined.
+[1m   config/strategies/twitter.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar passport = require('passport'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    url = require('url'),[39m
+                   ^ 'require' is not defined.
+      8 |[90m    TwitterStrategy = require('passport-twitter').Strategy,[39m
+                               ^ 'require' is not defined.
+      9 |[90m    config = require('../config'),[39m
+                      ^ 'require' is not defined.
+     10 |[90m    users = require('../../app/controllers/users.server.controller');[39m
+                     ^ 'require' is not defined.
+     12 |[90mmodule.exports = function() {[39m
+         ^ 'module' is not defined.
+[1m   app/controllers/clases.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    errorHandler = require('./errors.server.controller'),[39m
+                            ^ 'require' is not defined.
+     10 |[90m    async = require('async'),[39m
+                     ^ 'require' is not defined.
+     11 |[90m    _ = require('lodash');[39m
+                 ^ 'require' is not defined.
+     16 |[90mexports.create = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     34 |[90mexports.read = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     41 |[90mexports.update = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     60 |[90mexports.delete = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+    127 |[90mexports.list = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    194 |[90mexports.claseByID = function(req, res, next, id) {[39m
+         ^ 'exports' is not defined.
+    206 |[90mexports.hasAuthorization = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/clientes.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    errorHandler = require('./errors.server.controller'),[39m
+                            ^ 'require' is not defined.
+     10 |[90m    _ = require('lodash');[39m
+                 ^ 'require' is not defined.
+     15 |[90mexports.create = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     34 |[90mexports.read = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     41 |[90mexports.update = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     61 |[90mexports.delete = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    103 |[90mexports.list = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    158 |[90mexports.clienteByID = function(req, res, next, id) {[39m
+         ^ 'exports' is not defined.
+    170 |[90mexports.clienteByCodigo = function(req, res, next, codcli) {[39m
+         ^ 'exports' is not defined.
+    183 |[90mexports.hasAuthorization = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/core.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mexports.index = function(req, res) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/derechos.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    errorHandler = require('./errors.server.controller'),[39m
+                            ^ 'require' is not defined.
+      9 |[90m    _ = require('lodash');[39m
+                 ^ 'require' is not defined.
+     14 |[90mexports.create = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     32 |[90mexports.read = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     39 |[90mexports.update = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     58 |[90mexports.delete = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     75 |[90mexports.list = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    158 |[90mexports.derechoByID = function(req, res, next, id) {[39m
+         ^ 'exports' is not defined.
+    170 |[90mexports.hasAuthorization = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/errors.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+     23 |[90mexports.getErrorMessage = function(err) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/fecvens.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    errorHandler = require('./errors.server.controller'),[39m
+                            ^ 'require' is not defined.
+      9 |[90m    _ = require('lodash');[39m
+                 ^ 'require' is not defined.
+     14 |[90mexports.create = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     32 |[90mexports.read = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     39 |[90mexports.update = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     58 |[90mexports.delete = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     75 |[90mexports.list = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     92 |[90mexports.fecvenByID = function(req, res, next, id) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/feriados.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    errorHandler = require('./errors.server.controller'),[39m
+                            ^ 'require' is not defined.
+      9 |[90m    _ = require('lodash');[39m
+                 ^ 'require' is not defined.
+     14 |[90mexports.create = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     32 |[90mexports.read = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     39 |[90mexports.update = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     58 |[90mexports.delete = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     75 |[90mexports.list = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    135 |[90mexports.feriadoByID = function(req, res, next, id) {[39m
+         ^ 'exports' is not defined.
+    147 |[90mexports.hasAuthorization = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/fichas.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    errorHandler = require('./errors.server.controller'),[39m
+                            ^ 'require' is not defined.
+     11 |[90m    async = require('async'),[39m
+                     ^ 'require' is not defined.
+     12 |[90m    _ = require('lodash'),[39m
+                 ^ 'require' is not defined.
+     14 |[90m    fs = require('fs');[39m
+                  ^ 'require' is not defined.
+     16 |[90mvar parametros = require('./parametros.server.controller');[39m
+                          ^ 'require' is not defined.
+     96 |[90m                 console.log(file.name);[39m
+                          ^ 'console' is not defined.
+     97 |[90m                 console.log(file.type);[39m
+                          ^ 'console' is not defined.
+     98 |[90m                 console.log(file.path);[39m
+                          ^ 'console' is not defined.
+    117 |[90m                      console.log('failed to delete ' + file.path);[39m
+                               ^ 'console' is not defined.
+    120 |[90m                    console.log('successfully deleted ' + file.path);[39m
+                             ^ 'console' is not defined.
+    133 |[90m            console.log('ficha: ', ficha);[39m
+                     ^ 'console' is not defined.
+    147 |[90m                console.log('saveFicha: es edit');[39m
+                         ^ 'console' is not defined.
+    170 |[90m                console.log('saveFicha: es nuevo');[39m
+                         ^ 'console' is not defined.
+    199 |[90mexports.create = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+    231 |[90mexports.read = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    239 |[90mexports.update = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+    250 |[90mexports.updateFecha = function(req, res, next)[39m
+         ^ 'exports' is not defined.
+    254 |[90m    console.log('updateFecha:', ficha.fechas);[39m
+             ^ 'console' is not defined.
+    268 |[90mexports.delete = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    285 |[90mexports.list = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+    349 |[90mexports.reporte1 = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+    355 |[90m    console.log('codcli: ', codcli);[39m
+             ^ 'console' is not defined.
+    356 |[90m    console.log('tipoFecha:', tipoFecha);[39m
+             ^ 'console' is not defined.
+    357 |[90m    console.log('Desde:', desde, ' - Hasta: ', hasta);[39m
+             ^ 'console' is not defined.
+    364 |[90m    console.log('query:', query);[39m
+             ^ 'console' is not defined.
+    371 |[90m                console.log('error:', errorHandler.getErrorMessage(err));[39m
+                         ^ 'console' is not defined.
+    429 |[90mexports.obtenerFechaVenc = function(req, res, next)[39m
+         ^ 'exports' is not defined.
+    434 |[90m            console.log('Error:', errorHandler.getErrorMessage(err));[39m
+                     ^ 'console' is not defined.
+    445 |[90mexports.listVencimientos = function(req, res, next)[39m
+         ^ 'exports' is not defined.
+    460 |[90m    console.log('listVencimientos');[39m
+             ^ 'console' is not defined.
+    461 |[90m    console.log('hasta:', hasta);[39m
+             ^ 'console' is not defined.
+    476 |[90m        console.log('desde:', desde);[39m
+                 ^ 'console' is not defined.
+    485 |[90m                console.log('Error:', errorHandler.getErrorMessage(err));[39m
+                         ^ 'console' is not defined.
+    524 |[90mexports.fichaByID = function(req, res, next, id) {[39m
+         ^ 'exports' is not defined.
+    555 |[90mexports.fichaByIDFecha = function(req, res, next, id) {[39m
+         ^ 'exports' is not defined.
+    568 |[90mexports.hasAuthorization = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+    579 |[90mexports.updateDescarte = function(req, res, next)[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/parametros.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    errorHandler = require('./errors.server.controller'),[39m
+                            ^ 'require' is not defined.
+     10 |[90m    _ = require('lodash');[39m
+                 ^ 'require' is not defined.
+     15 |[90mexports.create = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     33 |[90mexports.read = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     42 |[90mexports.obtenerFecha = function(req, res, next)[39m
+         ^ 'exports' is not defined.
+    101 |[90mexports.readFecha = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    156 |[90mexports.update = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    175 |[90mexports.delete = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    192 |[90mexports.list = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    255 |[90mexports.parametroByID = function(req, res, next, id) {[39m
+         ^ 'exports' is not defined.
+    267 |[90mexports.parametroByCod = function(req, res, next, id) {[39m
+         ^ 'exports' is not defined.
+    280 |[90mexports.hasAuthorization = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/subclases.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    errorHandler = require('./errors.server.controller'),[39m
+                            ^ 'require' is not defined.
+     10 |[90m    _ = require('lodash');[39m
+                 ^ 'require' is not defined.
+     15 |[90mexports.create = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     33 |[90mexports.read = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     40 |[90mexports.update = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     59 |[90mexports.delete = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     76 |[90mexports.list = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    167 |[90mexports.subclaseByID = function(req, res, next, id) {[39m
+         ^ 'exports' is not defined.
+    179 |[90mexports.hasAuthorization = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/tramites.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    errorHandler = require('./errors.server.controller'),[39m
+                            ^ 'require' is not defined.
+      9 |[90m    _ = require('lodash');[39m
+                 ^ 'require' is not defined.
+     14 |[90mexports.create = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     32 |[90mexports.read = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     39 |[90mexports.update = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     58 |[90mexports.delete = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     75 |[90mexports.list = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    137 |[90mexports.tramiteByID = function(req, res, next, id) {[39m
+         ^ 'exports' is not defined.
+    149 |[90mexports.hasAuthorization = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/ubis.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      7 |[90m    errorHandler = require('./errors.server.controller'),[39m
+                            ^ 'require' is not defined.
+      9 |[90m    _ = require('lodash');[39m
+                 ^ 'require' is not defined.
+     14 |[90mexports.create = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+     39 |[90mexports.read = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     46 |[90mexports.readPad = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     53 |[90mexports.update = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     72 |[90mexports.delete = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     80 |[90m            console.log('La ubicación ' + ubi.nom + ' tiene hijos');[39m
+                     ^ 'console' is not defined.
+    116 |[90mexports.list = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    172 |[90mexports.ubiByID = function(req, res, next, id) {[39m
+         ^ 'exports' is not defined.
+    178 |[90m        console.log('Cuidado: idx es cero: ' + idx);[39m
+                 ^ 'console' is not defined.
+    193 |[90mexports.ubiByPad = function(req, res, next, pad) {[39m
+         ^ 'exports' is not defined.
+    205 |[90mexports.hasAuthorization = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/users.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar _ = require('lodash');[39m
+                 ^ 'require' is not defined.
+     11 |[90mmodule.exports = _.extend([39m
+         ^ 'module' is not defined.
+     12 |[90m    require('./users/users.authentication.server.controller'),[39m
+             ^ 'require' is not defined.
+     13 |[90m    require('./users/users.authorization.server.controller'),[39m
+             ^ 'require' is not defined.
+     14 |[90m    require('./users/users.password.server.controller'),[39m
+             ^ 'require' is not defined.
+     15 |[90m    require('./users/users.profile.server.controller')[39m
+             ^ 'require' is not defined.
+[1m   app/controllers/users/users.authentication.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar _ = require('lodash'),[39m
+                 ^ 'require' is not defined.
+      7 |[90m    errorHandler = require('../errors.server.controller'),[39m
+                            ^ 'require' is not defined.
+      8 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      9 |[90m    passport = require('passport'),[39m
+                        ^ 'require' is not defined.
+     15 |[90mexports.signup = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     52 |[90mexports.signin = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+     75 |[90mexports.signout = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     83 |[90mexports.oauthCallback = function(strategy) {[39m
+         ^ 'exports' is not defined.
+    103 |[90mexports.saveOAuthUserProfile = function(req, providerUserProfile, done) {[39m
+         ^ 'exports' is not defined.
+    177 |[90mexports.removeOAuthProvider = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/users/users.authorization.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar _ = require('lodash'),[39m
+                 ^ 'require' is not defined.
+      7 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     13 |[90mexports.userByID = function(req, res, next, id) {[39m
+         ^ 'exports' is not defined.
+     27 |[90mexports.requiresLogin = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+     40 |[90mexports.hasAuthorization = function(roles) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/users/users.password.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar _ = require('lodash'),[39m
+                 ^ 'require' is not defined.
+      7 |[90m    errorHandler = require('../errors.server.controller'),[39m
+                            ^ 'require' is not defined.
+      8 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      9 |[90m    passport = require('passport'),[39m
+                        ^ 'require' is not defined.
+     11 |[90m    config = require('../../../config/config'),[39m
+                      ^ 'require' is not defined.
+     12 |[90m    nodemailer = require('nodemailer'),[39m
+                          ^ 'require' is not defined.
+     13 |[90m    async = require('async'),[39m
+                     ^ 'require' is not defined.
+     14 |[90m    crypto = require('crypto');[39m
+                      ^ 'require' is not defined.
+     19 |[90mexports.forgot = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+     97 |[90mexports.validateResetToken = function(req, res) {[39m
+         ^ 'exports' is not defined.
+    115 |[90mexports.reset = function(req, res, next) {[39m
+         ^ 'exports' is not defined.
+    197 |[90mexports.changePassword = function(req, res) {[39m
+         ^ 'exports' is not defined.
+[1m   app/controllers/users/users.profile.server.controller.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar _ = require('lodash'),[39m
+                 ^ 'require' is not defined.
+      7 |[90m    errorHandler = require('../errors.server.controller.js'),[39m
+                            ^ 'require' is not defined.
+      8 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      9 |[90m    passport = require('passport'),[39m
+                        ^ 'require' is not defined.
+     15 |[90mexports.update = function(req, res) {[39m
+         ^ 'exports' is not defined.
+     55 |[90mexports.me = function(req, res) {[39m
+         ^ 'exports' is not defined.
+[1m   app/models/clase.server.model.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+[1m   app/models/cliente.server.model.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+[1m   app/models/derecho.server.model.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+[1m   app/models/fecven.server.model.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+[1m   app/models/feriado.server.model.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+[1m   app/models/ficha.server.model.js[22m
+      1 |[90m    'use strict';[39m
+             ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+[1m   app/models/parametro.server.model.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+[1m   app/models/subclase.server.model.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+[1m   app/models/tramite.server.model.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+[1m   app/models/ubi.server.model.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+[1m   app/models/user.server.model.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+      8 |[90m    crypto = require('crypto');[39m
+                      ^ 'require' is not defined.
+     99 |[90m        this.salt = new Buffer(crypto.randomBytes(16).toString('base64'), 'base64');[39m
+                                 ^ 'Buffer' is not defined.
+[1m   app/routes/clases.server.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = function(app) {[39m
+         ^ 'module' is not defined.
+      4 |[90m    var users = require('../../app/controllers/users.server.controller');[39m
+                         ^ 'require' is not defined.
+      5 |[90m    var clases = require('../../app/controllers/clases.server.controller');[39m
+                          ^ 'require' is not defined.
+[1m   app/routes/clientes.server.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = function(app) {[39m
+         ^ 'module' is not defined.
+      4 |[90m    var users = require('../../app/controllers/users.server.controller');[39m
+                         ^ 'require' is not defined.
+      5 |[90m    var clientes = require('../../app/controllers/clientes.server.controller');[39m
+                            ^ 'require' is not defined.
+[1m   app/routes/core.server.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = function(app) {[39m
+         ^ 'module' is not defined.
+      5 |[90m    var core = require('../../app/controllers/core.server.controller');[39m
+                        ^ 'require' is not defined.
+[1m   app/routes/derechos.server.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = function(app) {[39m
+         ^ 'module' is not defined.
+      4 |[90m    var users = require('../../app/controllers/users.server.controller');[39m
+                         ^ 'require' is not defined.
+      5 |[90m    var derechos = require('../../app/controllers/derechos.server.controller');[39m
+                            ^ 'require' is not defined.
+[1m   app/routes/fecvens.server.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = function(app) {[39m
+         ^ 'module' is not defined.
+      4 |[90m    var users = require('../../app/controllers/users.server.controller');[39m
+                         ^ 'require' is not defined.
+      5 |[90m    var fecvens = require('../../app/controllers/fecvens.server.controller');[39m
+                           ^ 'require' is not defined.
+[1m   app/routes/feriados.server.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = function(app) {[39m
+         ^ 'module' is not defined.
+      4 |[90m    var users = require('../../app/controllers/users.server.controller');[39m
+                         ^ 'require' is not defined.
+      5 |[90m    var feriados = require('../../app/controllers/feriados.server.controller');[39m
+                            ^ 'require' is not defined.
+[1m   app/routes/fichas.server.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = function(app) {[39m
+         ^ 'module' is not defined.
+      4 |[90m    var users = require('../../app/controllers/users.server.controller');[39m
+                         ^ 'require' is not defined.
+      5 |[90m    var fichas = require('../../app/controllers/fichas.server.controller');[39m
+                          ^ 'require' is not defined.
+      6 |[90m    var multiparty = require('connect-multiparty');[39m
+                              ^ 'require' is not defined.
+[1m   app/routes/parametros.server.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = function(app) {[39m
+         ^ 'module' is not defined.
+      4 |[90m    var users = require('../../app/controllers/users.server.controller');[39m
+                         ^ 'require' is not defined.
+      5 |[90m    var parametros = require('../../app/controllers/parametros.server.controller');[39m
+                              ^ 'require' is not defined.
+[1m   app/routes/subclases.server.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = function(app) {[39m
+         ^ 'module' is not defined.
+      4 |[90m    var users = require('../../app/controllers/users.server.controller');[39m
+                         ^ 'require' is not defined.
+      5 |[90m    var subclases = require('../../app/controllers/subclases.server.controller');[39m
+                             ^ 'require' is not defined.
+[1m   app/routes/tramites.server.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = function(app) {[39m
+         ^ 'module' is not defined.
+      4 |[90m    var users = require('../../app/controllers/users.server.controller');[39m
+                         ^ 'require' is not defined.
+      5 |[90m    var tramites = require('../../app/controllers/tramites.server.controller');[39m
+                            ^ 'require' is not defined.
+[1m   app/routes/ubis.server.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mmodule.exports = function(app) {[39m
+         ^ 'module' is not defined.
+      4 |[90m    var users = require('../../app/controllers/users.server.controller');[39m
+                         ^ 'require' is not defined.
+      5 |[90m    var ubis = require('../../app/controllers/ubis.server.controller');[39m
+                        ^ 'require' is not defined.
+[1m   app/routes/users.server.routes.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar passport = require('passport');[39m
+                        ^ 'require' is not defined.
+      8 |[90mmodule.exports = function(app) {[39m
+         ^ 'module' is not defined.
+     10 |[90m    var users = require('../../app/controllers/users.server.controller');[39m
+                         ^ 'require' is not defined.
+[1m   app/tests/clase.server.model.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      7 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Clase Model Unit Tests:', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     40 |[90m    describe('Method Save', function() {[39m
+             ^ 'describe' is not defined.
+     41 |[90m        it('should be able to save without problems', function(done) {[39m
+                 ^ 'it' is not defined.
+     48 |[90m        it('should be able to show an error when try to save without name', function(done) { [39m
+                 ^ 'it' is not defined.
+     58 |[90m    afterEach(function(done) { [39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/clase.server.routes.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      4 |[90m    request = require('supertest'),[39m
+                       ^ 'require' is not defined.
+      5 |[90m    app = require('../../server'),[39m
+                   ^ 'require' is not defined.
+      6 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Clase CRUD tests', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     48 |[90m    it('should be able to save Clase instance if logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     87 |[90m    it('should not be able to save Clase instance if not logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     97 |[90m    it('should not be able to save Clase instance if no name is provided', function(done) {[39m
+             ^ 'it' is not defined.
+    125 |[90m    it('should be able to update Clase instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    166 |[90m    it('should be able to get a list of Clases if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    186 |[90m    it('should be able to get a single Clase if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    203 |[90m    it('should be able to delete Clase instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    240 |[90m    it('should not be able to delete Clase instance if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    263 |[90m    afterEach(function(done) {[39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/cliente.server.model.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      7 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Cliente Model Unit Tests:', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     40 |[90m    describe('Method Save', function() {[39m
+             ^ 'describe' is not defined.
+     41 |[90m        it('should be able to save without problems', function(done) {[39m
+                 ^ 'it' is not defined.
+     48 |[90m        it('should be able to show an error when try to save without name', function(done) { [39m
+                 ^ 'it' is not defined.
+     58 |[90m    afterEach(function(done) { [39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/cliente.server.routes.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      4 |[90m    request = require('supertest'),[39m
+                       ^ 'require' is not defined.
+      5 |[90m    app = require('../../server'),[39m
+                   ^ 'require' is not defined.
+      6 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Cliente CRUD tests', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     48 |[90m    it('should be able to save Cliente instance if logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     87 |[90m    it('should not be able to save Cliente instance if not logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     97 |[90m    it('should not be able to save Cliente instance if no name is provided', function(done) {[39m
+             ^ 'it' is not defined.
+    125 |[90m    it('should be able to update Cliente instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    166 |[90m    it('should be able to get a list of Clientes if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    186 |[90m    it('should be able to get a single Cliente if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    203 |[90m    it('should be able to delete Cliente instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    240 |[90m    it('should not be able to delete Cliente instance if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    263 |[90m    afterEach(function(done) {[39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/derecho.server.model.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      7 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Derecho Model Unit Tests:', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     40 |[90m    describe('Method Save', function() {[39m
+             ^ 'describe' is not defined.
+     41 |[90m        it('should be able to save without problems', function(done) {[39m
+                 ^ 'it' is not defined.
+     48 |[90m        it('should be able to show an error when try to save without name', function(done) { [39m
+                 ^ 'it' is not defined.
+     58 |[90m    afterEach(function(done) { [39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/derecho.server.routes.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      4 |[90m    request = require('supertest'),[39m
+                       ^ 'require' is not defined.
+      5 |[90m    app = require('../../server'),[39m
+                   ^ 'require' is not defined.
+      6 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Derecho CRUD tests', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     48 |[90m    it('should be able to save Derecho instance if logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     87 |[90m    it('should not be able to save Derecho instance if not logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     97 |[90m    it('should not be able to save Derecho instance if no name is provided', function(done) {[39m
+             ^ 'it' is not defined.
+    125 |[90m    it('should be able to update Derecho instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    166 |[90m    it('should be able to get a list of Derechos if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    186 |[90m    it('should be able to get a single Derecho if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    203 |[90m    it('should be able to delete Derecho instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    240 |[90m    it('should not be able to delete Derecho instance if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    263 |[90m    afterEach(function(done) {[39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/fecven.server.model.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      7 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Fecven Model Unit Tests:', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     40 |[90m    describe('Method Save', function() {[39m
+             ^ 'describe' is not defined.
+     41 |[90m        it('should be able to save without problems', function(done) {[39m
+                 ^ 'it' is not defined.
+     48 |[90m        it('should be able to show an error when try to save without name', function(done) { [39m
+                 ^ 'it' is not defined.
+     58 |[90m    afterEach(function(done) { [39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/fecven.server.routes.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      4 |[90m    request = require('supertest'),[39m
+                       ^ 'require' is not defined.
+      5 |[90m    app = require('../../server'),[39m
+                   ^ 'require' is not defined.
+      6 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Fecven CRUD tests', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     48 |[90m    it('should be able to save Fecven instance if logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     87 |[90m    it('should not be able to save Fecven instance if not logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     97 |[90m    it('should not be able to save Fecven instance if no name is provided', function(done) {[39m
+             ^ 'it' is not defined.
+    125 |[90m    it('should be able to update Fecven instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    166 |[90m    it('should be able to get a list of Fecvens if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    186 |[90m    it('should be able to get a single Fecven if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    203 |[90m    it('should be able to delete Fecven instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    240 |[90m    it('should not be able to delete Fecven instance if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    263 |[90m    afterEach(function(done) {[39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/feriado.server.model.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      7 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Feriado Model Unit Tests:', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     40 |[90m    describe('Method Save', function() {[39m
+             ^ 'describe' is not defined.
+     41 |[90m        it('should be able to save without problems', function(done) {[39m
+                 ^ 'it' is not defined.
+     48 |[90m        it('should be able to show an error when try to save without name', function(done) { [39m
+                 ^ 'it' is not defined.
+     58 |[90m    afterEach(function(done) { [39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/feriado.server.routes.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      4 |[90m    request = require('supertest'),[39m
+                       ^ 'require' is not defined.
+      5 |[90m    app = require('../../server'),[39m
+                   ^ 'require' is not defined.
+      6 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Feriado CRUD tests', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     48 |[90m    it('should be able to save Feriado instance if logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     87 |[90m    it('should not be able to save Feriado instance if not logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     97 |[90m    it('should not be able to save Feriado instance if no name is provided', function(done) {[39m
+             ^ 'it' is not defined.
+    125 |[90m    it('should be able to update Feriado instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    166 |[90m    it('should be able to get a list of Feriados if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    186 |[90m    it('should be able to get a single Feriado if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    203 |[90m    it('should be able to delete Feriado instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    240 |[90m    it('should not be able to delete Feriado instance if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    263 |[90m    afterEach(function(done) {[39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/ficha.server.model.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      7 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Ficha Model Unit Tests:', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     40 |[90m    describe('Method Save', function() {[39m
+             ^ 'describe' is not defined.
+     41 |[90m        it('should be able to save without problems', function(done) {[39m
+                 ^ 'it' is not defined.
+     48 |[90m        it('should be able to show an error when try to save without name', function(done) { [39m
+                 ^ 'it' is not defined.
+     58 |[90m    afterEach(function(done) { [39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/ficha.server.routes.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      4 |[90m    request = require('supertest'),[39m
+                       ^ 'require' is not defined.
+      5 |[90m    app = require('../../server'),[39m
+                   ^ 'require' is not defined.
+      6 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Ficha CRUD tests', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     48 |[90m    it('should be able to save Ficha instance if logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     87 |[90m    it('should not be able to save Ficha instance if not logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     97 |[90m    it('should not be able to save Ficha instance if no name is provided', function(done) {[39m
+             ^ 'it' is not defined.
+    125 |[90m    it('should be able to update Ficha instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    166 |[90m    it('should be able to get a list of Fichas if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    186 |[90m    it('should be able to get a single Ficha if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    203 |[90m    it('should be able to delete Ficha instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    240 |[90m    it('should not be able to delete Ficha instance if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    263 |[90m    afterEach(function(done) {[39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/parametro.server.model.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      7 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Parametro Model Unit Tests:', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     40 |[90m    describe('Method Save', function() {[39m
+             ^ 'describe' is not defined.
+     41 |[90m        it('should be able to save without problems', function(done) {[39m
+                 ^ 'it' is not defined.
+     48 |[90m        it('should be able to show an error when try to save without name', function(done) { [39m
+                 ^ 'it' is not defined.
+     58 |[90m    afterEach(function(done) { [39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/parametro.server.routes.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      4 |[90m    request = require('supertest'),[39m
+                       ^ 'require' is not defined.
+      5 |[90m    app = require('../../server'),[39m
+                   ^ 'require' is not defined.
+      6 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Parametro CRUD tests', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     48 |[90m    it('should be able to save Parametro instance if logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     87 |[90m    it('should not be able to save Parametro instance if not logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     97 |[90m    it('should not be able to save Parametro instance if no name is provided', function(done) {[39m
+             ^ 'it' is not defined.
+    125 |[90m    it('should be able to update Parametro instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    166 |[90m    it('should be able to get a list of Parametros if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    186 |[90m    it('should be able to get a single Parametro if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    203 |[90m    it('should be able to delete Parametro instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    240 |[90m    it('should not be able to delete Parametro instance if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    263 |[90m    afterEach(function(done) {[39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/subclase.server.model.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      7 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Subclase Model Unit Tests:', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     40 |[90m    describe('Method Save', function() {[39m
+             ^ 'describe' is not defined.
+     41 |[90m        it('should be able to save without problems', function(done) {[39m
+                 ^ 'it' is not defined.
+     48 |[90m        it('should be able to show an error when try to save without name', function(done) { [39m
+                 ^ 'it' is not defined.
+     58 |[90m    afterEach(function(done) { [39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/subclase.server.routes.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      4 |[90m    request = require('supertest'),[39m
+                       ^ 'require' is not defined.
+      5 |[90m    app = require('../../server'),[39m
+                   ^ 'require' is not defined.
+      6 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Subclase CRUD tests', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     48 |[90m    it('should be able to save Subclase instance if logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     87 |[90m    it('should not be able to save Subclase instance if not logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     97 |[90m    it('should not be able to save Subclase instance if no name is provided', function(done) {[39m
+             ^ 'it' is not defined.
+    125 |[90m    it('should be able to update Subclase instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    166 |[90m    it('should be able to get a list of Subclases if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    186 |[90m    it('should be able to get a single Subclase if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    203 |[90m    it('should be able to delete Subclase instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    240 |[90m    it('should not be able to delete Subclase instance if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    263 |[90m    afterEach(function(done) {[39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/tramite.server.model.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      7 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Tramite Model Unit Tests:', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     40 |[90m    describe('Method Save', function() {[39m
+             ^ 'describe' is not defined.
+     41 |[90m        it('should be able to save without problems', function(done) {[39m
+                 ^ 'it' is not defined.
+     48 |[90m        it('should be able to show an error when try to save without name', function(done) { [39m
+                 ^ 'it' is not defined.
+     58 |[90m    afterEach(function(done) { [39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/tramite.server.routes.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      4 |[90m    request = require('supertest'),[39m
+                       ^ 'require' is not defined.
+      5 |[90m    app = require('../../server'),[39m
+                   ^ 'require' is not defined.
+      6 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Tramite CRUD tests', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     48 |[90m    it('should be able to save Tramite instance if logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     87 |[90m    it('should not be able to save Tramite instance if not logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     97 |[90m    it('should not be able to save Tramite instance if no name is provided', function(done) {[39m
+             ^ 'it' is not defined.
+    125 |[90m    it('should be able to update Tramite instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    166 |[90m    it('should be able to get a list of Tramites if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    186 |[90m    it('should be able to get a single Tramite if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    203 |[90m    it('should be able to delete Tramite instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    240 |[90m    it('should not be able to delete Tramite instance if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    263 |[90m    afterEach(function(done) {[39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/ubi.server.model.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      7 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Ubi Model Unit Tests:', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     40 |[90m    describe('Method Save', function() {[39m
+             ^ 'describe' is not defined.
+     41 |[90m        it('should be able to save without problems', function(done) {[39m
+                 ^ 'it' is not defined.
+     48 |[90m        it('should be able to show an error when try to save without name', function(done) { [39m
+                 ^ 'it' is not defined.
+     58 |[90m    afterEach(function(done) { [39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/ubi.server.routes.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      3 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      4 |[90m    request = require('supertest'),[39m
+                       ^ 'require' is not defined.
+      5 |[90m    app = require('../../server'),[39m
+                   ^ 'require' is not defined.
+      6 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     19 |[90mdescribe('Ubi CRUD tests', function() {[39m
+         ^ 'describe' is not defined.
+     20 |[90m    beforeEach(function(done) {[39m
+             ^ 'beforeEach' is not defined.
+     48 |[90m    it('should be able to save Ubi instance if logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     87 |[90m    it('should not be able to save Ubi instance if not logged in', function(done) {[39m
+             ^ 'it' is not defined.
+     97 |[90m    it('should not be able to save Ubi instance if no name is provided', function(done) {[39m
+             ^ 'it' is not defined.
+    125 |[90m    it('should be able to update Ubi instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    166 |[90m    it('should be able to get a list of Ubis if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    186 |[90m    it('should be able to get a single Ubi if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    203 |[90m    it('should be able to delete Ubi instance if signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    240 |[90m    it('should not be able to delete Ubi instance if not signed in', function(done) {[39m
+             ^ 'it' is not defined.
+    263 |[90m    afterEach(function(done) {[39m
+             ^ 'afterEach' is not defined.
+[1m   app/tests/user.server.model.test.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+      6 |[90mvar should = require('should'),[39m
+                      ^ 'require' is not defined.
+      7 |[90m    mongoose = require('mongoose'),[39m
+                        ^ 'require' is not defined.
+     18 |[90mdescribe('User Model Unit Tests:', function() {[39m
+         ^ 'describe' is not defined.
+     19 |[90m    before(function(done) {[39m
+             ^ 'before' is not defined.
+     42 |[90m    describe('Method Save', function() {[39m
+             ^ 'describe' is not defined.
+     43 |[90m        it('should begin with no users', function(done) {[39m
+                 ^ 'it' is not defined.
+     50 |[90m        it('should be able to save without problems', function(done) {[39m
+                 ^ 'it' is not defined.
+     54 |[90m        it('should fail to save an existing user again', function(done) {[39m
+                 ^ 'it' is not defined.
+     62 |[90m        it('should be able to show an error when try to save without first name', function(done) {[39m
+                 ^ 'it' is not defined.
+     71 |[90m    after(function(done) {[39m
+             ^ 'after' is not defined.
+
+[31m>> [39m1135 errors in 158 files
+[33mWarning: Task "jshint:all" failed. [4mUsed --force, continuing.[24m[39m
+
+[4mRunning "csslint:all" (csslint) task[24m
+[33mWarning: Unable to read ".csslintrc" file (Error code: ENOENT). [4mUsed --force, continuing.[24m[39m
+
+[4mRunning "concurrent:default" (concurrent) task[24m
+[4mRunning "nodemon:dev" (nodemon) task[24m
+[4mRunning "watch" task[24m
+Waiting...
+[33m[nodemon] v1.2.1[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: app/views/**/*.* gruntfile.js server.js config/**/*.js app/**/*.js[39m
+[32m[nodemon] starting `node --debug server.js`[39m
+[33m
+##############################################################
+#
+#   !!! MONGOOSE WARNING !!!
+#
+#   This is an UNSTABLE release of Mongoose.
+#   Unstable releases are available for preview/testing only.
+#   DO NOT run this in production.
+#
+##############################################################
+[0m
+[31m[nodemon] watching 27,447 files - this might cause high cpu usage. To reduce use "--watch".[39m
+MEAN.JS application started on port 3000

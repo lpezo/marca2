@@ -1,0 +1,109 @@
+.thumb {
+    width: 100px;
+    height: 100px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
+
+.CSSReport {
+	margin:0;padding:0;
+	width:100%;
+	border:1px solid #000000;
+	
+	-moz-border-radius-bottomleft:0;
+	-webkit-border-bottom-left-radius:0;
+	border-bottom-left-radius:0;
+	
+	-moz-border-radius-bottomright:0;
+	-webkit-border-bottom-right-radius:0;
+	border-bottom-right-radius:0;
+	
+	-moz-border-radius-topright:0;
+	-webkit-border-top-right-radius:0;
+	border-top-right-radius:0;
+	
+	-moz-border-radius-topleft:0;
+	-webkit-border-top-left-radius:0;
+	border-top-left-radius:0;
+}.CSSReport table{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0;padding:0;
+}.CSSReport tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0;
+	-webkit-border-bottom-right-radius:0;
+	border-bottom-right-radius:0;
+}
+.CSSReport table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0;
+	-webkit-border-top-left-radius:0;
+	border-top-left-radius:0;
+}
+.CSSReport table tr:first-child td:last-child {
+	-moz-border-radius-topright:0;
+	-webkit-border-top-right-radius:0;
+	border-top-right-radius:0;
+}.CSSReport tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0;
+	-webkit-border-bottom-left-radius:0;
+	border-bottom-left-radius:0;
+}.CSSReport tr:hover td{
+	background-color:#ffffff;
+		
+
+}
+.CSSReport td{
+	vertical-align:middle;
+	
+	
+	background-color:#ffffff;
+
+	border:1px solid #000000;
+	border-width:0 1px 1px 0;
+	text-align:left;
+	padding:7px;
+	font-size:10px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}.CSSReport tr:last-child td{
+	border-width:0 1px 0 0;
+}.CSSReport tr td:last-child{
+	border-width:0 0 1px 0;
+}.CSSReport tr:last-child td:last-child{
+	border-width:0 0 0 0;
+}
+.CSSReport tr:first-child td{
+		background:-o-linear-gradient(bottom, #ff7f00 5%, #ff7f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #ff7f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #ff7f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#ff7f00");	background: -o-linear-gradient(top,#ff7f00,ff7f00);
+
+	background-color:#ff7f00;
+	border:0 solid #000000;
+	text-align:center;
+	border-width:0 0 1px 1px;
+	font-size:14px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}
+.CSSReport tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #ff7f00 5%, #ff7f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #ff7f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #ff7f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#ff7f00");	background: -o-linear-gradient(top,#ff7f00,ff7f00);
+
+	background-color:#ff7f00;
+}
+.CSSReport tr:first-child td:first-child{
+	border-width:0 0 1px 0;
+}
+.CSSReport tr:first-child td:last-child{
+	border-width:0 0 1px 1px;
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}

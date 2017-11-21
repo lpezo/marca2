@@ -1,0 +1,36 @@
+<section data-ng-controller="ParametrosController">
+    <div class="page-header">
+        <h1>Parámetros</h1>
+    </div>
+
+    <div class="pull-right">
+      <a type="button" class="btn btn-success" href="/#!/parametros/create">
+        <i class="glyphicon glyphicon-open"></i> Nuevo Parametro
+      </a>
+    </div>
+
+    <div>
+        <table ng-table="tableParams" show-filter="true">
+            <tr ng-repeat="parametro in $data">
+                <td data-title="'Código'" sortable="'codigo'" filter="{ 'codigo': 'text' }">{{parametro.codigo}}</td>
+                <td data-title="'Descripción'" sortable="'desc'" filter="{ 'desc': 'text' }">{{parametro.desc}}</td>
+                <td data-title="'Días'" sortable="'dias'" filter="{ 'dias': 'text' }">{{parametro.dias}}</td>
+                <td data-title="'Días o Meses'" sortable="'diames'" filter="{ 'diames': 'text' }">{{parametro.diames}}</td>
+                <td data-title="'Dias Laborales'" sortable="'labo'" filter="{ 'labo': 'text' }">{{parametro.labo}}</td>
+                <td>
+                   <div class="table-actions">
+                        <a class="btn btn-default" title="View" href="/#!/parametros/{{parametro._id}}">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        <a class="btn btn-default" title="Edit" href="/#!/parametros/{{parametro._id}}/edit">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                        <a class="btn btn-danger" title="Remove" ng-really-click="remove(parametro)" item="parametro">
+                  				<span class="glyphicon glyphicon-remove-circle"></span>
+                  			</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

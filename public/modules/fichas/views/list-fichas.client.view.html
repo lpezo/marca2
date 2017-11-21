@@ -1,0 +1,133 @@
+<section data-ng-controller="FichasController" data-ng-init="iniList()">
+    <div class="page-header">
+        <h3>Fichas</h3>
+    </div>
+
+     <div class="form-group">
+
+<!--     </div>
+
+    <div class="form-group"> -->
+
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">CLASE</label>
+            </div>
+            <div class="col-md-2">
+                <label class="control-label" for="query.vencfecha1">FECHA VENCIMIENTO</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="input-group">
+                    <select class="btn btn-default dropdown-toggle" ng-click="doQuery()" 
+                    data-ng-options="clase for clase in clases" data-ng-model="query.clase">
+                    </select>
+                    <a class="btn" title="Borrar" ng-click="query.clase=null">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="dropdown col-md-3">
+                <a class="dropdown-toggle my-vencfecha1" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                    <!-- <div class="input-append"> -->
+                        <input type="text" data-ng-model="query.vencfecha1 | date:'dd-MM-yyyy'"
+                            ng-model-options="{ getterSetter: true}" size="10" placeholder="Desde">
+                        <span class="addon">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                        </span>
+                    <!-- </div> -->
+                </a>
+                <a class="btn" title="Borrar" ng-click="query.vencfecha1=null">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <datetimepicker data-ng-model="query.vencfecha1"
+                                    data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-vencfecha1' }" 
+                                    ng-change="queryVencFecha(query.vencfecha1, query.vencfecha2)"></datetimepicker>
+                </ul>
+            </div>
+
+            <div class="dropdown col-md-3">
+                <label class="control-label" for="query.vencfecha1"></label>
+                <a class="dropdown-toggle my-vencfecha2" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                    <!-- <div class="input-append"> -->
+                        <input type="text" data-ng-model="query.vencfecha2 | date:'dd-MM-yyyy'"
+                            ng-model-options="{ getterSetter: true}" size="10" placeholder="Hasta">
+                        <span class="addon">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                        </span>
+                    <!-- </div> -->
+                </a>
+                <a class="btn" title="Borrar" ng-click="query.vencfecha2=null">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <datetimepicker data-ng-model="query.vencfecha2"
+                                    data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-vencfecha2' }"
+                                    ng-change="queryVencFech2(query.vencfecha1, query.vencfecha2)"></datetimepicker>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <hr/>
+
+    <div>
+<!--       <a type="button" class="btn btn-success" href="/#!/fichas/create">
+        <i class="glyphicon glyphicon-open"></i> Nueva Ficha
+      </a> -->
+      <a data-ng-show="buscandoFichas" class="text-danger">
+        <i class="glyphicon glyphicon-wait"></i> Por favor espere un momento...
+      </a>
+    </div>
+
+    <div>
+        <table ng-table="tableParams" show-filter="true">
+            <colgroup>
+                <col width="50" />
+                <col width="250" />
+                <col widht="100" />
+                <col widht="100" />
+                <col widht="100" />
+                <col widht="110" />
+            </colgroup>
+            <tr ng-repeat="ficha in $data">
+                <td data-title="'Código'" sortable="'codigo'" >{{ficha.codigo}}</td>
+                <!-- <td data-title="'Cod Cliente'" sortable="'codcli'" >{{ficha.codigo}}</td> -->
+                <td data-title="'Nombre Cliente'" sortable="'nomcli'" filter="{ 'nomcli': 'text' }">{{ficha.nomcli}}</td>
+                <td data-title="'Nombre Signo'" sortable="'nomsigno'" filter="{ 'nomsigno': 'text' }">{{ficha.nomsigno}}</td>
+                <td data-title="'Certificado'" sortable="'numcertificado'" filter="{ 'numcertificado': 'text' }">{{ficha.numcertificado}}</td>
+                <td data-title="'Vencimiento'" sortable="'fechas.fecvenc'" >{{ficha.fechas.fecvenc | date:'dd/MM/yyyy'}}</td>
+                <td data-title="'Clase'" >{{ficha.clases}}</td>
+                
+                <td>
+                   <div class="table-actions">
+                        <!--
+                        <a class="btn btn-default" title="View" href="/#!/fichas/{{ficha._id}}">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        -->
+                        <a class="btn btn-default" title="Edit" href="/#!/fichas/{{ficha._id}}/edit">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                        <a class="btn btn-default" title="Fechas" href="/#!/fichas/{{ficha._id}}/fecha">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </a>
+                        <a class="btn btn-danger" title="Remove" ng-really-message="¿Está seguro de eliminar la ficha?" ng-really-click="remove(ficha)" item="ficha">
+                  				<span class="glyphicon glyphicon-remove-circle"></span>
+                  		</a>
+                    </div>
+                    <td>
+                        <img ng-hide="!ficha.archivo" ng-src="/img/{{ficha.archivo}}" id="img-id" width="50" alt="{{ficha.archivo}}"/>
+                        <!--
+                        onerror='this.style.display = "none"' 
+                        -->
+
+                    </td>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

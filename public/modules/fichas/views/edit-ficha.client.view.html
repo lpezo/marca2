@@ -1,0 +1,11 @@
+<section data-ng-controller="FichasController" data-ng-init="toEditFicha()" validate>
+    <div class="page-header">
+        <h1>Editar Ficha</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" name="form-ficha">
+        <fieldset ng-include="'modules/fichas/views/create-edit-ficha.client.template.html'">
+        </fieldset>
+        </form>
+    </div>
+</section>

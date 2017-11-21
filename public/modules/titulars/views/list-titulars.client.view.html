@@ -1,0 +1,37 @@
+<section data-ng-controller="TitularsController" data-ng-init="iniList()">
+    <div class="page-header">
+        <h1>Titulares</h1>
+    </div>
+
+    <div class="pull-right">
+      <a type="button" class="btn btn-success" href="/#!/titulars/create">
+        <i class="glyphicon glyphicon-open"></i> Nuevo Titular
+      </a>
+    </div>
+
+    <div>
+        <table ng-table="tableParams" show-filter="true">
+            <tr ng-repeat="titular in $data">
+                <td data-title="'Código'" sortable="'codigo'" filter="{ 'codigo': 'text' }">{{titular.codigo}}</td>
+                <td data-title="'Nombre'" sortable="'nombre'" filter="{ 'nombre': 'text' }">{{titular.nombre}}</td>
+                <td data-title="'Ruc'" sortable="'ruc'" >{{titular.ruc}}</td>
+                <td data-title="'Dirección'" sortable="'direccion'" filter="{ 'direccion': 'text' }">{{titular.direccion}}</td>
+                <td>
+                    <div class="table-actions">
+                <td>
+                   <div class="table-actions">
+                        <a class="btn btn-default" title="View" href="/#!/titulars/{{titular._id}}">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        <a class="btn btn-default" title="Edit" href="/#!/titulars/{{titular._id}}/edit">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                        <a class="btn btn-danger" title="Remove" ng-really-message="¿Está seguro de borrar un titular?" ng-really-click="remove(titular)" item="titular">
+                  				<span class="glyphicon glyphicon-remove-circle"></span>
+                  			</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

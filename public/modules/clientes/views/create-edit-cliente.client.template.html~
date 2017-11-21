@@ -1,0 +1,71 @@
+<div class="form-group">
+    <label class="control-label" for="codigo">Código</label>
+    <div class="controls">
+        <input type="text" data-ng-model="cliente.codigo" id="codigo">
+    </div>
+</div>
+
+<div class="form-group row">
+    <label class="control-label" for="nombre">Nombre</label>
+    <div class="controls">
+        <input type="text" data-ng-model="cliente.nombre" id="nombre" size="70">
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="control-label" for="razon">Razón</label>
+    <div class="controls">
+        <input type="text" data-ng-model="cliente.razon" id="codigo" size="70">
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="control-label" for="ruc">Ruc</label>
+    <div class="controls">
+        <input type="text" data-ng-model="cliente.ruc" id="ruc">
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="control-label" for="email">Correo</label>
+    <div class="controls">
+        <input type="email" data-ng-model="cliente.email" name="email" id="email" size="40">
+        <p ng-show="form-cliente.email.$invalid && !form-cliente.email.$pristine" class="help-block">Ingrese un correo válido</p>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="control-label" for="direccion">Dirección</label>
+    <div class="controls">
+        <input type="text" data-ng-model="cliente.direccion" id="direccion" size="100">
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="control-label" for="tel_fax">Teléfono</label>
+    <div class="controls">
+        <input type="text" data-ng-model="cliente.tel_fax" id="tel_fax" size="30">
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="control-label" for="fax">Fax</label>
+    <div class="controls">
+        <input type="text" data-ng-model="cliente.fax" id="fax" size="30">
+    </div>
+</div>
+
+<div class="form-group">
+    <button class="btn btn-primary" ng-disable="!form-cliente.$valid" ng-click="update()">
+        Grabar
+    </button>
+    <a class="btn btn-secondary" href="/#!/clientes">
+        <i class="glyphicon glyphicon-list"></i> Lista Cliente
+    </a>
+</div>
+
+
+<div data-ng-show="error" class="text-danger">
+  <strong data-ng-bind="error"></strong>
+  <p ng-message="email">Ingrese un correo válido</p>
+</div>

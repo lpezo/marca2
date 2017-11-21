@@ -1,0 +1,572 @@
+<section data-ng-controller="FichasController" data-ng-init="toEditFecha()" validate>
+    <div class="page-header">
+        <h3>FECHAS DE FICHA</h3>
+    </div>
+        <form class="form-horizontal" name="form-ficha">
+        <fieldset class="row">
+        	<div class="col-md-4">
+                <label class="control-label">GENERAL</label>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecpre">Fecha de Presentación</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecpre" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text"
+                                    data-ng-model="ficha.fechas.fecpre | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true }" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecpre=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecpre"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecpre' }" ng-change="changeFecpre()">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecnoti">Fecha de Notificación</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecnoti" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text" 
+                                    data-ng-model="ficha.fechas.fecnoti | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true}" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecnoti=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecnoti"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecnoti' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecpre">Notificación</label>
+                    <div class="input-append">
+                        <input type="text" data-ng-model="ficha.fechas.noti">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecabs">Fecha de Absolución de Observación</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecabs" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text" 
+                                    data-ng-model="ficha.fechas.fecabs | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true}" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecabs=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecabs"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecabs' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <hr/>
+
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecordpub">Notifi. Orden de Publicación</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecordpub" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text" 
+                                    data-ng-model="ficha.fechas.fecordpub | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true}" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecordpub=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecordpub"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecordpub' }" ng-change="changeFecOrdPub()" >
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecvencplapub">Vence Plazo para Publicar</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecvencplapub" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text" 
+                                    data-ng-model="ficha.fechas.fecvencplapub | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true}" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecvencplapub=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecvencplapub"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecvencplapub' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+		<hr/>
+
+
+<!--                 <div>
+                    <label class="control-label" for="ficha.fechas.fecpre">Fecha de Presentacion</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecpre" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text" 
+                                    data-ng-model="ficha.fechas.fecpre | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true}" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecpre=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecpre"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecpre' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecpub">Publicación</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecpub" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text" 
+                                    data-ng-model="ficha.fechas.fecpub | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true}" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecpub=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecpub"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecpub' }" ng-change="changePub()">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecvencplazo">Vencimiento de Plazo Observación</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecvencplazo" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text" 
+                                    data-ng-model="ficha.fechas.fecvencplazo | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true}" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecvencplazo=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecvencplazo"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecvencplazo' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecpre">Observación</label>
+                    <div class="input-append">
+                        <input type="text" data-ng-model="ficha.fechas.obs">
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecnotopo">Notificación de Oposición</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecnotopo" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text" 
+                                    data-ng-model="ficha.fechas.fecnotopo | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true}" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecnotopo=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecnotopo"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecnotopo' }" ng-change="change_fecnotopo()">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecplazocont">Plazo Contestación de Oposición</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecplazocont" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text" 
+                                    data-ng-model="ficha.fechas.fecplazocont | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true}" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecplazocont=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecplazocont"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecplazocont' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecinflegal">Informe Legal</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecinflegal" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text" 
+                                    data-ng-model="ficha.fechas.fecinflegal | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true}" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecinflegal=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecinflegal"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecinflegal' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecresol">Resolución</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecresol" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text" 
+                                    data-ng-model="ficha.fechas.fecresol | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true}" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecresol=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecresol"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecresol' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                 <div>
+                    <label class="control-label" for="ficha.fechas.fecnotresol">Fecha Notificación Resolución</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecnotresol" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text" 
+                                    data-ng-model="ficha.fechas.fecnotresol | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true}" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecnotresol=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecnotresol"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecnotresol' }" ng-change="change_fecnotresol()">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <hr/>
+
+            </div>
+
+            <div class="col-md-4">
+                <label class="control-label">RECONSIDERACIÓN</label>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecplareco">Vencimieno Plazo Reconsideración</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecplareco" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text"
+                                    data-ng-model="ficha.fechas.fecplareco | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true }" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecplareco=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecplareco"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecplareco' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecnotresoreco">Notificación de Resolución</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecnotresoreco" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text"
+                                    data-ng-model="ficha.fechas.fecnotresoreco | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true }" >
+                                <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                        <a class="btn" title="Borrar" ng-click="ficha.fechas.fecnotresoreco=null; ficha.fechas.fecvencplaape=null; ">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecnotresoreco"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecnotresoreco' }" ng-change="change_fecnotresoreco()">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <label class="control-label">APELACIÓN</label>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecvencplaape">Vencimiento Plazo Apelación</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecvencplaape" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text"
+                                    data-ng-model="ficha.fechas.fecvencplaape | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true }" >
+                                <span class="addon">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecvencplaape=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecvencplaape"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecvencplaape' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecnotresoape">Notificación de Resolución</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecnotresoape" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text"
+                                    data-ng-model="ficha.fechas.fecnotresoape | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true }" >
+                            <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecnotresoape=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecnotresoape"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecnotresoape' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <label class="control-label">CONTENCIOSO</label>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecvencplazdem">Vencimiento Plazo Demanda</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecvencplazdem" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text"
+                                    data-ng-model="ficha.fechas.fecvencplazdem | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true }" >
+                            <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecvencplazdem=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecvencplazdem"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecvencplazdem' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecresojud">Resolución Judicial</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecresojud" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text"
+                                    data-ng-model="ficha.fechas.fecresojud | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true }" >
+                            <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecresojud=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecresojud"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecresojud' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecvenc">Fecha de Vencimiento</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecvenc" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text"
+                                    data-ng-model="ficha.fechas.fecvenc | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true }" >
+                            <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecvenc=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecvenc"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecvenc' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="control-label" for="ficha.fechas.fecvigente">Vigente Hasta</label>
+                    <div class="dropdown">
+                        <div class="input-append">
+                            <a class="dropdown-toggle my-fecvigente" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                                <input type="text"
+                                    data-ng-model="ficha.fechas.fecvigente | date:'dd-MM-yyyy'"
+                                    ng-model-options="{ getterSetter: true }" >
+                            <span class="addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </span>
+                            </a>
+                            <a class="btn" title="Borrar" ng-click="ficha.fechas.fecvigente=null;">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <datetimepicker data-ng-model="ficha.fechas.fecvigente"
+                                                data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fecvigente' }">
+                                </datetimepicker>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </fieldset>
+
+        <div class="form-group">
+            <!--<input type="submit" value="Actualizar" class="btn btn-default" ng-click="uploadPic (picFile)"   /> -->
+            <button class="btn btn-primary" ng-disable="!form-ficha.$valid" ng-click="uploadFechas()">
+                Grabar
+            </button>
+            <a class="btn btn-secondary" 
+                ng-really-message="Desea salir sin grabar?" ng-really-click="iralista()">
+                <i class="glyphicon glyphicon-list"></i> Lista Fichas
+            </a>
+        </div>
+	   
+        <div data-ng-show="error" class="text-danger">
+	      <span ng-show="picFile.result">Se envió la imagen</span>
+	      <strong data-ng-bind="error"></strong>
+	    </div>                
+        </form>
+</section>

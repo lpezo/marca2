@@ -1,0 +1,34 @@
+<section data-ng-controller="FeriadosController">
+    <div class="page-header">
+        <h1>Feriados</h1>
+    </div>
+
+    <div class="pull-right">
+      <a type="button" class="btn btn-success" href="/#!/feriados/create">
+        <i class="glyphicon glyphicon-open"></i> Nuevo Feriado
+      </a>
+    </div>
+
+    <div>
+        <table ng-table="tableParams" show-filter="true">
+            <tr ng-repeat="feriado in $data">
+                <td data-title="'Día'" sortable="'dia'">{{feriado.dia}}</td>
+                <td data-title="'Mes'" sortable="'mes'">{{feriado.mes}}</td>
+                <td data-title="'Glosa'" sortable="'glosa'" filter="{ 'glosa': 'text' }">{{feriado.glosa}}</td>
+                <td>
+                   <div class="table-actions">
+                        <a class="btn btn-default" title="View" href="/#!/feriados/{{feriado._id}}">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        <a class="btn btn-default" title="Edit" href="/#!/feriados/{{feriado._id}}/edit">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                        <a class="btn btn-danger" title="Remove" ng-really-message="Are you sure ?" ng-really-click="remove(feriado)" item="feriado">
+                  				<span class="glyphicon glyphicon-remove-circle"></span>
+                  			</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

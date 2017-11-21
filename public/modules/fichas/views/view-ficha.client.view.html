@@ -1,0 +1,28 @@
+<section data-ng-controller="FichasController" data-ng-init="toViewFicha()">
+	<div class="page-header">
+		<h1 data-ng-bind="ficha.name"></h1>
+	</div>
+
+	<div class="col-md-12">
+
+		<form novalidate>
+			<formly-form model="ficha" fields="formFields">
+			</formly-form>
+		</form>
+
+		<hr/>
+		<div data-ng-show="((authentication.user) && (authentication.user._id == ficha.user._id))">
+			<a class="btn btn-success" href="/#!/fichas/{{ficha._id}}/edit">
+				<i class="glyphicon glyphicon-edit"></i> Edit
+			</a>
+			<a class="btn btn-danger" title="Remove" ng-really-message="¿ Está seguro ?" ng-really-click="remove()" item="ficha">
+				<i class="glyphicon glyphicon-remove-circle"></i> Delete
+			</a>
+			<a class="btn btn-primary" href="/#!/fichas">
+				<i class="glyphicon glyphicon-list"></i> List Fichas
+			</a>
+		</div>
+
+	</div>
+
+</section>

@@ -1,0 +1,33 @@
+<section data-ng-controller="TramitesController" data-ng-init="toListSubClase()">
+    <h3>Tramites</h3>
+
+    <div class="pull-right">
+      <a type="button" class="btn btn-success" href="/#!/tramites/create">
+        <i class="glyphicon glyphicon-open"></i> Nuevo Tramite
+      </a>
+    </div>
+
+    <div>
+        <table ng-table="tableParams" show-filter="true">
+            <tr ng-repeat="tramite in $data">
+                <td data-title="'Código'" sortable="'codigo'" filter="{ 'codigo': 'text' }">{{tramite.codigo}}</td>
+                <td data-title="'Name'" sortable="'name'" filter="{ 'name': 'text' }">{{tramite.name}}</td>
+                <td>
+                    <div class="table-actions">
+                <td>
+                   <div class="table-actions">
+                        <a class="btn btn-default" title="View" href="/#!/tramites/{{tramite._id}}">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        <a class="btn btn-default" title="Edit" href="/#!/tramites/{{tramite._id}}/edit">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                        <a class="btn btn-danger" title="Remove" ng-really-message="Are you sure ?" ng-really-click="remove(tramite)" item="tramite">
+                  				<span class="glyphicon glyphicon-remove-circle"></span>
+                  			</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

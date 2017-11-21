@@ -1,0 +1,52 @@
+<section data-ng-controller="FecvensController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Lista de Fechas de Vencimiento</h1>
+    </div>
+
+    <div class="pull-right">
+      <a type="button" class="btn btn-success" href="/#!/fecvens/create">
+        <i class="glyphicon glyphicon-open"></i> Nuevo Fecha de Vencimiento
+      </a>
+    </div>
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}
+</style>    
+
+    <div class="tg-wrap">
+        <table class="tg" style="undefined;table-layout: fixed; width: 755px">            
+            <colgroup>
+            <col style="width: 200px">
+            <col style="width: 200px">
+            <col style="width: 100px">
+            </colgroup>        
+            <tr>
+                <th>Campo</th>
+                <th>Descarte</th>
+                <th>Dias</th>
+            </tr>
+            <tr ng-repeat="fecven in data">
+                <td class="tg-031e">{{fecven.campo}}</td>
+                <td class="tg-031e">{{fecven.descarte}}</td>
+                <td class="tg-031e">{{fecven.dias}}</td>
+                <td class="tg-031e">
+                   <div class="table-actions">
+                        <a class="btn btn-default" title="View" href="/#!/fecvens/{{fecven._id}}">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        <a class="btn btn-default" title="Edit" href="/#!/fecvens/{{fecven._id}}/edit">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                        <a class="btn btn-danger" title="Remove" ng-really-message="Are you sure ?" ng-really-click="remove(fecven)" item="fecven">
+                  				<span class="glyphicon glyphicon-remove-circle"></span>
+                  			</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

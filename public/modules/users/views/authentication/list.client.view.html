@@ -1,0 +1,71 @@
+<section data-ng-controller="AuthenticationController" data-ng-init="iniList()">
+    <div class="row">
+         <div class="pull-left">
+            <h2>Usuarios</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1">
+            <label class="control-label">Registros:</label>
+        </div>
+        <div class="col-md-2">        
+            <select name="idCount" ng-model="config.count" ng-options="count for count in TableSettings.counts"> 
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <a class="btn btn-primary" title="Consulta" ng-click="buscando || doQuery('i')" ng-disabled="buscando">
+            Consulta
+        </a>
+    </div>        
+    <hr/>
+
+    <div>
+     <table class="table-striped">
+      <col width="200">
+      <col width="200">
+      <col width="200">
+      <col width="200">
+      <tr>
+        <th>Usuario</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Roles</th>
+      </tr>
+      <tr ng-repeat="usu in data.results">
+        <td>{{usu.username}}</td>
+        <td>{{usu.displayName}}</td>
+        <td>{{usu.email}}</td>
+        <td>{{usu.roles}}</td>
+        <td>
+            <a class="btn btn-danger btn-sm" title="Eliminar" ng-really-message="Está seguro?" ng-really-click="remove(usu)" item="usu" ng-hide="authentication.user.username === usu.username">
+                    <span>Eliminar</span>
+            </a>
+        </td>
+      </tr>
+    </table> 
+    </div>
+
+    <div>
+        <a class="btn btn-default" title="Anterior" ng-click="!data.options.hayanterior || doQuery('<')" ng-disabled="!data.options.hayanterior"><span class="glyphicon glyphicon-backward">Anterior</span>
+        </a>
+        <a class="btn btn-default" title="Siguiente" ng-click="!data.options.haymas || doQuery('>')" ng-disabled="!data.options.haymas">Siguiente<span class="glyphicon glyphicon-forward"></span>
+        </a>
+    </div>
+
+    <div data-ng-show="error" class="alert alert-danger form-group">
+        <strong data-ng-bind="error"></strong>
+    </div>
+
+    <div>
+        <span ng-show="data.total">
+            Regs: {{data.total | number}} / 
+        </span>
+        <span>
+            Total: {{total.cant | number}}
+        </span>
+    </div>
+
+</section>

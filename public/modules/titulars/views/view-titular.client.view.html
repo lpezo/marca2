@@ -1,0 +1,27 @@
+<section data-ng-controller="TitularsController" data-ng-init="toViewTitular()">
+	<div class="page-header">
+		<h1 data-ng-bind="titular.nombre"></h1>
+	</div>
+
+	<div class="col-md-12">
+
+		<form novalidate>
+			<formly-form model="titular" fields="formFields">
+			</formly-form>
+		</form>
+
+		<div data-ng-show="((authentication.user))">
+			<a class="btn btn-success" href="/#!/titulars/{{titular._id}}/edit">
+				<i class="glyphicon glyphicon-edit"></i> Edit
+			</a>
+			<a class="btn btn-danger" title="Remove" ng-really-message="Are you sure ?" ng-really-click="remove()" item="titular">
+				<i class="glyphicon glyphicon-remove-circle"></i> Delete
+			</a>
+			<a class="btn btn-primary" href="/#!/titulars">
+				<i class="glyphicon glyphicon-list"></i> Lista Titulars
+			</a>
+		</div>
+
+	</div>
+
+</section>

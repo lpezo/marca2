@@ -1,0 +1,28 @@
+<section data-ng-controller="SubclasesController" data-ng-init="toViewSubclase()">
+	<div class="page-header">
+		<h1 data-ng-bind="subclase.name"></h1>
+	</div>
+
+	<div class="col-md-12">
+
+		<form novalidate>
+			<formly-form model="subclase" fields="formFields">
+			</formly-form>
+		</form>
+
+		<hr/>
+		<div data-ng-show="((authentication.user) && (authentication.user._id == subclase.user._id))">
+			<a class="btn btn-success" href="/#!/subclases/{{subclase._id}}/edit">
+				<i class="glyphicon glyphicon-edit"></i> Edit
+			</a>
+			<a class="btn btn-danger" title="Remove" ng-really-message="Are you sure ?" ng-really-click="remove()" item="subclase">
+				<i class="glyphicon glyphicon-remove-circle"></i> Delete
+			</a>
+			<a class="btn btn-primary" href="/#!/subclases">
+				<i class="glyphicon glyphicon-list"></i> List Subclases
+			</a>
+		</div>
+
+	</div>
+
+</section>

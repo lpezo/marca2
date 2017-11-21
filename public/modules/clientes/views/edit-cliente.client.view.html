@@ -1,0 +1,44 @@
+<section data-ng-controller="ClientesController" data-ng-init="toEditCliente()">
+    <div class="page-header">
+        <h1>Editar Cliente</h1>
+    </div>
+    <!-- <div class="col-md-12"> -->
+        <form class="form-horizontal" data-ng-submit="update()" novalidate>
+
+          <formly-form model="cliente" fields="formFields">
+    			</formly-form>
+
+          <hr/>
+          <div class="form-group">
+              <button type="submit" class="btn btn-success">
+                <i class="glyphicon glyphicon-ok"></i> Save
+              </button>
+              <a class="btn btn-danger" href="/#!/clientes">
+                <i class="glyphicon glyphicon-remove"></i> Cancel
+              </a>
+          </div>
+
+          <div data-ng-show="error" class="alert alert-danger form-group">
+            <strong data-ng-bind="error"></strong>
+          </div>
+
+        </form>
+    <!-- </div> -->
+</section>
+
+
+
+<!--
+<section data-ng-controller="ClientesController" data-ng-init="toEditCliente()">
+    <div class="page-header">
+        <h1>Editar Cliente</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="update()" novalidate>
+        <fieldset ng-include="'modules/clientes/views/create-edit-cliente.client.template.html'">
+        </fieldset>
+        </form>
+    </div>
+</section>
+
+-->

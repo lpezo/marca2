@@ -1,0 +1,1 @@
+{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "marca2.ubis" }, { "v" : 1, "unique" : true, "key" : { "num" : 1 }, "name" : "num_1", "ns" : "marca2.ubis" }, { "v" : 1, "key" : { "pad" : 1 }, "name" : "pad_1", "ns" : "marca2.ubis" } ] }

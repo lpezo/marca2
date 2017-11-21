@@ -1,0 +1,28 @@
+<section data-ng-controller="FeriadosController" data-ng-init="toViewFeriado()">
+	<div class="page-header">
+		<h1 data-ng-bind="feriado.name"></h1>
+	</div>
+
+	<div class="col-md-12">
+
+		<form novalidate>
+			<formly-form model="feriado" fields="formFields">
+			</formly-form>
+		</form>
+
+		<hr/>
+		<div data-ng-show="((authentication.user) && (authentication.user._id == feriado.user._id))">
+			<a class="btn btn-success" href="/#!/feriados/{{feriado._id}}/edit">
+				<i class="glyphicon glyphicon-edit"></i> Edit
+			</a>
+			<a class="btn btn-danger" title="Remove" ng-really-message="Are you sure ?" ng-really-click="remove()" item="feriado">
+				<i class="glyphicon glyphicon-remove-circle"></i> Delete
+			</a>
+			<a class="btn btn-primary" href="/#!/feriados">
+				<i class="glyphicon glyphicon-list"></i> List Feriados
+			</a>
+		</div>
+
+	</div>
+
+</section>

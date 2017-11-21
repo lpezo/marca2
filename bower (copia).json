@@ -1,0 +1,28 @@
+{
+  "name": "marca",
+  "version": "0.0.1",
+  "description": "Gestor de Marcas",
+  "dependencies": {
+    "angular": "~1.4",
+    "angular-animate": "~1.4",
+    "angular-bootstrap": "~0.11.2",
+    "angular-cookies": "~1.4",
+    "angular-mocks": "~1.4",
+    "angular-resource": "~1.4",
+    "angular-sanitize": "~1.4",
+    "angular-touch": "~1.4",
+    "angular-ui-calendar": "latest",
+    "angular-ui-date": "~0.0.8",
+    "angular-ui-router": "~0.2.11",
+    "angular-ui-utils": "~0.1.1",
+    "bootstrap": "~3",
+    "ng-file-upload": "~7.3.8",
+    "ng-file-upload-shim": "~7.3.8",
+    "ng-table": "~0.3.3",
+    "angular-bootstrap-datetimepicker": "latest",
+    "angular-formly": "~4.0.11",
+    "angular-formly-templates-bootstrap": "~4.0.10",
+    "api-check": "~6.0.11",
+    "angularjs-dropdown-multiselect": "~1.5.2"
+  }
+}

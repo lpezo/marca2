@@ -1,0 +1,63 @@
+<section data-ng-controller="ParametrosController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Parámetros</h1>
+    </div>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}
+</style>
+
+<form class="form-group" ng-submit="updateParametros(parametros)" novalidate>
+<fieldset>
+
+    <div class="tg-wrap"><table class="tg" style="undefined;table-layout: fixed; width: 755px">
+    <colgroup>
+    <col style="width: 301px">
+    <col style="width: 49px">
+    <col style="width: 148px">
+    <col style="width: 257px">
+    <col style="width: 30px">
+    </colgroup>
+      <tr ng-repeat="param in parametros">
+        <td class="tg-031e">{{param.desc}}</td>
+        <td class="tg-031e">
+            <input type="text" ng-model="param.dias" ng-change="change(param)">
+        </td>
+        <td class="tg-031e">
+            <label><input type="radio" ng-model="param.diames" value="d" ng-change="change(param)">Días</label>
+            <label><input type="radio" ng-model="param.diames" value="m" ng-change="change(param)">Meses</label>
+        </td>
+        <td class="tg-031e">
+            <label><input type="radio" ng-model="param.labo" value="y" ng-change="change(param)">Días laborables</label>
+            <label><input type="radio" ng-model="param.labo" value="n" ng-change="change(param)">Días no laborables</label>        
+        </td>
+        <td>{{param.change}}</td>
+      </tr>
+    </table></div>
+    <div class="form-group">
+        <input type="submit" value="Update" class="btn btn-default">
+    </div>
+    <div data-ng-show="error" class="text-danger">
+        <strong data-ng-bind="error"></strong>
+    </div>
+
+</fieldset>
+</form>
+
+    <!--
+    <div>
+        <table ng-table="tableParams" show-filter="true">
+            <tr ng-repeat="parametro in $data">
+                <td data-title="'Código'" sortable="'codigo'" filter="{ 'codigo': 'text' }">{{parametro.codigo}}</td>
+                <td data-title="'Descripción'" sortable="'desc'" filter="{ 'desc': 'text' }">{{parametro.desc}}</td>
+                <td data-title="'Días'" sortable="'dias'" filter="{ 'dias': 'text' }">{{parametro.dias}}</td>
+                <td data-title="'Días o Meses'" sortable="'diames'" filter="{ 'diames': 'text' }">{{parametro.diames}}</td>
+                <td data-title="'Dias Laborales'" sortable="'labo'" filter="{ 'labo': 'text' }">{{parametro.labo}}</td>
+            </tr>
+        </table>
+    </div>
+    -->
+</section>

@@ -1,0 +1,80 @@
+    <section data-ng-controller="FichasController" data-ng-init="iniVenc()">
+    <div class="page-header">
+        <h1>Registros Próximos a Vencer </h1>
+    </div>
+
+        <hr/>
+
+        <div class="CSSReport">
+            <table >
+                <tr>
+                    <td>
+                        #
+                    </td>
+                    <!-- <td>
+                        Código
+                    </td> -->
+                    <td>
+                        Cliente
+                    </td>
+                    <td >
+                        Logo
+                    </td>
+                    <td>
+                        Motivo
+                    </td>
+                    <td>
+                    	Expediente
+                    </td>
+                    <td>
+                    	Certificado
+                    </td>
+                    <td>
+                        Fecha
+                    </td>
+                    <td>
+                        Descartar
+                    </td>
+                </tr>
+                <tr ng-repeat="item in fichas">
+                    <td style="text-align: center">
+                        {{item.num}}
+                    </td>
+                    <!-- <td style="text-align: center">
+                        <a href="/#!/fichas/{{item._id}}/edit">
+                        {{item.codigo}}
+                        </a>
+                    </td> -->
+                    <td>
+                        {{item.nomcli}}
+                    </td>
+                    <td>
+                        <img ng-hide="!item.archivo" ng-src="/img/{{item.archivo}}" id="img-id" width="50" onerror='this.style.display = "none"'/>                      
+                    </td>
+                    <td>
+                        {{item.motivo}}
+                    </td>
+                    <td>
+                    	{{item.numexpediente}}
+                    </td>
+                    <td>
+                    	{{item.numcertificado}}
+                    </td>
+                    <td>
+                        <a href="/#!/fichas/{{item._id}}/fecha">
+                        {{item.fecha | date: 'dd-MM-yyyy'}}
+                        </a>
+                    </td>
+                    <td style="text-align: center">
+                        <a class="btn btn-danger" title="Descartar" ng-really-message="¿Está seguro de descartar esta fecha?" ng-really-click="descartar(item)" item="descartar">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div data-ng-show="error" class="text-danger">
+          <strong data-ng-bind="error"></strong>
+        </div>          
+</section>

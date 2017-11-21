@@ -1,0 +1,3 @@
+Application loaded using the "production" environment configuration
+{ [Error: Cannot find module '../build/Release/bson'] code: 'MODULE_NOT_FOUND' }
+MEAN.JS application started on port 3000

@@ -1,0 +1,35 @@
+<section data-ng-controller="DerechosController">
+    <div class="page-header">
+        <h1>Derechos</h1>
+    </div>
+
+    <div class="pull-right">
+      <a type="button" class="btn btn-success" href="/#!/derechos/create">
+        <i class="glyphicon glyphicon-open"></i> New Derecho
+      </a>
+    </div>
+
+    <div>
+        <table ng-table="tableParams" show-filter="true">
+            <tr ng-repeat="derecho in $data">
+                <td data-title="'Código'" sortable="'codigo'" filter="{ 'codigo': 'text' }">{{derecho.codigo}}</td>
+                <td data-title="'Nombre'" sortable="'name'" filter="{ 'name': 'text' }">{{derecho.name}}</td>
+                <td>
+                    <div class="table-actions">
+                <td>
+                   <div class="table-actions">
+                        <a class="btn btn-default" title="View" href="/#!/derechos/{{derecho._id}}">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        <a class="btn btn-default" title="Edit" href="/#!/derechos/{{derecho._id}}/edit">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                        <a class="btn btn-danger" title="Remove" ng-really-message="Are you sure ?" ng-really-click="remove(derecho)" item="derecho">
+                  				<span class="glyphicon glyphicon-remove-circle"></span>
+                  			</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
