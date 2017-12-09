@@ -212,6 +212,13 @@ var FichaSchema = new Schema({
 	},
 	archivo: {
 		type: String
+	},
+	fechavenc: {
+		type: Date
+	},
+	fechavencDescarte: {
+		type: Boolean,
+		default: false
 	}
 });
 

@@ -58,7 +58,7 @@ var parametros = require('./parametros.server.controller');
 			//console.log('Save Ficha: ', ficha._id);
 			if (ficha.codigo || ficha.codigo > 0)
 			{
-				//console.log('Save Ficha: ', 'Es Edit');
+				console.log('Save Ficha: ', 'Es Edit');
 				done(null, 0);
 			}
 			else
@@ -84,7 +84,7 @@ var parametros = require('./parametros.server.controller');
 		},
 		function(numero, done) {
 			//done(err, emailHTML, user);
-			//console.log('numero:', numero);
+			console.log('numero:', numero);
 			if (numero > 0)
 			{
 				ficha.codigo = numero;
@@ -107,7 +107,13 @@ var parametros = require('./parametros.server.controller');
 			            message: errorHandler.getErrorMessage(e)
 			        });
 			 }
-			var nomdestino = numero.toString() + path.extname(file.path);
+			var nomdestino = 'null';
+			if (ficha.codigo)
+				nomdestino = ficha.codigo.toString() + path.extname(file.path);
+			if (ficha.numexpediente && ficha.numexpediente.length > 1)
+			{
+				nomdestino = ficha.numexpediente + path.extname(file.path);
+			}
 			var destino = path.join( './public/img', nomdestino);
 			console.log('destino:', destino);	
 			ficha.archivo = nomdestino;
@@ -206,9 +212,9 @@ var parametros = require('./parametros.server.controller');
 					nomsigno: ficha.nomsigno, numexpediente: ficha.numexpediente, numcertificado: ficha.numcertificado,
 					clases: ficha.clases, subclases: ficha.subclases, prinumero: ficha.prinumero || '', 
 					prifecha: ficha.prifecha || null, pripais: ficha.pripais || '', 
-					interes: ficha.interes || '', estado: ficha.estado || '', deslogo: ficha.deslogo || '', finalizado: ficha.finalizado, archivo: ficha.archivo || ''};
+					interes: ficha.interes || '', estado: ficha.estado || '', deslogo: ficha.deslogo || '', finalizado: ficha.finalizado, archivo: ficha.archivo || '', fechavenc: ficha.fechavenc || null};
 
-				// console.log('upd:',upd);
+				console.log('upd:',upd);
 
 				if (imagen)
 					upd.image = imagen;
@@ -452,7 +458,7 @@ exports.list = function(req, res, next) {
 
 	var filter = {
 		filters : {
-			field: ['codigo', 'codcli', 'nomcli', 'nomsigno', 'numcertificado', 'clases', 'fechas.fecvenc', 'archivo'],
+			field: ['codigo', 'codcli', 'nomcli', 'nomsigno', 'numcertificado', 'clases', 'fechas.fecvenc', 'archivo', 'fechavenc', 'nomtit'],
 			mandatory : {
 				contains: qfilter,
 				exact: qcodigo,
@@ -642,7 +648,8 @@ exports.listVencimientos = function(req, res, next)
 		qrango[busq.campo] = {'$gte': desde, '$lte': hastax};
 		console.log('desde:', desde, 'hasta:', hastax);
 		var query = {$and:[qfinalizado, qdescarte, qrango]};
-		var proy = {codigo:1, codcli:1, nomcli:1, nomsigno:1, numexpediente:1, numcertificado:1, archivo:1};
+		var proy = {codigo:1, codcli:1, nomcli:1, nomsigno:1, numexpediente:1, 
+			numcertificado:1, archivo:1, fechavenc:1, nomtit:1};
 		proy[busq.campo] = 1;
 
 		console.log('query:', query);
@@ -659,7 +666,10 @@ exports.listVencimientos = function(req, res, next)
 					var obj = fich.toObject();
 					obj.motivo = busq.descripcion;
 					var pos = busq.campo.indexOf('.');
-					obj.fecha = obj[busq.campo.substr(0, pos)][busq.campo.substr(pos+1)];
+					if (pos >= 0)
+						obj.fecha = obj[busq.campo.substr(0, pos)][busq.campo.substr(pos+1)];
+					else
+						obj.fecha = obj[busq.campo];
 					//obj.fecha = obj['fechas'][busq.campo];
 					if (obj.fecha > hasta)
 						obj.motivo = obj.motivo + ' (vencido)';

@@ -17,7 +17,10 @@
                     <td>
                         Cliente
                     </td>
-                    <td >
+				    <td>
+						Titular
+				    </td>
+                    <td>
                         Logo
                     </td>
                     <td>
@@ -48,6 +51,9 @@
                     <td>
                         {{item.nomcli}}
                     </td>
+				    <td>
+						{{item.nomtit}}
+				    </td>
                     <td>
                         <img ng-hide="!item.archivo" ng-src="/img/{{item.archivo}}" id="img-id" width="50" onerror='this.style.display = "none"'/>                      
                     </td>
@@ -62,7 +68,7 @@
                     </td>
                     <td>
                         <a href="/#!/fichas/{{item._id}}/fecha">
-                        {{item.fecha | date: 'dd-MM-yyyy'}}
+                        {{item.fechavenc | date: 'dd-MM-yyyy'}}
                         </a>
                     </td>
                     <td style="text-align: center">

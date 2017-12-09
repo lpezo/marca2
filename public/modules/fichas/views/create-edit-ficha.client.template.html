@@ -97,6 +97,26 @@
                 capitalize-first>
             </div>
         </div>
+        <div class="controls col-md-3">
+            <label class="control-label" for="ficha.fechavenc">Fecha Vencimiento</label>
+            <div class="dropdown">
+                <a class="dropdown-toggle my-fechavenc" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                    <div class="input-append">
+                        <input type="text" data-ng-model="ficha.fechavenc | date:'dd-MM-yyyy'"
+                            ng-model-options="{ getterSetter: true}">
+                        <span class="addon">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <datetimepicker data-ng-model="ficha.fechavenc"
+                                    data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-fechavenc' }"></datetimepicker>
+                </ul>
+            </div>
+        </div>
+
     </div>
 </div>
 

@@ -19,6 +19,8 @@
 		}
 		doc.codcli = imp.CODCLI;
 		doc.nomcli = imp.NOMCLI;
+		doc.codtit = imp.CODTIT;
+		doc.nomtit = imp.NOMTIT;
 		doc.nomsigno = imp.MARCA;
 		doc.clases = [];
 		imp.CLASE.toString().split(',').forEach(function(cla){
@@ -31,16 +33,22 @@
 		doc.fechas = {};
 		if (imp.VENCIMIENTO && imp.VENCIMIENTO.length > 6)
 		{
-			var strfec = imp.VENCIMIENTO.substring(6, 10) + '-' + 
-			imp.VENCIMIENTO.substring(3, 5) + '-' +
-			imp.VENCIMIENTO.substring(0, 2);
-			doc.fechas.fecvenc = new Date(strfec);
+			var xfecha = imp.VENCIMIENTO;
+			if (xfecha.substring(1, 2) == ".")
+				xfecha = "0" + xfecha;
+			var strfec = xfecha.substring(6, 10) + '-' + 
+				xfecha.substring(3, 5) + '-' +
+				xfecha.substring(0, 2);
+			doc.fechavenc = new Date(strfec);
 		}
 		if (imp.VIGENCIA && imp.VIGENCIA.length > 6)
 		{
-			var strfec = imp.VIGENCIA.substring(6, 10) + '-' + 
-			imp.VIGENCIA.substring(3, 5) + '-' +
-			imp.VIGENCIA.substring(0, 2);
+			var xfecha = imp.VIGENCIA;
+			if (xfecha.substring(1, 2) == ".")
+				xfecha = "0" + xfecha;
+			var strfec = xfecha.substring(6, 10) + '-' + 
+				xfecha.substring(3, 5) + '-' +
+				xfecha.substring(0, 2);
 			doc.fechas.fecvigente = new Date(strfec);
 		}
 		doc.estado = imp.ESTADO;
