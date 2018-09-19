@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/marca2',
+	db: 'mongodb://127.0.0.1:27017/marca2',
 	app: {
 		title: 'MARCA - Development Environment'
 	},
