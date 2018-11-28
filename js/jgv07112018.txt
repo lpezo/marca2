@@ -1,0 +1,1000 @@
+ 1041  cat package.json 
+ 1042  meteor npm --save install babel-runtime@6.23.0
+ 1043  meteor npm --save install meteor-node-stubs@0.2.0
+ 1044  meteor --help
+ 1045  meteor --help --allwo-supersuer
+ 1046  meteor --help --allwo-superuser
+ 1047  meteor --help --allow-superuser
+ 1048  meteor
+ 1049  meteor --allow-superuser
+ 1050  cat package.json 
+ 1051  meteor
+ 1052  meteor --allow-superuser
+ 1053  meteor npm remove fibers
+ 1054  meteor npm --save install fibers
+ 1055  ./deploylargo.sh 
+ 1056  apt-get install g++ build-essential
+ 1057  apt-get autoremove
+ 1058  sudo apk add python make g++
+ 1059  npm owner ls fibers
+ 1060  nodejs
+ 1061  ls
+ 1062  cd /var/ww/cursom/bundle/
+ 1063  ls
+ 1064  nod main
+ 1065  node main
+ 1066  ls
+ 1067  cat README 
+ 1068  cd programas
+ 1069  cd programs
+ 1070  ls
+ 1071  cd server
+ 1072  ls
+ 1073  ls -l
+ 1074  cat debug.js 
+ 1075  cat package.json 
+ 1076  node -v
+ 1077  n
+ 1078  ls
+ 1079  npm -v
+ 1080  node -v
+ 1081  ls
+ 1082  cd ..
+ 1083  ls
+ 1084  cat README 
+ 1085  cd program
+ 1086  cd programs
+ 1087  cd server
+ 1088  npm install
+ 1089  cd ..
+ 1090  cd /opt/cursomongo/
+ 1091  ls
+ 1092  cat deploylargo.sh 
+ 1093  start cursomongo
+ 1094  curl localhost:9091
+ 1095  stop cursomongo
+ 1096  cd /var/ww/cursomongo
+ 1097  cd /var/ww/cursom
+ 1098  ls
+ 1099  cd bundle/
+ 1100  ls
+ 1101  cat /etc/init/cursomongo.conf
+ 1102  expor PORT=3000
+ 1103  export PORT=3000
+ 1104  export HOME=/var/ww/cursom
+ 1105  pwd
+ 1106  export MONGO_URL='mongodb://localhost:27017/cursom'
+ 1107  export ROOT_URL='http://190.81.56.82:9091/'
+ 1108  node main.js
+ 1109  n --help
+ 1110  n ls
+ 1111  n 8.2.0
+ 1112  n
+ 1113  node -v
+ 1114  ls
+ 1115  node main.js
+ 1116  ls
+ 1117  cd programs/servers
+ 1118  cd programs/server
+ 1119  ls
+ 1120  ls -l
+ 1121  rm node_modules/ -r
+ 1122  npm -v
+ 1123  npm install
+ 1124  cd ..
+ 1125  ls
+ 1126  node main.js
+ 1127  nano /etc/init/cursomongo.conf
+ 1128  node -v
+ 1129  nano /etc/init/cursomongo.conf
+ 1130  start cursomongo
+ 1131  exit
+ 1132  cd /opt
+ 1133  ls
+ 1134  stop detect
+ 1135  ls /etc/init/cur*
+ 1136  start cursomongo
+ 1137  exit
+ 1138  cd /opt/cursomongo/
+ 1139  ls
+ 1140  cat package.json 
+ 1141  git status
+ 1142  ls ..
+ 1143  ls ../bak
+ 1144  ls
+ 1145  cp package*.json ../bak
+ 1146  ls ../bak
+ 1147  ls
+ 1148  git pull origin master
+ 1149  ls
+ 1150  git pull origin master --force
+ 1151  git add .
+ 1152  git status
+ 1153  git commit -m "desde mark"
+ 1154  git push origin master
+ 1155  git pull origin master
+ 1156  ls
+ 1157  cd client/
+ 1158  ls
+ 1159  nano Cuestionario.js
+ 1160  ls
+ 1161  nano Cuestonario.js 
+ 1162  ls
+ 1163  cd ..
+ 1164  cd cursomongo/
+ 1165  ls
+ 1166  cat package.json 
+ 1167  cp ../caja2/deploycorto.sh 
+ 1168  cp ../caja2/deploycorto.sh  .
+ 1169  ls
+ 1170  nano deploycorto.sh 
+ 1171  cat deploylargo.sh 
+ 1172  cat deploycorto.sh 
+ 1173  clear
+ 1174  cat deploylargo.sh 
+ 1175  cat deploycorto.sh 
+ 1176  nano deploycorto.sh 
+ 1177  ls
+ 1178  ./deploycorto.sh 
+ 1179  exit
+ 1180  cd /opt
+ 1181  ls
+ 1182  ls -l
+ 1183  cd ..
+ 1184  ls
+ 1185  cd var
+ 1186  ls
+ 1187  cd /home
+ 1188  ls
+ 1189  cd detuser/
+ 1190  ls
+ 1191  pwd
+ 1192  github clone https://github.com/lpezo/carrier.git
+ 1193  git clone https://github.com/lpezo/carrier.git
+ 1194  ls
+ 1195  cd carrier
+ 1196  ls
+ 1197  exit
+ 1198  cd /opt
+ 1199  ls
+ 1200  cd /etc/init
+ 1201  ls ca*
+ 1202  cat caja.conf 
+ 1203  exit
+ 1204  mongo
+ 1205  exit
+ 1206  cd /opt/caja2
+ 1207  git pull origin master
+ 1208  ls
+ 1209  ls -l
+ 1210  ls *.sh
+ 1211  ./deploylargo.sh 
+ 1212  exit
+ 1213  cd /opt/caja2
+ 1214  ls
+ 1215  ls *.scv
+ 1216  ls *.csv
+ 1217  mongo caja
+ 1218  ls *.csv
+ 1219  mongoimport -d caja -c areas --type csv --file Areas.csv --headerLines --drop
+ 1220  mongoimport
+ 1221  mongoimport -d caja -c areas --type csv --file Areas.csv --headerLines --drop
+ 1222  mongoimport -d caja -c areas --type csv --file Areas.csv --headerLine --drop
+ 1223  mongoimport -d caja -c areas --type csv --file Areas.csv --HeaderLine --drop
+ 1224  mongoimport -d caja -c areas --type csv --file Areas.csv --headerline --drop
+ 1225  exit
+ 1226  cd /opt/caja2
+ 1227  ls
+ 1228  ls *.scv -l
+ 1229  ls *.csv -l
+ 1230  mongoimport -d caja -c areas --type csv --file Areas.csv --headerline --drop
+ 1231  mongo caja
+ 1232  exit
+ 1233  pwd
+ 1234  cd /opt
+ 1235  ls
+ 1236  cat leer.txt 
+ 1237  status marca
+ 1238  cd /etc/init
+ 1239  ls caja*
+ 1240  cat caja.conf
+ 1241  ls
+ 1242  cd cur*
+ 1243  ls cur*
+ 1244  cat cursomongo.conf
+ 1245  stop cursomongo
+ 1246  stop detect
+ 1247  cat caja.conf
+ 1248  curl localhost:83
+ 1249  pwd
+ 1250  ls
+ 1251  ls n
+ 1252  ls z
+ 1253  ls
+ 1254  ls n
+ 1255  ls
+ 1256  exit
+ 1257  pwd
+ 1258  free -m
+ 1259  cd /opt
+ 1260  ls
+ 1261  cat leer.txt 
+ 1262  curl localhost:9092
+ 1263  curl localhost:9093
+ 1264  curl localhost:81
+ 1265  cat leer.txt 
+ 1266  status cursomongo
+ 1267  stop cursomongo
+ 1268  curl localhost:3000
+ 1269  car leer.txt 
+ 1270  cat leer.txt 
+ 1271  cd /etc/init
+ 1272  ls detect.conf 
+ 1273  vi detect.conf 
+ 1274  status detect 
+ 1275  stop detect
+ 1276  mv detect.conf detect.conf.bak
+ 1277  mv cursomongo.conf cursomongo.conf.bak
+ 1278  curl localhost:3000
+ 1279  cd /opt
+ 1280  ls
+ 1281  exit
+ 1282  node -v
+ 1283  nvm ls
+ 1284  n ls
+ 1285  n
+ 1286  ls /var/www
+ 1287  ls /var/ww
+ 1288  exit
+ 1289  nvm
+ 1290  n
+ 1291  n 8.9.2
+ 1292  node -v
+ 1293  exit
+ 1294  pwd
+ 1295  ls
+ 1296  cd /opt
+ 1297  ls
+ 1298  ls -l
+ 1299  cd /etc/init
+ 1300  ls
+ 1301  ls ma*
+ 1302  status marca
+ 1303  status marca2
+ 1304  vi marca2.conf
+ 1305  mysql status
+ 1306  apache status
+ 1307  apache2 status
+ 1308  systemctl
+ 1309  systemd
+ 1310  system3
+ 1311  systemctl list-units -t service
+ 1312  uname
+ 1313  version
+ 1314  lsb_release -a
+ 1315  status cursomongo
+ 1316  shutdown -r now
+ 1317  pwd
+ 1318  status marca
+ 1319  cd /opt
+ 1320  cat leer.txt 
+ 1321  status marca2
+ 1322  status marca
+ 1323  cd /etc
+ 1324  ls
+ 1325  ckear
+ 1326  clear
+ 1327  ls m*.conf
+ 1328  cd init
+ 1329  ls m*.conf
+ 1330  vi marca.conf
+ 1331  stop marca
+ 1332  vi marca2.conf
+ 1333  vi -r marca2.conf
+ 1334  vi marca2.conf
+ 1335  vi marca.conf
+ 1336  cp marca2.conf marca3.conf
+ 1337  vi marca3.conf
+ 1338  vi marca.conf
+ 1339  vi marca2.conf
+ 1340  stop marca2
+ 1341  vi marca2.conf
+ 1342  mv marca.conf.bak
+ 1343  mv marca.conf marca.conf.bak
+ 1344  mv marca2.conf marca2.conf.bak
+ 1345  ls m*.conf
+ 1346  vi marca3.conf
+ 1347  status marca
+ 1348  status marca2
+ 1349  start marca3
+ 1350  curl localhost:80
+ 1351  cat /opt/leer.txt 
+ 1352  vi marca3.conf
+ 1353  curl localhost:80
+ 1354  cat /opt/leer.txt 
+ 1355  vi marca3.conf
+ 1356  vi marca2.conf.bak 
+ 1357  vi marca.conf.bak 
+ 1358  exit
+ 1359  status marca3
+ 1360  curl localhost:80
+ 1361  curl localhost
+ 1362  curl localhost
+ 1363  chklist --list
+ 1364  chkconfig --list
+ 1365  top
+ 1366  ps faux
+ 1367  service apache
+ 1368  service apache2
+ 1369  status service apache2
+ 1370  apache2 status
+ 1371  apache status
+ 1372  http status
+ 1373  history
+ 1374  history > /home/user/listajgv
+ 1375  history > listajgv
+ 1376  history | grep
+ 1377  history --help
+ 1378  history help
+ 1379  history 
+ 1380  ls
+ 1381  status marca
+ 1382  status marcas
+ 1383  ls
+ 1384  ls -l
+ 1385  cat listajgv 
+ 1386  clear
+ 1387  ls
+ 1388  status marca2
+ 1389  statu marca3
+ 1390  status marca3
+ 1391  vi /etc/init/marca3.conf 
+ 1392  cd /var/
+ 1393  ls
+ 1394  cd log
+ 1395  ls
+ 1396  vi marca.log 
+ 1397  ls m*.log
+ 1398  ls m*.log -ls
+ 1399  mv marca.log marca.bak.log
+ 1400  tail -n 100 marca.bak.log
+ 1401  status marca3
+ 1402  ls
+ 1403  ls m*
+ 1404  stop marca3
+ 1405  start marca3
+ 1406  ls
+ 1407  ls mar*
+ 1408  vi marca.log 
+ 1409  mongo
+ 1410  free -m
+ 1411  ps -m
+ 1412  df
+ 1413  df -m
+ 1414  df -mB
+ 1415  df --help
+ 1416  df -h
+ 1417  ls
+ 1418  ls marca.*
+ 1419  ls marca.* -l
+ 1420  rm marca.bak.log 
+ 1421  ls
+ 1422  df -h
+ 1423  mongo
+ 1424  stop mongod
+ 1425  stop mongo
+ 1426  stop mongodb
+ 1427  service top mongodb
+ 1428  service status mongodb
+ 1429  service status mongod
+ 1430  service status mongo
+ 1431  service mongodb status
+ 1432  service mongod status
+ 1433  service mongod start
+ 1434  mongo
+ 1435  service mongod status
+ 1436  service mongod start
+ 1437  service mongod status
+ 1438  ls
+ 1439  ls mo*}
+ 1440  ls mo* -l
+ 1441  ls
+ 1442  ls mo*
+ 1443  rm mongod.log
+ 1444  ls *.log
+ 1445  ls
+ 1446  cd mongodb/
+ 1447  ls
+ 1448  ls -l
+ 1449  rm mongod.log 
+ 1450  ls
+ 1451  service mongod start
+ 1452  service mongod status
+ 1453  ls
+ 1454  service mongod start
+ 1455  ls
+ 1456  mongo
+ 1457  mong
+ 1458  mongo
+ 1459  status marca3
+ 1460  stop marca3
+ 1461  start marca3
+ 1462  status marca3
+ 1463  curl localhost
+ 1464  curl localhost:80
+ 1465  status marca3
+ 1466  status marca
+ 1467  status marca2
+ 1468  stop marca3
+ 1469  curl localhost:80
+ 1470  start marca3
+ 1471  cd ..
+ 1472  ls
+ 1473  ls ma*
+ 1474  cat marca.log
+ 1475  mongo
+ 1476  ls
+ 1477  ls mar*
+ 1478  cat marca.log 
+ 1479  curl localhost:80
+ 1480  df -h
+ 1481  reboot
+ 1482  mongo
+ 1483  status marca3
+ 1484  curl localhost
+ 1485  curl localhost:80
+ 1486  curl localhost:9094
+ 1487  status marca3
+ 1488  cd /var/log
+ 1489  tail marca.log 
+ 1490  mong
+ 1491  mongo
+ 1492  exit
+ 1493  mongo
+ 1494  ls
+ 1495  status marca3
+ 1496  vi /etc/init/marca3.conf 
+ 1497  stop marca3
+ 1498  status marca3
+ 1499  curl localhost:80
+ 1500  netstat --listen
+ 1501  docker ls
+ 1502  docker container ls
+ 1503  docker ps
+ 1504  node -v
+ 1505  docker inspect
+ 1506  iptables-save | grep 80
+ 1507  iptables-save
+ 1508  cd /*opt/marca2
+ 1509  ls"
+ 1510  netstat
+ 1511  netstat | grep ":
+ 1512  sudo netstat -tlnp | grep ":"
+ 1513  sudo netstat -tlnp | grep ":80"
+ 1514  sudo netstat -tlnp | grep 80
+ 1515  sudo lsof -i :80
+ 1516  curl localhost
+ 1517  ls
+ 1518  cat ../leer.txt 
+ 1519  curl localhost:3000
+ 1520  grunt
+ 1521  n
+ 1522  vi /etc/init/marca3.conf 
+ 1523  n
+ 1524  node -v
+ 1525  grunt
+ 1526  mongo
+ 1527  ls
+ 1528  ls -l
+ 1529  cd config/
+ 1530  ls
+ 1531  vi config.js 
+ 1532  cd env
+ 1533  ls
+ 1534  vi all.js 
+ 1535  vi development.js 
+ 1536  vi production.js 
+ 1537  printenv
+ 1538  ls
+ 1539  vi development.js 
+ 1540  ping localhost
+ 1541  mongo
+ 1542  ls
+ 1543  vi all.js 
+ 1544  cd ..
+ 1545  grunt
+ 1546  curl local
+ 1547  curl localhost:3000
+ 1548  cd /opt/marca2
+ 1549  ls
+ 1550  grunt
+ 1551  node -v
+ 1552  vi package.json 
+ 1553  ls *.js
+ 1554  PORT=80 node server
+ 1555  cd /opt
+ 1556  cd marca2
+ 1557  ls
+ 1558  cat Dockerfile 
+ 1559  clear
+ 1560  ls
+ 1561  node -v
+ 1562  node server
+ 1563  mongo marca2
+ 1564  mongo -h localhost --port 27017
+ 1565  mongo localhost --port 27017
+ 1566  mongo localhost/marca2 --port 27017
+ 1567  mongo marca2 --port 27017
+ 1568  mongo 127.0.0.1:27017/marca2 
+ 1569  ls
+ 1570  cd config/
+ 1571  ls
+ 1572  cd env
+ 1573  ls
+ 1574  vi all.js 
+ 1575  vi development.js 
+ 1576  cd ..
+ 1577  node server
+ 1578  vi development.js 
+ 1579  vi config/env/development.js 
+ 1580  node server
+ 1581  vi config/env/development.js 
+ 1582  vi config/env/all.js 
+ 1583  vi config/env/development.js 
+ 1584  node server
+ 1585  vi /opt/marca2/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/base.js
+ 1586  ls
+ 1587  rm dump.tar.gz 
+ 1588  cd ..
+ 1589  ls
+ 1590  rm marca2_old.tar.gz 
+ 1591  mv marca2.tar.gz
+ 1592  mv marca2.tar.gz marca2_old.tar.gz
+ 1593  tar zcvf marca2.tar.gz marca2
+ 1594  clear
+ 1595  ls
+ 1596  tar 
+ 1597  tar zcvf marca2.tar.gz marca2 --exclude=./marca2/node_modules/
+ 1598  tar zcvf marca2.tar.gz marca2 --exclude=./marca2/node_modules/*
+ 1599  ls
+ 1600  ls -l
+ 1601  cd marca2
+ 1602  ls
+ 1603  vi package.json 
+ 1604  node -v
+ 1605  vi package.json 
+ 1606  npm install
+ 1607  node -v
+ 1608  n
+ 1609  node -v
+ 1610  npm install
+ 1611  n 
+ 1612  n use
+ 1613  n ls
+ 1614  n use 0.10.48
+ 1615  n install 0.10.48
+ 1616  n ls
+ 1617  n install 0.10.48
+ 1618  n install 0.11
+ 1619  n --help
+ 1620  n 0.10.48
+ 1621  node -v
+ 1622  npm install
+ 1623  n
+ 1624  npm install
+ 1625  vi package.json 
+ 1626  cd node_modules/
+ 1627  cd mongoose
+ 1628  ls
+ 1629  vi package.json 
+ 1630  cd ..
+ 1631  ls
+ 1632  grunt
+ 1633  PORT=80 NODE_ENV=development node server
+ 1634  PORT=80 NODE_ENV=production node server
+ 1635  ls
+ 1636  vi server.js 
+ 1637  vi config/init.js 
+ 1638  grunt
+ 1639  vi config/init.js 
+ 1640  LS
+ 1641  ls
+ 1642  git status
+ 1643  ls *.js
+ 1644  vi server.
+ 1645  vi server.js 
+ 1646  cd config/
+ 1647  ls
+ 1648  vi config.js 
+ 1649  vi init.js 
+ 1650  ls
+ 1651  vi express.js 
+ 1652  cd env
+ 1653  ls
+ 1654  vi all.js 
+ 1655  vi development.js 
+ 1656  vi production.js 
+ 1657  cd ..
+ 1658  ls
+ 1659  vi config.js 
+ 1660  cd ..
+ 1661  ls
+ 1662  vi server.
+ 1663  vi server.js
+ 1664  grunt
+ 1665  vi server.js
+ 1666  grunt
+ 1667  vi server.js
+ 1668  grunt
+ 1669  vi server.js
+ 1670  grunt
+ 1671  vi server.js
+ 1672  grunt
+ 1673  vi server.js
+ 1674  grunt
+ 1675  ls
+ 1676  vi server.js 
+ 1677  vi package.json 
+ 1678  npm install
+ 1679  cd node_modules/
+ 1680  ls
+ 1681  cd mongoose
+ 1682  ls
+ 1683  vi package.json 
+ 1684  cd ..
+ 1685  grunt
+ 1686  grunt build
+ 1687  start marca3
+ 1688  exit
+ 1689  cd /etc
+ 1690  ls
+ 1691  clear
+ 1692  ls
+ 1693  cd init
+ 1694  status marca
+ 1695  status marca2
+ 1696  status marca3
+ 1697  vi marca3.conf 
+ 1698  stop marca3
+ 1699  node -v
+ 1700  cd /opt/marca
+ 1701  ls
+ 1702  ls -l
+ 1703  cd /etc/marca3
+ 1704  cd /etc/init
+ 1705  vi marca.conf.bak 
+ 1706  vi marca3.conf 
+ 1707  ls /var/
+ 1708  ls /var/ww
+ 1709  ls /var/ww/marca
+ 1710  ls
+ 1711  cp marca3.conf marca3.conf.bak
+ 1712  mv marca.conf.bak marca.conf
+ 1713  vi marca.conf
+ 1714  start marca
+ 1715  status marca
+ 1716  curl localhost
+ 1717  stop marca
+ 1718  cd /var/log
+ 1719  ls
+ 1720  tail -n 50 marca.log
+ 1721  ls
+ 1722  ls ma*
+ 1723  ls
+ 1724  ls mar* -l
+ 1725  tail marca.log -n 100
+ 1726  curl localhost
+ 1727  start marca
+ 1728  curl localhost
+ 1729  stop marca
+ 1730  vi /etc/init/marca.conf 
+ 1731  cd /var/ww/marca
+ 1732  ls
+ 1733  ls -l
+ 1734  cd bundle/
+ 1735  ls
+ 1736  cat README
+ 1737  vi /etc/init/marca.conf 
+ 1738  PORT=80  /root/n/n/versions/node/4.4.7/bin/node /var/ww/marca/bundle/main.js
+ 1739  cat /etc/init/marca.conf 
+ 1740  PORT=80 MONGO_URL=mongodb://localhost:27017/marca ROOT_URL=http://190.81.56.82:9094/ /root/n/n/versions/node/4.4.7/bin/node /var/ww/marca/bundle/main.js
+ 1741  vi /etc/init/marca2.conf.bak
+ 1742  mongo
+ 1743  vi /etc/init/marca.conf
+ 1744  PORT=80 MONGO_URL=mongodb://localhost:27017/marca2 ROOT_URL=http://190.81.56.82:9094/ /root/n/n/versions/node/4.4.7/bin/node /var/ww/marca/bundle/main.js
+ 1745  mongo
+ 1746  mongo marca2
+ 1747  PORT=80 MONGO_URL=mongodb://localhost:27017/marca2 ROOT_URL=http://190.81.56.82:9094/ /root/n/n/versions/node/4.4.7/bin/node /var/ww/marca/bundle/main.js
+ 1748  cd /etc/init
+ 1749  ls *.conf
+ 1750  ls m*.conf
+ 1751  ls mar*.conf
+ 1752  mv marca.conf marca.conf.bak
+ 1753  vi marca3.conf
+ 1754  start marca3
+ 1755  curl localhost:80
+ 1756  exit
+ 1757  cd /opt
+ 1758  ls
+ 1759  cd marca3
+ 1760  ls
+ 1761  cd ..
+ 1762  cd /etc/init
+ 1763  vi marca3.conf
+ 1764  stop marca3
+ 1765  start marca3
+ 1766  curl localhost:80
+ 1767  stop marca3
+ 1768  vi marca3.conf
+ 1769  vi marca2.conf.bak
+ 1770  vi marca.conf
+ 1771  vi marca.conf.bak
+ 1772  vi marca3.conf
+ 1773  start marca3
+ 1774  curl localhost
+ 1775  stop localhost
+ 1776  vi marca3.conf
+ 1777  node -v
+ 1778  vi marca3.conf
+ 1779  start marca3
+ 1780  stop marca3
+ 1781  start marca3
+ 1782  curl localhost:80
+ 1783  vi marca3.conf
+ 1784  stop marca3
+ 1785  start marca3
+ 1786  curl localhost
+ 1787  exit
+ 1788  cd /opt
+ 1789  ls
+ 1790  cd marca2
+ 1791  ls
+ 1792  ls -l
+ 1793  cd js
+ 1794  ls
+ 1795  ls -l
+ 1796  ls -help
+ 1797  ls --help
+ 1798  ls --time
+ 1799  ls
+ 1800  ls -l --time
+ 1801  ls -l --time=u
+ 1802  ls -l --sort=t
+ 1803  exit
+ 1804  cd /opt
+ 1805  ls
+ 1806  cd marca2
+ 1807  ls
+ 1808  git config --get remote.origin.url
+ 1809  git status
+ 1810  exit
+ 1811  cd /opt
+ 1812  ls
+ 1813  cd marca21
+ 1814  cd marca2
+ 1815  git status
+ 1816  git add .
+ 1817  git status
+ 1818  git add . --all
+ 1819  git commit -m ultimos
+ 1820  git push origin master
+ 1821  exit
+ 1822  pwd
+ 1823  ls /home
+ 1824  ls
+ 1825  pwd
+ 1826  rm Release.zip 
+ 1827  ls z
+ 1828  cat z
+ 1829  ls
+ 1830  ls -l
+ 1831  rm z
+ 1832  ls
+ 1833  exit
+ 1834  cd /opt/marca2/js
+ 1835  ls
+ 1836  ls -l
+ 1837  cat tomongo.sh 
+ 1838  mongoimport -d marca2 -c import --drop --type csv --headerline --file
+ 1839  mongoimport -d marca2 -c import --drop --type csv --headerline --file Consolidado_03.csv 
+ 1840  cd ..
+ 1841  sl
+ 1842  ls
+ 1843  ls dump
+ 1844  rm dump -rf
+ 1845  mongodump -d marca2
+ 1846  ls
+ 1847  cd js
+ 1848  ls
+ 1849  vi import.js 
+ 1850  mongo marca2
+ 1851  ls 
+ 1852  vi import.js
+ 1853  mongo marca2 < import.js
+ 1854  mongo marca2
+ 1855  vi import.js 
+ 1856  db.fichas.findOne()
+ 1857  mongo marca2
+ 1858  mongorestore -c fichas --drop
+ 1859  d ..
+ 1860  cd ..
+ 1861  mongorestore -c fichas --drop
+ 1862  mongorestore -d marca2 -c fichas --drop dump/marca2/fichas.bson 
+ 1863  mongo marca2
+ 1864  ls js
+ 1865  cat tomongo.sh
+ 1866  cd js
+ 1867  cat tomongo.sh 
+ 1868  vi tomongo.sh 
+ 1869  chmod +x tomongo.sh 
+ 1870  ./tomongo.sh Consolidado_03.csv 
+ 1871  vi tomongo.sh 
+ 1872  ./tomongo.sh Consolidado_03.csv 
+ 1873  mongo marca2
+ 1874  mongorestore -d marca2 -c fichas --drop dump/marca2/fichas.bson exit
+ 1875  exit
+ 1876  pwd
+ 1877  ls
+ 1878  ls -l
+ 1879  rm ExcelAddIn.zip 
+ 1880  ls
+ 1881  ls -l
+ 1882  exit
+ 1883  ls -l
+ 1884  exit
+ 1885  ls
+ 1886  ls -l
+ 1887  cd /opt/marca1
+ 1888  cd /opt/marca2
+ 1889  cd js
+ 1890  ls
+ 1891  cd /opt
+ 1892  ls
+ 1893  cat leer.txt
+ 1894  curl localhost:3000
+ 1895  node -v
+ 1896  nvm ls
+ 1897  n ls
+ 1898  n
+ 1899  lear
+ 1900  clear
+ 1901  ls
+ 1902  n use
+ 1903  n
+ 1904  node -v
+ 1905  ls
+ 1906  ls /etc/init/marca*
+ 1907  vi /etc/init/marca3.conf
+ 1908  ls
+ 1909  cat leer.txt 
+ 1910  ls
+ 1911  cd /var/www
+ 1912  cd /var/ww
+ 1913  ls
+ 1914  git clone https://gitlab.com/lpezo/android_rest.git
+ 1915  ls
+ 1916  cd android_rest/
+ 1917  ls
+ 1918  ls tmp
+ 1919  ls
+ 1920  vi package.json 
+ 1921  npm install
+ 1922  ls
+ 1923  vi package.json 
+ 1924  ls
+ 1925  vi index.html 
+ 1926  cd src
+ 1927  ls
+ 1928  vi server.js
+ 1929  ls
+ 1930  vi auth.js 
+ 1931  ls -l
+ 1932  rm auth.js 
+ 1933  cd ..
+ 1934  ls
+ 1935  rm tmp -rf
+ 1936  npm run start
+ 1937  ls
+ 1938  ls -la
+ 1939  git status
+ 1940  git add .
+ 1941  git add . --all
+ 1942  git commit -m "from mark"
+ 1943  git push origin master
+ 1944  ls
+ 1945  cp /etc/init/marca3.conf /etc/init/visit.conf
+ 1946  vi /etc/init/visit.conf
+ 1947  cat /opt/leer.txt 
+ 1948  vi /etc/init/visit.conf
+ 1949  node -v
+ 1950  vi /etc/init/visit.conf
+ 1951  status visit
+ 1952  start visit
+ 1953  status visit
+ 1954  curl localhost:3000
+ 1955  curl localhost:3000/visits
+ 1956  exit
+ 1957  curl localhost:3000
+ 1958  curl localhost:3000/visits
+ 1959  ls
+ 1960  cd /opt
+ 1961  cat leer.txt 
+ 1962  exit
+ 1963  ls
+ 1964  cd /opt
+ 1965  ls
+ 1966  cat leer.txt 
+ 1967  curl localhost:9093
+ 1968  stop visit
+ 1969  vi /etc/init/visit.conf 
+ 1970  start visit
+ 1971  cat leer.txt
+ 1972  exit
+ 1973  cd /opt
+ 1974  vi leer.txt
+ 1975  cat leer.txt
+ 1976  curl localhost:83
+ 1977  clear
+ 1978  ls
+ 1979  cat leer.txt
+ 1980  status visit
+ 1981  stop visit
+ 1982  vi /etc/init/visit.conf 
+ 1983  start visit
+ 1984  curl localhost:3000
+ 1985  curl localhost:3000/visit
+ 1986  curl localhost:3000/visits
+ 1987  exit
+ 1988  ls
+ 1989  cd /opt
+ 1990  ls
+ 1991  cd /var
+ 1992  ls
+ 1993  cd ww
+ 1994  ls
+ 1995  cd /opt
+ 1996  ls
+ 1997  cat leer.txt
+ 1998  exit
+ 1999  cd /opt
+ 2000  cat leer.txt 
+ 2001  cd /opt
+ 2002  ls
+ 2003  cd marca2
+ 2004  ñlss
+ 2005  lsç
+ 2006  ls
+ 2007  rm dump -rf
+ 2008  cd js
+ 2009  ls
+ 2010  cat tomongo.sh 
+ 2011  cd ..
+ 2012  ls
+ 2013  mongodump -d marca2
+ 2014  ls dump
+ 2015  ls dump/marca2
+ 2016  clear
+ 2017  mongo marca2
+ 2018  clear
+ 2019  ls
+ 2020  cd js
+ 2021  ls
+ 2022  cat tomongo.sh
+ 2023  ./tomongo.sh carga01.csv 
+ 2024  ls *.js
+ 2025  ls -l
+ 2026  mongo marca2 < import.js 
+ 2027  mongo marca2
+ 2028  ls
+ 2029  cat tomongo.sh 
+ 2030  echo "mongo marca2 < import.js" >  toimport_2.sh
+ 2031  chmod +x toimport_2.sh 
+ 2032  ls 
+ 2033  ls .sh
+ 2034  ls
+ 2035  ./tomongo.sh carga02.csv 
+ 2036  ./toimport_2.sh
+ 2037  vi toimport_2.sh 
+ 2038  vi import.js 
+ 2039  ./toimport_2.sh 
+ 2040  history > jgv07112018.txt

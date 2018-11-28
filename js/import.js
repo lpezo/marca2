@@ -10,6 +10,10 @@
 	db.import.find().forEach(function(imp){
 		print('---IMPORT----')
 		printjson(imp);
+		var existe = db.fichas.findOne({numcertificado: imp.CERTIFICADO.toString()});
+		if (existe){
+			print('----------->El certificado existe')
+		}else{
 		ultcodigo++;
 		var doc = {codigo:ultcodigo};
 		var cli = db.clientes.findOne({codigo:imp.CODCLI});
@@ -59,5 +63,6 @@
 		print('=>ficha')
 		printjson(doc);
 		db.fichas.insert(doc);
+		}
 	});
 }
