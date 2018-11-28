@@ -21,7 +21,7 @@
         name="codcli" placeholder="Ubicar Cliente" autocomplete="off" style=”text-transform:uppercase” typeahead="cliente as cliente.nombre for cliente in getCliente($viewValue)" capitalize-first>
 
         <label class="control-label">TITULAR</label>
-        <input type="text" size="50" ng-model="titular" 
+        <input type="text" size="50" ng-model="codtit" 
         name="codtit" placeholder="Ubicar Titular" autocomplete="off" style=”text-transform:uppercase” capitalize-first>
 
     </div>
@@ -236,7 +236,7 @@
     <!--<input type="submit" value="Actualizar" class="btn btn-default" ng-click="uploadPic (picFile)"  
                     ng-disable="!form-ficha.$valid"
      /> -->
-    <button class="btn btn-primary" ng-click="uploadPic(picFile, cliente, titular)">
+    <button class="btn btn-primary" ng-click="uploadPic(picFile, cliente, codtit)">
         Grabar
     </button>
     <a class="btn btn-secondary"
