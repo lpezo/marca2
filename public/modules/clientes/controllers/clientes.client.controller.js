@@ -16,11 +16,6 @@ angular.module('clientes').controller('ClientesController', ['$scope', '$statePa
 		// Create new Cliente
 		$scope.create = function() {
 			var cliente = new Clientes($scope.cliente);
-			if (!cliente.codigo || cliente.codigo.length < 4)
-			{
-				$scope.error = "Longitud de código debe ser mayor o igual a cuatro";
-				return;
-			}
 
 			// Redirect after save
 			cliente.$save(function(response) {
