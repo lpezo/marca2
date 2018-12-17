@@ -1529,12 +1529,13 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 				$scope.ficha.nomcli = cliente.nombre;
 			}
 
+			/*
 			if (titular)
 			{
 				$scope.ficha.codtit = titular.codigo;
 				$scope.ficha.nomtit = titular.nombre;
 			}
-
+			*/
 
 			var ficha = new Fichas($scope.ficha);
 			ficha.derecho = $scope.derecho._id;
@@ -1708,7 +1709,7 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 				// }
 
 				$scope.cliente = {codigo: ficha.codcli, nombre: ficha.nomcli};
-				$scope.titular = {codigo: ficha.codtit, nombre: ficha.nomtit};
+				//$scope.titular = {codigo: ficha.codtit, nombre: ficha.nomtit};
 				// console.log('editficha:', ficha);
 				// console.log('scope.clase:', $scope.clase);
 				// console.log('scope.clases:', $scope.clases);
