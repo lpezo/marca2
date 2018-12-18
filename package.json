@@ -10,6 +10,7 @@
   "scripts": {
     "start": "grunt",
     "test": "grunt test",
+    "dev": "PORT=80 NODE_ENV=production grunt",
     "postinstall": "bower install --config.interactive=false"
   },
   "dependencies": {
