@@ -16,6 +16,12 @@
             <div class="col-md-2">
                 <label class="control-label" for="query.vencfecha1">FECHA VENCIMIENTO</label>
             </div>
+            <div class="col-md-3">
+                <label class="control-label" for="query.vencfecha2"></label>
+            </div>
+            <div class="col-md-2">
+                <label class="control-label" for="query.buscar">BUSCAR</label>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-2">
@@ -67,6 +73,11 @@
                                     data-datetimepicker-config="{ startView: 'day', minView: 'day', dropdownSelector: '.my-vencfecha2' }"
                                     ng-change="queryVencFech2(query.vencfecha1, query.vencfecha2)"></datetimepicker>
                 </ul>
+            </div>
+            <div class="dropdown col-md-2">
+                <label class="control-label" for="query.buscar"></label>
+                <input type="text" data-ng-model="query.buscar"
+                            ng-model-options="{ getterSetter: true}" size="10" placeholder="Buscar">
             </div>
         </div>
 

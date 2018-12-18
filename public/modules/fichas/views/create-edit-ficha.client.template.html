@@ -18,11 +18,11 @@
         <input type="text" class="control" data-ng-model="ficha.nomcli" id="nomcli" size="80" disabled> -->
         <label class="control-label">CLIENTE</label>
         <input type="text" size="50" ng-model="cliente" ng-model-options="modelOptions" 
-        name="codcli" placeholder="Ubicar Cliente" autocomplete="off" style=”text-transform:uppercase” typeahead="cliente as cliente.nombre for cliente in getCliente($viewValue)" capitalize-first>
+        name="codcli" placeholder="Ubicar Cliente" autocomplete="off"  typeahead="cliente as cliente.nombre for cliente in getCliente($viewValue)" capitalize-first>
 
         <label class="control-label">TITULAR</label>
-        <input type="text" size="50" ng-model="titular" ng-model-options="modelOptions" 
-        name="codtit" placeholder="Ubicar Titular" autocomplete="off" style=”text-transform:uppercase” typeahead="titular as titular.nombre for titular in getTitular($viewValue)" capitalize-first>
+        <input type="text" size="50" ng-model="codtit" 
+        name="codtit" placeholder="Ubicar Titular" autocomplete="off"  capitalize-first>
 
     </div>
 </div>
@@ -236,7 +236,7 @@
     <!--<input type="submit" value="Actualizar" class="btn btn-default" ng-click="uploadPic (picFile)"  
                     ng-disable="!form-ficha.$valid"
      /> -->
-    <button class="btn btn-primary" ng-click="uploadPic(picFile, cliente, titular)">
+    <button class="btn btn-primary" ng-click="uploadPic(picFile, cliente, codtit)">
         Grabar
     </button>
     <a class="btn btn-secondary"
