@@ -445,7 +445,9 @@ exports.list = function(req, res, next) {
 		delete qfilter.codigo;
 	}
 
-	if (req.query.buscar){
+	console.log('q:', q);
+
+	if (q.buscar){
 		if (!qfilter)
 			qfilter = {};
 		qfilter.deslogo = req.query.buscar;
