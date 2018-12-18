@@ -447,11 +447,7 @@ exports.list = function(req, res, next) {
 
 	console.log('q:', q);
 
-	if (q.buscar){
-		if (!qfilter)
-			qfilter = {};
-		qfilter.deslogo = q.buscar;
-	}
+
 
 	if (q)
 	{
@@ -465,6 +461,11 @@ exports.list = function(req, res, next) {
 			// q.codigo.fechas = {fecvenc : q.vencfecha1};
 			gte = {'fechas.fecvenc': q.vencfecha1};
 			lte = {'fechas.fecvenc': q.vencfecha2};
+		}
+		if (q.buscar){
+			if (!qfilter)
+				qfilter = {};
+			qfilter.deslogo = q.buscar;
 		}
 	}
 
