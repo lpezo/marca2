@@ -450,7 +450,7 @@ exports.list = function(req, res, next) {
 	if (q.buscar){
 		if (!qfilter)
 			qfilter = {};
-		qfilter.deslogo = req.query.buscar;
+		qfilter.deslogo = q.buscar;
 	}
 
 	if (q)
