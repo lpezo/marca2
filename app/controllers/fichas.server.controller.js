@@ -466,6 +466,9 @@ exports.list = function(req, res, next) {
 		}
 	}
 
+	console.log('qfilter:', qfilter);
+	console.log('qcodigo:', qcodigo);
+
 	var filter = {
 		filters : {
 			field: ['codigo', 'codcli', 'nomcli', 'nomsigno', 'numcertificado', 'clases', 'fechas.fecvenc', 'archivo', 'fechavenc', 'nomtit'],
