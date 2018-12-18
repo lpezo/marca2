@@ -280,7 +280,7 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 			var param = $scope.tableParams.parameters();
 			param.query = $scope.query;
 			param.page = 1;
-			// console.log('param:', param);
+			console.log('param:', param);
 			$scope.tableParams.parameters(param);
 			$scope.tableParams.reload();
 		};
