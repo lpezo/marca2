@@ -212,11 +212,12 @@ var parametros = require('./parametros.server.controller');
 				if (ficha.fechavenc === 'null')
 					ficha.fechavenc = '';
 
-				var upd = {codcli: ficha.codcli, nomcli: ficha.nomcli, codtit: ficha.codtit, nomtit: ficha.nomtit, derecho: ficha.derecho, tramite: ficha.tramite,
+				var upd = {codcli: ficha.codcli, nomcli: ficha.nomcli, nomtit: ficha.codtit, derecho: ficha.derecho, tramite: ficha.tramite,
 					nomsigno: ficha.nomsigno, numexpediente: ficha.numexpediente, numcertificado: ficha.numcertificado,
 					clases: ficha.clases, subclases: ficha.subclases, prinumero: ficha.prinumero || '', 
 					prifecha: ficha.prifecha || null, pripais: ficha.pripais || '', 
-					interes: ficha.interes || '', estado: ficha.estado || '', deslogo: ficha.deslogo || '', finalizado: ficha.finalizado, archivo: ficha.archivo || '', fechavenc: ficha.fechavenc || ''};
+					interes: ficha.interes || '', estado: ficha.estado || '', deslogo: ficha.deslogo || '', finalizado: ficha.finalizado, 
+					archivo: ficha.archivo || '', fechavenc: ficha.fechavenc || '', obs: ficha.obs || ''};
 
 				console.log('upd:',upd);
 

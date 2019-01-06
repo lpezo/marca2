@@ -2092,6 +2092,63 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 	  	{
 	  		$location.path('fichas');
 	  	};
+	  	
+	  	$scope.creapdf = function()
+	  	{
+	  	    console.log($scope.result);
+	  	    
+	  	        var docDefinition = {
+                    content: [
+                      {
+                        table: {
+                          headerRows: 1,
+                          widths: [ 50, 100, 100, 100, 100 ],
+                          body: [
+                            [ 'Código', 'Marca', 'Clase', 'Logo', 'Certificado']
+                          ]
+                        },
+                        layout: {
+                          fillColor: function (rowIndex, node, columnIndex) {
+                            return (rowIndex === 0) ? '#FF7F00' : null;
+                          }
+                        }
+                      }
+                    ],
+                    defaultStyle: {
+                      fontSize: 10
+                    }
+                };
+	  	    
+	  	            // open the PDF in a new window
+                for (var ificha in $scope.result){
+                  var ficha = $scope.result[ificha];
+                  var clase = '';
+                  for (var cadaclase in ficha.clases){
+                    if (clase === '')
+                      clase = ficha.clases[cadaclase];
+                    else
+                      clase = clase + ', ' + ficha.clases[cadaclase];
+                  }
+                  var image = '/img/'+ficha.archivo;
+                  if (!ficha.archivo)
+                    image = '';
+                  if (ficha.codigo){
+                    docDefinition.content[0].table.body.push( [ficha.codigo, ficha.nomsigno, clase, image, ficha.numcertificado || ''] );
+                  }
+                }
+        
+                console.log(docDefinition);
+                
+                pdfMake.createPdf(docDefinition).open();
+        
+                // print the PDF
+                //pdfMake.createPdf(docDefinition).print();
+        
+                // download the PDF
+                pdfMake.createPdf(docDefinition);
+	  	    
+	  	    //alert('pendiente');
+	  	};
 
 	}
 
