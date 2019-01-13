@@ -8,7 +8,8 @@ angular.module('fichas').factory('FichasImg', ['$http', '$q',
                 var deferred = $q.defer();
                 var urlCalls = [];
                 angular.forEach(fichas, function(ficha){
-                    if (ficha.archivo){
+                    console.log(ficha.archivo);
+                    if (ficha.archivo && ficha.archivo.length > 0){
                         var url = '/img/' + ficha.archivo;
                         urlCalls.push($http.get(url));
                     }
@@ -17,6 +18,11 @@ angular.module('fichas').factory('FichasImg', ['$http', '$q',
                 });
                 
                 $q.all(urlCalls).then(function(results){
+                    for (var i in results){
+                        if (results[i] && results[i].data ){
+                            results[i].base64 = btoa(results[i].data);
+                        }
+                    }
                     deferred.resolve(results);
                 },function(errors){
                     deferred.reject(errors);
@@ -25,14 +31,6 @@ angular.module('fichas').factory('FichasImg', ['$http', '$q',
                 });
                 return deferred.promise;
             }
-        }
-        /*
-		return $resource('fichas/:fichaId', { fichaId: '@_id'
-		}, {
-			update: {
-				method: 'PUT'
-			}
-        });
-        */
+        };
 	}
 ]);

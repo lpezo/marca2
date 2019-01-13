@@ -617,7 +617,7 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 				}
 			};
 			  
-			FichasImg.loadImages64(fichas).then(function(response){
+			FichasImg.loadImages64($scope.result).then(function(response){
 				console.log(response);
 			});
 

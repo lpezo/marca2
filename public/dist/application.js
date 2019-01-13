@@ -1505,10 +1505,10 @@ angular.module('fichas').config(['$stateProvider',
 // Fichas controller
 angular.module('fichas').controller('FichasController', ['$scope', '$stateParams', '$location', 
 		'$resource', 'Authentication', 'Fichas', 'TableSettings', 'FichasForm', 'ClientesBusq', 
-		'Derechos', 'Tramites', 'Clases', 'Subclases', '$timeout', 'Upload', 'ParametrosCod', 'Fecvens', 'TitularsBusq',
+		'Derechos', 'Tramites', 'Clases', 'Subclases', '$timeout', 'Upload', 'ParametrosCod', 'Fecvens', 'TitularsBusq', 'FichasImg',
 	function($scope, $stateParams, $location, 
 		$resource, Authentication, Fichas, TableSettings, FichasForm, ClientesBusq,
-		Derechos, Tramites, Clases, SubClases, $timeout, Upload, ParametrosCod, Fecvens, TitularsBusq) {
+		Derechos, Tramites, Clases, SubClases, $timeout, Upload, ParametrosCod, Fecvens, TitularsBusq, FichasImg) {
 		$scope.authentication = Authentication;
 		$scope.tableParams = TableSettings.getParams(Fichas, 'ficha');
 		$scope.ficha = {};
@@ -2097,55 +2097,62 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 	  	{
 	  	    console.log($scope.result);
 	  	    
-	  	        var docDefinition = {
-                    content: [
-                      {
-                        table: {
-                          headerRows: 1,
-                          widths: [ 50, 100, 100, 100, 100 ],
-                          body: [
-                            [ 'Código', 'Marca', 'Clase', 'Logo', 'Certificado']
-                          ]
-                        },
-                        layout: {
-                          fillColor: function (rowIndex, node, columnIndex) {
-                            return (rowIndex === 0) ? '#FF7F00' : null;
-                          }
-                        }
-                      }
-                    ],
-                    defaultStyle: {
-                      fontSize: 10
-                    }
-                };
-	  	    
-	  	            // open the PDF in a new window
-                for (var ificha in $scope.result){
-                  var ficha = $scope.result[ificha];
-                  var clase = '';
-                  for (var cadaclase in ficha.clases){
-                    if (clase === '')
-                      clase = ficha.clases[cadaclase];
-                    else
-                      clase = clase + ', ' + ficha.clases[cadaclase];
-                  }
-                  var image = '/img/'+ficha.archivo;
-                  if (!ficha.archivo)
-                    image = '';
-                  if (ficha.codigo){
-                    docDefinition.content[0].table.body.push( [ficha.codigo, ficha.nomsigno, clase, image, ficha.numcertificado || ''] );
-                  }
-                }
-        
-                console.log(docDefinition);
+			var docDefinition = {
+				content: [
+					{
+					table: {
+						headerRows: 1,
+						widths: [ 50, 100, 100, 100, 100 ],
+						body: [
+						[ 'Código', 'Marca', 'Clase', 'Logo', 'Certificado']
+						]
+					},
+					layout: {
+						fillColor: function (rowIndex, node, columnIndex) {
+						return (rowIndex === 0) ? '#FF7F00' : null;
+						}
+					}
+					}
+				],
+				defaultStyle: {
+					fontSize: 10
+				}
+			};
+			  
+			FichasImg.loadImages64($scope.result).then(function(response){
+				console.log(response);
+			});
+
+				// open the PDF in a new window
+			for (var ificha in $scope.result){
+				var ficha = $scope.result[ificha];
+				var clase = '';
+				for (var cadaclase in ficha.clases){
+				if (clase === '')
+					clase = ficha.clases[cadaclase];
+				else
+					clase = clase + ', ' + ficha.clases[cadaclase];
+				}
+				var image = '/img/'+ficha.archivo;
+				if (!ficha.archivo)
+				image = '';
+				if (ficha.codigo){
+				docDefinition.content[0].table.body.push( [ficha.codigo, ficha.nomsigno, clase, image, ficha.numcertificado || ''] );
+				}
+			}
+	
+
+
+			console.log(docDefinition);
+
                 
-                pdfMake.createPdf(docDefinition).open();
-        
-                // print the PDF
-                //pdfMake.createPdf(docDefinition).print();
-        
-                // download the PDF
-                pdfMake.createPdf(docDefinition);
+			pdfMake.createPdf(docDefinition).open();
+	
+			// print the PDF
+			//pdfMake.createPdf(docDefinition).print();
+	
+			// download the PDF
+			pdfMake.createPdf(docDefinition);
 	  	    
 	  	    //alert('pendiente');
 	  	};
@@ -2246,6 +2253,41 @@ angular.module('fichas').factory('Fichas', ['$resource',
 
 })();
 
+'use strict';
+
+//Fichas service used to communicate Fichas REST endpoints
+angular.module('fichas').factory('FichasImg', ['$http', '$q',
+	function($http, $q) {
+        return {
+            loadImages64: function(fichas) {
+                var deferred = $q.defer();
+                var urlCalls = [];
+                angular.forEach(fichas, function(ficha){
+                    if (ficha.archivo){
+                        var url = '/img/' + ficha.archivo;
+                        urlCalls.push($http.get(url));
+                    }
+                    else
+                        urlCalls.push(null);
+                });
+                
+                $q.all(urlCalls).then(function(results){
+                    for (var i in results){
+                        if (results[i] && results[i].data ){
+                            results[i].base64 = btoa(results[i].data);
+                        }
+                    }
+                    deferred.resolve(results);
+                },function(errors){
+                    deferred.reject(errors);
+                }, function(updates){
+                    deferred.update(updates);
+                });
+                return deferred.promise;
+            }
+        }
+	}
+]);
 'use strict';
 
 //Setting up route
