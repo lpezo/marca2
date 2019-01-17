@@ -20,7 +20,8 @@ angular.module('fichas').factory('FichasImg', ['$http', '$q',
                 $q.all(urlCalls).then(function(results){
                     for (var i in results){
                         if (results[i] && results[i].data ){
-                            results[i].base64 = btoa(results[i].data);
+                            results[i].base64 = btoa(new Uint8Array(results[i].data).reduce(function(data, byte) {return data + String.fromCharCode(byte)}, ''));
+                            delete results[i].data;
                         }
                     }
                     deferred.resolve(results);

@@ -2120,7 +2120,7 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 			};
 			  
 			FichasImg.loadImages64($scope.result).then(function(response){
-				console.log(response);
+				console.log('response:',response);
 			});
 
 				// open the PDF in a new window
@@ -2263,7 +2263,8 @@ angular.module('fichas').factory('FichasImg', ['$http', '$q',
                 var deferred = $q.defer();
                 var urlCalls = [];
                 angular.forEach(fichas, function(ficha){
-                    if (ficha.archivo){
+                    console.log(ficha.archivo);
+                    if (ficha.archivo && ficha.archivo.length > 0){
                         var url = '/img/' + ficha.archivo;
                         urlCalls.push($http.get(url));
                     }
@@ -2274,7 +2275,8 @@ angular.module('fichas').factory('FichasImg', ['$http', '$q',
                 $q.all(urlCalls).then(function(results){
                     for (var i in results){
                         if (results[i] && results[i].data ){
-                            results[i].base64 = btoa(results[i].data);
+                            results[i].base64 = btoa(new Uint8Array(results[i].data).reduce(function(data, byte) {return data + String.fromCharCode(byte)}, ''));
+                            delete results[i].data;
                         }
                     }
                     deferred.resolve(results);
@@ -2285,7 +2287,7 @@ angular.module('fichas').factory('FichasImg', ['$http', '$q',
                 });
                 return deferred.promise;
             }
-        }
+        };
 	}
 ]);
 'use strict';

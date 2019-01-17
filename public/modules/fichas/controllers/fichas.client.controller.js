@@ -618,7 +618,7 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 			};
 			  
 			FichasImg.loadImages64($scope.result).then(function(response){
-				console.log(response);
+				console.log('response:',response);
 			});
 
 				// open the PDF in a new window
