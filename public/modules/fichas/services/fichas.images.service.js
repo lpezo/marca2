@@ -10,7 +10,7 @@ angular.module('fichas').factory('FichasImg', ['$http', '$q',
                 angular.forEach(fichas, function(ficha){
                     console.log(ficha.archivo);
                     if (ficha.archivo && ficha.archivo.length > 0){
-                        var url = '/img/' + ficha.archivo;
+                        var url = '/fichas/img/' + ficha.archivo;
                         urlCalls.push($http.get(url));
                     }
                     else
@@ -20,8 +20,8 @@ angular.module('fichas').factory('FichasImg', ['$http', '$q',
                 $q.all(urlCalls).then(function(results){
                     for (var i in results){
                         if (results[i] && results[i].data ){
-                            results[i].base64 = btoa(new Uint8Array(results[i].data).reduce(function(data, byte) {return data + String.fromCharCode(byte)}, ''));
-                            delete results[i].data;
+                            //results[i].base64 = btoa(results[i].data);
+                            results[i].base64 = resulst[i].data;
                         }
                     }
                     deferred.resolve(results);

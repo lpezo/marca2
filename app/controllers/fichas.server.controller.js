@@ -768,3 +768,14 @@ exports.updateDescarte = function(req, res, next)
 		res.jsonp(ficha);
 	});
 };
+
+exports.descargaImagen = function(req, res, next){
+	var nomimg = req.params.nomimg;
+	var file = '/img/' + nomimg;
+	fs.readFile(file, function (err, bitmap) {
+		var data = {data: bitmap.toString('base64')};
+		console.log(data);
+		res.jsonp(data);
+		next();
+	});
+};

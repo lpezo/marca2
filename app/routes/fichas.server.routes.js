@@ -35,7 +35,10 @@ module.exports = function(app) {
     	.post(fichas.updateDescarte);
 
     app.route('/fichasimagenes')
-    	.post(fichas.updateImagen);
+		.post(fichas.updateImagen);
+		
+	app.route('/fichas/img/:nomimg')
+		.get(fichas.descargaImagen);
 
 	// Finish by binding the Ficha middleware
 	app.param('fichaId', fichas.fichaByID);
