@@ -2121,40 +2121,47 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 			  
 			FichasImg.loadImages64($scope.result).then(function(response){
 				console.log('response:',response);
+				
+				
+    			// open the PDF in a new window
+    			for (var ificha in $scope.result){
+    				var ficha = $scope.result[ificha];
+    				var clase = '';
+    				for (var cadaclase in ficha.clases){
+    				if (clase === '')
+    					clase = ficha.clases[cadaclase];
+    				else
+    					clase = clase + ', ' + ficha.clases[cadaclase];
+    				}
+    				var image = '/img/'+ficha.archivo;
+    				if (!ficha.archivo)
+    				image = '';
+    				if (ficha.codigo){
+    				    docDefinition.content[0].table.body.push( [ficha.codigo, ficha.nomsigno, clase, image, ficha.numcertificado || ''] );
+    				}
+    			}
+    						
+    			//console.log(docDefinition);
+                
+    			pdfMake.createPdf(docDefinition).open();
+    	
+    			// print the PDF
+    			//pdfMake.createPdf(docDefinition).print();
+    	
+    			// download the PDF
+    			pdfMake.createPdf(docDefinition);
+    	  	    
+    	  	    //alert('pendiente');
+				
+			}).catch(function(err){
+			    console.log('err:', err);
 			});
 
-				// open the PDF in a new window
-			for (var ificha in $scope.result){
-				var ficha = $scope.result[ificha];
-				var clase = '';
-				for (var cadaclase in ficha.clases){
-				if (clase === '')
-					clase = ficha.clases[cadaclase];
-				else
-					clase = clase + ', ' + ficha.clases[cadaclase];
-				}
-				var image = '/img/'+ficha.archivo;
-				if (!ficha.archivo)
-				image = '';
-				if (ficha.codigo){
-				docDefinition.content[0].table.body.push( [ficha.codigo, ficha.nomsigno, clase, image, ficha.numcertificado || ''] );
-				}
-			}
+
 	
 
 
-			console.log(docDefinition);
 
-                
-			pdfMake.createPdf(docDefinition).open();
-	
-			// print the PDF
-			//pdfMake.createPdf(docDefinition).print();
-	
-			// download the PDF
-			pdfMake.createPdf(docDefinition);
-	  	    
-	  	    //alert('pendiente');
 	  	};
 
 	}
@@ -2256,17 +2263,18 @@ angular.module('fichas').factory('Fichas', ['$resource',
 'use strict';
 
 //Fichas service used to communicate Fichas REST endpoints
-angular.module('fichas').factory('FichasImg', ['$http', '$q',
-	function($http, $q) {
+angular.module('fichas').factory('FichasImg', ['$resource', '$q',
+	function($resource, $q) {
         return {
             loadImages64: function(fichas) {
                 var deferred = $q.defer();
                 var urlCalls = [];
+                var resoimg = $resource('/fichas/img/:imagen', {imagen:'@id'});
                 angular.forEach(fichas, function(ficha){
                     console.log(ficha.archivo);
                     if (ficha.archivo && ficha.archivo.length > 0){
-                        var url = '/img/' + ficha.archivo;
-                        urlCalls.push($http.get(url));
+                        //var url = '/fichas/img/:imagen';
+                        urlCalls.push(resoimg.get({imagen: ficha.archivo}).$promise);
                     }
                     else
                         urlCalls.push(null);
@@ -2275,12 +2283,13 @@ angular.module('fichas').factory('FichasImg', ['$http', '$q',
                 $q.all(urlCalls).then(function(results){
                     for (var i in results){
                         if (results[i] && results[i].data ){
-                            results[i].base64 = btoa(new Uint8Array(results[i].data).reduce(function(data, byte) {return data + String.fromCharCode(byte)}, ''));
-                            delete results[i].data;
+                            //results[i].base64 = btoa(results[i].data);
+                            results[i].base64 = results[i].data;
                         }
                     }
                     deferred.resolve(results);
                 },function(errors){
+                    console.log('errors: ', errors);
                     deferred.reject(errors);
                 }, function(updates){
                     deferred.update(updates);
