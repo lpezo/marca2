@@ -771,11 +771,10 @@ exports.updateDescarte = function(req, res, next)
 
 exports.descargaImagen = function(req, res, next){
 	var nomimg = req.params.nomimg;
-	var file = '/img/' + nomimg;
+	var file = path.join( './public/img', nomimg);
 	fs.readFile(file, function (err, bitmap) {
 		var data = {data: bitmap.toString('base64')};
 		console.log(data);
 		res.jsonp(data);
-		next();
 	});
 };
