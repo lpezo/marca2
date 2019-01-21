@@ -631,7 +631,7 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
     				else
     					clase = clase + ', ' + ficha.clases[cadaclase];
     				}
-    				var image = '/img/'+ficha.archivo;
+    				var image = {image: ficha.base64, width:100};
     				if (!ficha.archivo)
     				image = '';
     				if (ficha.codigo){
