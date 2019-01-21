@@ -19,12 +19,12 @@ angular.module('fichas').factory('FichasImg', ['$resource', '$q',
                 });
                 
                 $q.all(urlCalls).then(function(results){
-                    for (var i in results){
-                        if (results[i] && results[i].data ){
+                    //for (var i in results){
+                    //    if (results[i] && results[i].data ){
                             //results[i].base64 = btoa(results[i].data);
-                            results[i].base64 = results[i].data;
-                        }
-                    }
+                            //results[i].base64 = results[i].data;
+                    //    }
+                    //}
                     deferred.resolve(results);
                 },function(errors){
                     console.log('errors: ', errors);
