@@ -633,7 +633,7 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
     				}
     				var image = {image: ficha.base64, width:100};
     				if (!ficha.archivo)
-    				image = '';
+    					image = '';
     				if (ficha.codigo){
     				    docDefinition.content[0].table.body.push( [ficha.codigo, ficha.nomsigno, clase, image, ficha.numcertificado || ''] );
     				}
