@@ -3,9 +3,9 @@
 
     function factory() {
 
-      var getFormFields = function(disabled) {
+      var lista = [];
 
-        var lista = [];
+      var getFormFields = function(disabled) {
 
         var fields = [
   				{
