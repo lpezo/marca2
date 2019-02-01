@@ -399,11 +399,16 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 					}
 				}
 				$scope.result = result;
+				FichasForm.setListaReporte(result);
 			}, function(errorResponse){
 				$scope.error = errorResponse.data.message;
 			});
 
 		};
+
+		$scope.pdf1 = function(){
+			$scope.result = FichasForm.getListaReporte();
+		}
 
 		$scope.changeFecpre = function()
 		{

@@ -5,6 +5,8 @@
 
       var getFormFields = function(disabled) {
 
+        var lista = [];
+
         var fields = [
   				{
   					key: 'codcli',
@@ -40,8 +42,18 @@
 
       };
 
+      var getListaReporte = function(){
+         return lista;
+      };
+
+      var setListaReporte = function(a){
+        lista = a;
+      };
+
       var service = {
-        getFormFields: getFormFields
+        getFormFields: getFormFields,
+        getListaReporte: getListaReporte,
+        setListaReporte: setListaReporte
       };
 
       return service;
