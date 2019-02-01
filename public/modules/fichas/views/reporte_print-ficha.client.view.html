@@ -1,0 +1,56 @@
+<section data-ng-controller="FichasController">
+<div class="CSSReport">
+    <table >
+        <tr>
+            <td style="align-text=center">
+                #
+            </td>
+            <td>
+                Código
+            </td>
+            <td>
+                Marca
+            </td>
+            <td>
+                Logo
+            </td>
+            <td >
+                Clase
+            </td>
+            <td>
+                Certificado
+            </td>
+            <td>
+                Fecha
+            </td>
+        </tr>
+        <tr ng-repeat="item in result">
+            <td style="align-text=center">
+                {{item.num}}
+            </td>
+            <td>
+                {{item.codigo}}
+            </td>
+            <td >
+                {{item.nomsigno}}
+            </td>
+            <td>
+                <img ng-hide="!item.archivo" ng-src="/img/{{item.archivo}}" id="img-id" width="50" onerror='this.style.display = "none"'/>						
+            </td>
+            <td>
+                <ul class="list-inline">
+                    <li ng-repeat="clas in item.clases">
+                        {{clas}}
+                    </li>
+                </ul>
+            </td>
+            <td>
+                {{item.numcertificado}}
+            </td>
+            <td ng-switch on="tipoFecha">
+                {{item.fecha | date: 'dd-MM-yyyy'}}
+            </td>
+        </tr>
+    </table>
+</div>
+</section>
