@@ -29,6 +29,10 @@ angular.module('fichas').config(['$stateProvider',
 			url: '/fichas/reporte/1',
 			templateUrl: 'modules/fichas/views/reporte1-ficha.client.view.html'
 		}).
+		state('pdfFicha', {
+			url: '/fichas/pdf/1',
+			templateUrl: 'modules/fichas/views/reporte_print-ficha.client.view.html'
+		}).
 		state('vencimientoFicha', {
 			url: '/fichavencimiento',
 			templateUrl: 'modules/fichas/views/list-venc.client.view.html'
