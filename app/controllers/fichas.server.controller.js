@@ -775,7 +775,7 @@ exports.descargaImagen = function(req, res, next){
 	fs.readFile(file, function (err, bitmap) {
 		//console.log(data);
 		var ext = nomimg.split('.').pop().toLowerCase();
-		var data = {data: 'data:image/' + ext + ';base4,'  + bitmap.toString('base64')};
+		var data = {data: 'data:image;base64,'  + bitmap.toString('base64')};
 		res.jsonp(data);
 	});
 };

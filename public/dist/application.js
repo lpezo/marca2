@@ -2133,15 +2133,15 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
     				else
     					clase = clase + ', ' + ficha.clases[cadaclase];
     				}
-    				var image = '/img/'+ficha.archivo;
-    				if (!ficha.archivo)
-    				image = '';
+    				var image = '';
+    				if (response[ificha])
+        				image = {image: response[ificha].data, width:50};
     				if (ficha.codigo){
     				    docDefinition.content[0].table.body.push( [ficha.codigo, ficha.nomsigno, clase, image, ficha.numcertificado || ''] );
     				}
     			}
     						
-    			//console.log(docDefinition);
+    			console.log('docDefinition:', docDefinition);
                 
     			pdfMake.createPdf(docDefinition).open();
     	
@@ -2281,12 +2281,12 @@ angular.module('fichas').factory('FichasImg', ['$resource', '$q',
                 });
                 
                 $q.all(urlCalls).then(function(results){
-                    for (var i in results){
-                        if (results[i] && results[i].data ){
+                    //for (var i in results){
+                    //    if (results[i] && results[i].data ){
                             //results[i].base64 = btoa(results[i].data);
-                            results[i].base64 = results[i].data;
-                        }
-                    }
+                            //results[i].base64 = results[i].data;
+                    //    }
+                    //}
                     deferred.resolve(results);
                 },function(errors){
                     console.log('errors: ', errors);

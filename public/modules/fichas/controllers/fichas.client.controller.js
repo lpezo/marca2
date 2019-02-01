@@ -631,15 +631,15 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
     				else
     					clase = clase + ', ' + ficha.clases[cadaclase];
     				}
-    				var image = {image: response.data, width:100};
-    				if (response.data)
-    					image = '';
+    				var image = '';
+    				if (response[ificha])
+        				image = {image: response[ificha].data, width:50};
     				if (ficha.codigo){
     				    docDefinition.content[0].table.body.push( [ficha.codigo, ficha.nomsigno, clase, image, ficha.numcertificado || ''] );
     				}
     			}
     						
-    			//console.log(docDefinition);
+    			console.log('docDefinition:', docDefinition);
                 
     			pdfMake.createPdf(docDefinition).open();
     	
