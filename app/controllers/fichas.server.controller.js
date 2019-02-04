@@ -548,7 +548,7 @@ exports.reporte1 = function(req, res, next) {
 	query[tipoFecha] = {'$gte': desde, '$lte': hasta};
 	console.log('query:', query);
 	Ficha.find(query, 
-		{codigo:1, nomsigno:1, clases:1, numcertificado:1, image: 1, fechas:1, archivo:1})
+		{codigo:1, nomsigno:1, clases:1, numcertificado:1, image: 1, fechavenc:1, fechas:1, archivo:1})
 		.exec(function(err, fichas){
 			if (err)
 			{
