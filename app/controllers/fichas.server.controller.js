@@ -587,6 +587,8 @@ exports.reporte1 = function(req, res, next) {
 					var pos = tipoFecha.indexOf('.');
 					if (pos >= 0)
 						oitem.fecha = oitem.fechas[tipoFecha.substr(pos+1)];
+					else
+						oitem.fecha = oitem[tipoFecha];
 					oitem.num = parseInt(i)+1;
 					afichas.push(oitem);
 				}
