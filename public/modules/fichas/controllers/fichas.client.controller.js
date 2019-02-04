@@ -399,7 +399,13 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 					}
 				}
 				$scope.result = result;
-				FichasForm.setListaReporte(result);
+				FichasForm.setListaReporte({
+					lista: result, 
+					tipoFecha: $scope.tipoFecha,
+					cliente: $scope.cliente.nombre,
+					desde: $scope.desde,
+					hasta: $scope.hasta
+				});
 			}, function(errorResponse){
 				$scope.error = errorResponse.data.message;
 			});
@@ -407,7 +413,10 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 		};
 
 		$scope.pdf1 = function(){
-			$scope.result = FichasForm.getListaReporte();
+			var obj = FichasForm.getListaReporte();
+			$scope.result = obj.lista;
+			$scope.tipoFecha = obj.tipoFecha;
+			$scope.fechaactual = new Date();
 		}
 
 		$scope.changeFecpre = function()
@@ -595,7 +604,7 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 	  	{
 	  		$location.path('fichas');
 	  	};
-	  	
+	  	/*
 	  	$scope.creapdf = function()
 	  	{
 	  	    console.log($scope.result);
@@ -666,7 +675,7 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 
 
 	  	};
-
+		*/
 	}
 
 ]);

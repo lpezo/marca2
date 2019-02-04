@@ -3,7 +3,7 @@
 
     function factory() {
 
-      var lista = [];
+      var lista = {};
 
       var getFormFields = function(disabled) {
 

@@ -1,4 +1,17 @@
 <section data-ng-controller="FichasController" ng-init="pdf1()">
+<div class="page-header">
+    <h3>RELACIÓN DE MARCAS REGISTRADAS</h3>
+    <h3>ACTUALIZADO AL: {{fechaactual | date: 'dd-MM-yyyy'}}</h3>
+    <div class="row">
+        <div class="col-md-1">CLIENTE</div>
+        <div class="col-md-4">{{cliente}}</div>
+    </div>
+    <div class="row">
+            <div class="col-md-1">DESDE</div>
+            <div class="col-md-4">{{desde}}</div>
+            <div class="col-md-1">HASTA</div>
+            <div class="col-md-4">{{hasta}}</div>
+    </div>
 <div class="CSSReport">
     <table >
         <tr>
