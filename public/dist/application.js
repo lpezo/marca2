@@ -1494,6 +1494,10 @@ angular.module('fichas').config(['$stateProvider',
 			url: '/fichas/reporte/1',
 			templateUrl: 'modules/fichas/views/reporte1-ficha.client.view.html'
 		}).
+		state('pdfFicha', {
+			url: '/fichas/pdf/1',
+			templateUrl: 'modules/fichas/views/reporte_print-ficha.client.view.html'
+		}).
 		state('vencimientoFicha', {
 			url: '/fichavencimiento',
 			templateUrl: 'modules/fichas/views/list-venc.client.view.html'
@@ -1901,11 +1905,16 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 					}
 				}
 				$scope.result = result;
+				FichasForm.setListaReporte(result);
 			}, function(errorResponse){
 				$scope.error = errorResponse.data.message;
 			});
 
 		};
+
+		$scope.pdf1 = function(){
+			$scope.result = FichasForm.getListaReporte();
+		}
 
 		$scope.changeFecpre = function()
 		{
@@ -2186,6 +2195,8 @@ angular.module('fichas').factory('Fichas', ['$resource',
 
     function factory() {
 
+      var lista = [];
+
       var getFormFields = function(disabled) {
 
         var fields = [
@@ -2223,8 +2234,18 @@ angular.module('fichas').factory('Fichas', ['$resource',
 
       };
 
+      var getListaReporte = function(){
+         return lista;
+      };
+
+      var setListaReporte = function(a){
+        lista = a;
+      };
+
       var service = {
-        getFormFields: getFormFields
+        getFormFields: getFormFields,
+        getListaReporte: getListaReporte,
+        setListaReporte: setListaReporte
       };
 
       return service;
