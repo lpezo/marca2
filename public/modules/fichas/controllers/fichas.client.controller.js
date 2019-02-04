@@ -417,7 +417,10 @@ angular.module('fichas').controller('FichasController', ['$scope', '$stateParams
 			$scope.result = obj.lista;
 			$scope.tipoFecha = obj.tipoFecha;
 			$scope.fechaactual = new Date();
-		}
+			$scope.cliente = obj.cliente;
+			$scope.desde = obj.desde;
+			$scope.hasta = obj.hasta;
+		};
 
 		$scope.changeFecpre = function()
 		{
