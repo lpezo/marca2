@@ -238,9 +238,9 @@ var parametros = require('./parametros.server.controller');
 			else
 			{
 				//console.log('saveFicha: es nuevo');
-				ficha = new Ficha(ficha);
 				ficha.user = req.user;
-                                ficha.nomtit = ficha.codtit;
+				ficha.nomtit = ficha.codtit;
+				ficha = new Ficha(ficha);
 				if (imagen)
 					ficha.image = imagen;
 				ficha.save(function(err) {
