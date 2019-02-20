@@ -461,8 +461,8 @@ exports.list = function(req, res, next) {
 		{
 			console.log('vencfecha:', q.vencfecha1, q.vencfecha2);
 			// q.codigo.fechas = {fecvenc : q.vencfecha1};
-			gte = {'fechas.fecvenc': q.vencfecha1};
-			lte = {'fechas.fecvenc': q.vencfecha2};
+			gte = {'fechavenc': q.vencfecha1};
+			lte = {'fechavenc': q.vencfecha2};
 		}
 		if (q.buscar){
 			if (!qfilter)
